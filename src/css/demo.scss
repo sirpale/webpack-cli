@@ -1,0 +1,394 @@
+// 嵌套规则
+#main p {
+  color : #00ff00;
+  width : 97%;
+  .redbox {
+    background-color : #ff0000;
+    color:#000;
+  }
+}
+
+#main {
+  width :97%;
+  p,div {
+    font-size : 2em;
+    a {font-weight : bold;}
+  }
+  pre {font-size : 3em;}
+}
+ 
+// 父选择器
+a {
+  font-weight : bold;
+  text-decoration : none;
+  &:hover {text-decoration:underline;}
+  body.firefox & {font-weight:normal;}
+}
+
+#main {
+  color:black;
+  &-sidebar {border:1px solid;}
+}
+
+// 属性嵌套
+.funky {
+  font : {
+    family : fantasy;
+    size : 30em;
+    weight : bold;
+  }
+  // 包含自己的属性值
+  //font : 20px/24px {
+  //  family : fantasy;
+  //  weight : bold;
+  //}
+}
+
+// 变量
+$width : 5em;
+#main {width:$width;}
+
+//!global声明 将局部变量转换为全局变量
+#main {
+  $width : 5em !global;
+}
+
+
+// 数据类型
+//数字，1, 2, 13, 10px
+//字符串，有引号字符串与无引号字符串，"foo", 'bar', baz
+//颜色，blue, #04a3f9, rgba(255,0,0,0.5)
+//布尔型，true, false
+//空值，null
+//数组 (list)，用空格或逗号作分隔符，1.5em 1em 0 2em, Helvetica, Arial, sans-serif
+//maps, 相当于 JavaScript 的 object，(key1: value1, key2: value2)
+
+
+// 字符串
+@mixin firefox-message($selector) {
+  body.firefox #{$selector}:before {
+    content : "Hi, Firefox users!";
+  }
+}
+@include firefox-message('.header');
+
+// 运算
+// 数字运算
+p {width:1in + 8pt;}
+
+//如果值，或值的一部分，是变量或者函数的返回值
+//如果值被圆括号包裹
+//如果值是算数表达式的一部分
+p {
+  font:10px/8px;
+  $width : 1000px;
+  width : $width/2;
+  //width : round(1.5)/2;
+  height : (500px/2);
+  margin-left : 5px + 8px/2px;
+}
+
+
+// 颜色值运算
+$translucent-reg : rgba(255,0,0,.5);
+$green : #00ff00;
+p {
+  //color : #010203 + #040506;
+  //color : #010203 *2;
+  //color : rgba(255,0,0,.75) + rgba(0,255,0,.75);
+  color : opacify($translucent-reg,.3);
+  background-color:transparentize($translucent-reg,.25);
+}
+
+div {
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled='false', startColorstr=#FF00FF00, endColorstr=#80FF0000);
+}
+
+// 字符串运算
+p {
+  cursor:e + -resize;
+  margin : 3px + 4px auto;
+}
+
+p:before {
+  //content : 'Foo ' + Bar;
+  content : "I ate #{5+10} pies!";
+  font-family : sans- + 'serif';
+}
+
+$value : null;
+p:before {
+  content : 'I ate #{$value} pies!';
+}
+
+// 布尔运算 and or not
+// 数组运算
+
+// 圆括号
+p {
+  width : 1em + (2em*3);
+}
+
+// 函数
+p {
+  //color : hsl(0,100%,50%);
+  // 关键词参数
+  color : hsl($hue : 0, $saturation:100%,$lightness : 50%);
+}
+
+// 插值语句
+$name : foo;
+$attr : boder;
+p.#{$name} {
+  #{$attr}-color : blue;
+}
+
+// &
+.foo.bar .baz.bang, .bip.qux {
+  $selector : &;
+}
+
+@mixin does-parent-exist {
+  @if & {
+    &:hover {
+      color : red;
+    }
+  } @else {
+    a {
+      color : red;
+    }
+  }
+}
+
+// !default
+$content : 'First content';
+$content : 'Second content?' !default;
+$new_content : 'First time reference' !default;
+
+#main {
+  content : $content;
+  new-content : $new_content;
+}
+
+// @media
+.sidebar {
+  width : 300px;
+  @media screen and(orientation:landscape) {
+    width : 500px;
+  }
+}
+
+@media screen {
+  .sidebar {
+    @media (orientation:landscape) {
+      width : 500px;
+    }
+  }
+}
+
+$media : screen;
+$feature : -webkit-min-device-pixel-ratio;
+$value : 1.5;
+
+@media #{$media} and ($feature:$value) {
+  .sidebar {
+    width : 500px;
+  }
+}
+
+// @extend
+.error {
+  border :1px #f00;
+  background-color:#fdd;
+}
+.seriousError {
+  @extend .error;
+  border-width:3px;
+}
+
+.hoverlink {
+  @extend a:hover;
+}
+a:hover {
+  text-decoration : underline;
+}
+
+.comment a.user:hover {
+  font-weight:bold;
+}
+
+.error {
+  border : 1px #f00;
+  background-color:#fdd;
+}
+.attention {
+  font-size:3em;
+  background-color:#ff0;
+}
+.seriousError {
+  @extend .error;
+  @extend .attention;
+  border-width : 3px;
+}
+
+.criticalError {
+  @extend .seriousError;
+  position:fixed;
+  top : 10%;
+  bottom : 10%;
+  left : 10%;
+  right : 10%;
+}
+
+// 选择器列
+//#fake-links .link {
+//  @extend a;
+//}
+//a {
+//  color : blue;
+//  &:hover {
+//    text-decoration:underline;
+//  }
+//}
+
+// 合并选择器列
+#admin .tabbar a {
+  font-weight : bold;
+}
+#demo .overview .fakelink {
+  @extend a;
+}
+
+// @extend-Only
+
+#context a%extreme {
+  color : blue;
+  font-weight:bold;
+  font-size : 2em;
+}
+
+.notice {
+  @extend %extreme;
+}
+
+// !optional 声明
+a.important {
+  @extend .notice !optional;
+}
+
+// @at-root
+.parent {
+  width :100px;
+  @at-root .child{height:100px;}
+  @at-root {
+    .child1 {color:red;}
+    .child2 {color:blue;}
+  }
+}
+
+//@media print {
+//  .page {
+//    width : 8in;
+//    @at-root (without: media) {
+//      color:red;
+//    }
+//  }
+//}
+
+// @debug
+@debug 10em + 12em;
+
+// @warn
+@mixin adjust-loaction($x,$y) {
+  @if unitless($x) {
+    @warn 'Assuming #{$x} to be in pixels';
+    $x : 1px * $x;
+  }
+  @if unitless($y) {
+    @warn 'Assuming #{$y} to be in pixels';
+    $y:1px * $y;
+  }
+  position:relative;
+  left : $x;
+  top:$y;
+}
+
+// @error
+@mixin adjust-location($x, $y) {
+  @if unitless($x) {
+    @error "$x may not be unitless, was #{$x}.";
+  }
+  @if unitless($y) {
+    @error "$y may not be unitless, was #{$y}.";
+  }
+  position: relative; left: $x; top: $y;
+}
+
+// @if
+$type : monster;
+p {
+  @if 1+1 == 2 {border:1px solid;}
+  @if 5 < 3 {border:2px dotted;}
+  @if null {border : 3px double;}
+
+  @if $type == ocean {
+    color : blue;
+  } @else if $type == matador {
+    color : red;
+  } @else if $type == monster {
+    color : green;
+  } @else {
+    color : black;
+  }
+}
+
+// @for
+@for $i from 1 through 3 {
+  .item-#{$i} {width : 2em * $i;}
+}
+
+
+// @each
+@each $animal in puma, sea-slug, egret, salamander {
+  .#{$animal}-icon {
+    background-image : url('/images/#{$animal}.png');
+  }
+}
+
+@each $animal, $color, $cursor in (puma, black, default),
+        (sea-slug,blue,pointer),
+        (egret,white,move) {
+  .#{$animal}-icon {
+    background-image : url('/images/#{$animal}.png');
+    border : 2px solid $color;
+    cursor : $cursor;
+  }
+}
+
+// @while
+$i:6;
+@while $i > 0 {
+  .item-#{$i} {width:2em * $i;}
+  $i:$i - 2;
+}
+
+// 混合指令
+@mixin large-text {
+  font: {
+    family : Arial;
+    size : 20px;
+    weight : bold;
+  }
+  color : #ff0000;
+}
+
+@mixin clearfix {
+  display : inline-block;
+  &:after {
+    content : '.';
+    display:block;
+    height : 0;
+    clear:both;
+    visibility : hidden;
+  }
+}

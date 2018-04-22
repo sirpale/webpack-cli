@@ -1,0 +1,10 @@
+{
+  "status" : "success",
+  "msg" : "注册成功！",
+  "info" : {
+    "uid" : "57412",
+    "name" : "admin",
+    "group" : "管理员",
+    "ava" : "../images/avatar01.jpg"
+  }
+}

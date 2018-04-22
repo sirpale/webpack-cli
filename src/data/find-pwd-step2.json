@@ -1,0 +1,7 @@
+{
+  "status" : "success",
+  "msg" : "邮件发送成功！",
+  "info" :{
+    "url" : "https://mail.qq.com/cgi-bin/loginpage"
+  }
+}

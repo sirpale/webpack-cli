@@ -1,0 +1,52 @@
+#include('./include/head.tpl.html');
+<input type="hidden" class="login-regiser-flag" value = "0"/>
+<!--主体-->
+<div class="main main-container main-border reg-main" style="position:relative">
+<!--<div style="position: absolute;top:45px;left:0;width:1098px";><img src="../images/set/ballon.jpg" style="max-height:980px; max-width:100%"/></div>-->
+    <div class="site-demo-button userp-reg">
+        找回密码
+    </div>
+    <div style="width:625px;margin:0 auto;">
+        <div class="layui-form yx-reg-form find-pwd-form"  style="margin-top:15px">           
+           
+            <div class="find-step step5">
+				<p class="find-pwd-tips" >
+					<img src="../images/warn.png" height="16" width="16" style="margin: -2px 5px 0px 0px;;" class="hide"><span>&nbsp;</span>
+				</p>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">新密码：</label>
+                    <div class="layui-input-inline">
+                        <input type="password" name="password"  placeholder="请输入密码"  class="layui-input find-new-password">
+                    </div>
+                    <div class="layui-form-mid layui-word-aux change-find-paw"><img src="../images/warn.png" height="16" width="16" style="margin: -2px 5px 0px 0px;color: red;" class="hide"><span>6~20数字、字母或特殊符号组成</span></div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">确认密码：</label>
+                    <div class="layui-input-inline">
+                        <input type="password" name="repassword"  placeholder="请输入密码"  class="layui-input find-new-re-password">
+                    </div>
+                    <div class="layui-form-mid layui-word-aux change-find-repaw"><img src="../images/warn.png"   height="16" width="16" style="margin: -2px 5px 0px 0px;  color: red;" class="hide"><span>&nbsp;</span></div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">验证码：</label>
+                    <div class="layui-input-inline"  style="width:190px;">
+                        <input type="text" name="vcode"  placeholder="请输入验证码"  class="layui-input find-pwd-yzm">
+                    </div>
+                    <div class="layui-input-inline" style="width:100px;">
+                        <img class="yzm-img yzm-reset-key" data-key="resetYzmKey" src="http://192.168.0.56:3000/images/misc.png?yzmKey=resetPwd" width="100" height="38"/>
+                    </div>
+                </div>
+
+                <div class="layui-form-item">
+                    <div class="layui-input-block">
+                        <a type="button" class="layui-btn layui-btn-normal sure-change-pwd"  style="margin-left:0px;width:300px;font-size:18px;background: #56B1F5 " data-url="../data/find-pwd-step3.json">确认修改</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+
+</script>
+#include('./include/foot.tpl.html');

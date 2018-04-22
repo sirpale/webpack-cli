@@ -1,0 +1,63 @@
+#include('./include/head.tpl.html');
+
+<input type="hidden" class="login-regiser-flag" value = "0"/>
+<!--主体-->
+<div class="main main-container main-border log-main" style="position:relative">
+	<div style="position: absolute;top:45px;left:0;width:1098px";><img src="../images/set/ballon.jpg" style="max-height:980px; max-width:100%"/></div>
+    <div class="site-demo-button userp-reg">
+        <!--<a  class="f-fr" href="login.html">已有账号？立即登录</a>-->
+        用户账号绑定
+    </div>
+    <blockquote class="layui-elem-quote layui-quote-nm">
+        请尽快创建您的5636论坛账号，以便开启更多功能
+    </blockquote>
+    <div style="width:690px;margin:0 auto">
+        <p class="binding-error-tips"><img src="../images/warn.png" height="16" width="16" class="hide" /><span>&nbsp;</span></p>
+        <form class="layui-form yx-login-form" data-url="../data/binding.json">
+            <div class="layui-form-item">
+                <label class="layui-form-label">用户名：</label>
+                <div class="layui-input-inline">
+                    <input type="text" name="username" placeholder="请输入用户名" class="layui-input yx-check-username">
+                </div>
+                <div class="layui-form-mid layui-word-aux"><img src="../images/warn.png" height="16" width="16" class="hide" /><span>用户名由4~20数字、字母或中文组成！</span></div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">密　码：</label>
+                <div class="layui-input-inline">
+                    <input type="password" name="password"  placeholder="请输入密码"  class="layui-input yx-check-password">
+                </div>
+                <div class="layui-form-mid layui-word-aux"><img src="../images/warn.png" height="16" width="16" class="hide" /><span>密码由6~20数字、字母或特殊符号组成！</span></div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">邮　箱：</label>
+                <div class="layui-input-inline">
+                    <input type="text" name="vcode"  placeholder="请输入邮箱" class="layui-input yx-check-email">
+                </div>
+                <div class="layui-form-mid layui-word-aux"><img src="../images/warn.png" height="16" width="16" class="hide" /><span>请输入邮箱！</span></div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">验证码：</label>
+                <div class="layui-input-inline"  style="width:190px;">
+                    <input type="text" name="vcode" placeholder="请输入验证码"  class="layui-input yx-binding-yzm">
+                </div>
+                <div class="layui-input-inline"  style="width:100px;">
+                    <img class="yzm-img yzm-binding-key" data-key="binding" src="http://192.168.0.56:3000/images/misc.png?yzmKey=binding" height="38" width="100"/>
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-input-block">
+                    <button type="button" class="layui-btn layui-btn-normal user-login-sub-btn2" style="margin-left:0px;width:300px;font-size:18px;background: #56B1F5"  >立即绑定</button>
+                    <!--<button type="reset" class="layui-btn layui-btn-primary">重置</button>-->
+                </div>
+            </div>
+            <p class="dashed-line"></p>
+            <div class="layui-form-item" style=" margin-left: 25px;position:relative;z-index:3">
+
+            </div>
+        </form>
+    </div>
+</div>
+<script>
+
+</script>
+#include('./include/foot.tpl.html');

@@ -1,0 +1,42 @@
+.notice-main{padding:0;}
+.set-right ul.c-blue{background-color: #E8F0F7;}
+.notice-list li{border-bottom:1px dashed #ccc;min-height:50px;padding:10px 0;position:relative}
+.notice-list li .notice-left{width:50px;min-height:50px;float: left;margin-right:25px;}
+.notice-list li .notice-left img{ padding: 2px; width: 48px;height: 48px;background: #FFF;border: 1px solid;border-color: #F2F2F2 #CDCDCD #CDCDCD #F2F2F2;-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius: 5px;}
+.notice-list li .notice-right{width:735px;min-height:50px;float: left}
+.notice-list li .notice-right p.c-notice-gray{color:#999}
+.shield{width:30px;background:#fff;position:absolute;top:20px;right:0;}
+.shield .shield-btn{width:20px;height:20px;background: #fff url(../images/set/op.png) no-repeat 0px -42px!important;}
+.shield .shield-btn:hover{background-position: 0px -62px!important;}
+.notice-list li p a{color:#89B0D2}
+.notice-list li p a:hover{color:#01AAED}
+//屏蔽框
+.shieldAlert{background: #fff;width:220px;height:150px;}
+.shieldAlert-box{width:220px;height:110px; margin-left: 30px;overflow: hidden;}
+.shieldAlert-box .layui-input-block{margin-left:0;}
+.shieldAlert-box form.layui-form{margin:5px auto;}
+.shieldAlert-box p{margin-top:10px;}
+
+//个人消息
+.yx-notice-list li div.notice-right p{margin:0;}
+.yx-notice-per-list li:after{content: ".";display: block;height: 0;clear: both;visibility: hidden;}
+.yx-notice-per-list li .notice-right a{color:#333}
+.yx-notice-per-list li .notice-right .other-per a{color:#1E9FFF}
+.yx-notice-per-list li .notice-right .notice-status div:hover{color: #3EA3D4;cursor: pointer;}
+.yx-notice-per-list li .notice-middle{width:10px;float:left;margin-right:20px;}
+.shield-per-delete{width:100px;height:0;background:#fff;position:absolute;bottom:38px;right:15px;color:#333}
+.shield-per-delete a{color:#3EA3D4;}
+.shield-per-delete a:hover{color:#369;}
+
+.yx-notice-sys-list li {min-height:68px;}
+.yx-notice-sys-list li .notice-left{margin-top: 7px;}
+.yx-notice-sys-list li .shield-per-delete{bottom:54px;}
+.yx-notice-sys-list li .notice-right .notice-status a{color:#6DBFFF}
+.yx-notice-sys-list li .notice-right .notice-status a:hover{color: #3EA3D4}
+
+//全选
+.select-notice-bottom{width:100%;height:50px;}
+.select-notice-left{width:250px;float:left;height:50px;margin-left:77px;line-height:60px;}
+.select-notice-left a{padding:4px 10px;background:#1e9fff;color:#fff;}
+.select-notice-left a:hover{text-decoration: underline;color:#fff;}
+.select-notice-right{width:500px;float:left;height:50px;float: right;}

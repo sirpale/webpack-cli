@@ -1,0 +1,64 @@
+#include('./include/head.tpl.html');
+<input type="hidden" class="login-regiser-flag" value = "0"/>
+<!--主体-->
+<div class="main main-container main-border reg-main" style="position:relative">
+<!--<div style="position: absolute;top:45px;left:0;width:1098px";><img src="../images/set/ballon.jpg" style="max-height:980px; max-width:100%"/></div>-->
+    <div class="site-demo-button userp-reg">
+        找回密码
+    </div>
+    <div style="width:625px;margin:0 auto;position: relative">
+        <div class="layui-form yx-reg-form find-pwd-form"  style="margin-top:15px">
+            <div class="find-step step1 ">
+				<div class="layui-form-item find-pwd-tips">
+					<p><img src="../images/warn.png" height="16" width="16" class="hide"><span>&nbsp;</span></p>
+				</div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">确认账号：</label>
+                    <div class="layui-input-inline">
+                        <input type="text" name="title"  placeholder="请输入用户名" class="layui-input check-find-username" value="">
+                    </div>
+                    <div class="layui-form-mid layui-word-aux find-user-error-tips"><img src="../images/warn.png" height="16" width="16" style="margin:-2px 5px 0 0" class="hide"/><span>&nbsp;</span></div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">验证码：</label>
+                    <div class="layui-input-inline"  style="width:190px;">
+                        <input type="text" name="yam"   placeholder="请输入验证码"  class="layui-input stepone-yzm">
+                    </div>
+                    <div class="layui-input-inline"  style="width:100px;">
+                        <img class="yzm-img yzm-find-key" data-key="regYzmKey" src="http://192.168.0.56:3000/images/misc.png?yzmKey=findPwd" width="100" height="38"/>
+					</div>
+                </div>
+                <div class="layui-form-item">
+                    <div class="layui-input-block">
+                        <a type="button" class="layui-btn layui-btn-normal my-find-step-one" data-url="../data/find-pwd-step1.json">　下一步　</a>
+                    </div>
+                </div>
+            </div>
+            <div class="find-step step2 hide">
+				<p style="height:35px;">&nbsp;</p>
+                <div class="layui-form-item">
+                    <label class="layui-form-label" style="width:130px">已绑定邮箱：</label>
+                    <div class="layui-input-inline" style="width:240px">
+                        <input type="text" name="title"  readonly class="layui-input check-find-email" value="">
+                    </div>
+                    <div class="layui-form-mid layui-word-aux find-emial-error-tips"><img src="../images/warn.png" height="16" width="16" style="margin:-2px 5px 0 0" class="hide"><span>&nbsp;</span></div>
+                </div>
+                 <div class="layui-form-item" style="margin-top:25px">
+                    <div class="layui-input-block my-send-email">
+                        <a type="button" href="javascript:void(0);" target="_blank" class="layui-btn layui-btn-normal change-show-pwd">　前往验证　</a>
+						
+						<a type="button" class="layui-btn layui-btn-normal find-pwd-send-btn " disabled="enabled" data-url="../data/find-pwd-step2.json">发送验证邮件</a>
+						<div class="gray-top"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="find-step step4 hide">
+                <p style="width:100%;height:35px;line-height:35px;margin:35px 0 0 100px;text-align:center">您没有绑定邮箱，无法通过邮箱找回密码，请联系管理员!</p>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+
+</script>
+#include('./include/foot.tpl.html');

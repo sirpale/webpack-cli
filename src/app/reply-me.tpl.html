@@ -1,0 +1,246 @@
+#include('./include/head.tpl.html');
+
+    <!--主体-->
+    <div class="main main-container person-main">
+        <!--面包屑导航-->
+        <div class="list-tips ">
+            <a href="./" class="nvhm" title="首页">5636网吧论坛</a><em>›</em>
+            <a href="person.html">个人中心</a> <em>›</em>
+            <a href="person.html">我的主页</a>
+        </div>
+        <!--<div class="crumbs">-->
+            <!--<span class="layui-breadcrumb" style="visibility: visible;">-->
+              <!--<a href="/">首页<span class="layui-box">&gt;</span></a>-->
+              <!--<a href="/demo/">King1993<span class="layui-box">&gt;</span></a>-->
+              <!--<a><cite>个人资料</cite></a>-->
+            <!--</span>-->
+        <!--</div>-->
+
+        <div class="content">
+            <!-- 个人资料头像开始 -->
+            <script class="data-tpl person-my-info-tpl" type="text/html" data-target="person-my-info" data-url="../data/person-my-info.json">
+                <div class="hl">
+                    <div class="icn"><a href="per-set.html"><img src="{{ d.info.ava }}"/></a></div>
+                    <!--<h2 class="mt"> King1993</h2>-->
+                </div>
+                <div class="per-data">
+                    <p class="sign"><a href="per-st.html" class="f-fr">[修改密码]</a><b>{{ d.info.name }}</b></p>
+                    <p class="sign">{{ d.info.sign }} <a href="per-set.html"><i class="layui-icon">&#xe642;</i> 编辑</a></p>
+                    <p>UID：<span>{{ d.info.uid }}</span></p>
+                    <p>邮箱：<span>{{ d.info.email }}</span>
+                        {{# if(d.info.emailVar == "0" && d.info.is_site_user == "0") { }}
+                        <a href="binding.html?" class="activeEmail">未认证</a>
+                        {{# } else { }}
+
+                        {{# } }}
+                    </p>
+                    <p>性别：<span>{{ d.info.sex }}</span></p>
+                    <p>回帖数：<span>{{ d.info.replyNum }}</span></p>
+                    <p>主题贴：<span>{{ d.info.pastNum }}</span></p>
+                    <p>消息数：<span><a href="notice.html">{{ d.info.msgNum}}</a></span></p>
+                    <p>注册时间：<span>{{ d.info.regTime }}</span></p>
+                    <p>上次访问：<span>{{ d.info.lastTime }}</span></p>
+                </div>
+
+            </script>
+            <div id="uhd" class="person-my-info">
+
+                <!--<div class="themes-list">-->
+                    <!--主题-->
+                <!--</div>-->
+
+
+            </div>
+            <!-- /个人资料头像结束 -->
+            <!-- 个人资料和主题切换开始 -->
+            <div class="layui-tab layui-tab-card">
+                <!--<ul class="layui-tab-title">-->
+                    <!--<li class="layui-this">主题</li>-->
+                    <!--<li>个人中心</li>-->
+                <!--</ul>-->
+                <!-- 主题开始 -->
+                <div class="layui-tab-content">
+                    <div class="layui-tab-item layui-show">
+                        <div class="send-posting">
+                            <div class="site-demo-button">
+                                <a href="past.html" class="layui-btn layui-btn-normal">我要发帖</a>
+                            </div>
+                        </div>
+                        <div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">
+                            <ul class="layui-tab-title three-reply-list">
+                                <li><a href="person.html">我的帖子</a></li>
+                                <li><a href="my-reply.html">回复</a></li>
+                                <li class="layui-this"><a href="reply-me.html">被回复</a></li>
+                            </ul>
+                            <!-- 主题切换开始 -->
+                            <div class="layui-tab-content">
+
+
+                                <!-- 被回复贴开始 -->
+                                <div class="layui-tab-itemlayui-show">
+                                    <div class="layui-tab-item layui-show">
+                                        <div class="layui-tab-item layui-show">
+                                            <script class="data-tpl person-other-reply-tpl" type="text/html" data-target="person-other-reply" data-url="../data/person-other-reply.json">
+                                                <colgroup>
+                                                    <col width="650">
+                                                    <col width="">
+                                                    <col width="">
+                                                    <col width="">
+                                                </colgroup>
+                                                <thead>
+                                                <tr>
+                                                    <th>标题</th>
+                                                    <th>版块/群组</th>
+                                                    <th>回复/查看 </th>
+                                                    <th>最后发帖</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                {{# layui.each(d.list,function(index, item) { }}
+                                                <tr>
+                                                    <td>
+                                                        <a href="{{ item.url }}">{{ item.title }}</a>
+                                                    </td>
+                                                    <td class="c-gray"><a href="{{ item.url }}">{{ item.plate }}</a></td>
+                                                    <td class="two-num">
+                                                        <span class="c-369"><a href="{{ item.url }}">{{ item.replyNum }}</a></span>
+                                                        <span class="c-gray"><a href="{{ item.url }}">{{ item.viewNum }}</a></span>
+                                                    </td>
+                                                    <td class="two-num">
+                                                        <span class="c-369"><a href="{{ item.url }}">{{ item.user }}</a></span>
+                                                        <span class="c-gray"><a href="{{ item.url }}">{{ item.time }}</a></span>
+                                                    </td>
+                                                </tr>
+                                                {{# }) }}
+
+                                                {{# if(d.list.length <= 0){ }}
+                                                <tr>
+                                                    <td colspan="4" class="f-tac">抱歉，暂时没有人回复您</td>
+                                                </tr>
+                                                {{# } }}
+                                                </tbody>
+                                            </script>
+                                            <table class="person-table person-other-reply" data-json='{"total":33,"pageSize":10,"act":"../data/person-other-reply-ajax.json"}'>
+                                                <tr>
+                                                    <td colspan="4" class="f-tac"><i class="layui-icon layui-anim layui-anim-rotate layui-anim-loop"></i> 数据获取中...</td>
+                                                </tr>
+                                            </table>
+                                            <div class="pages pages-a" data-target="person-other-reply"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /被回复贴结束 -->
+                            </div>
+                            <!-- /主题切换结束 -->
+
+                        </div>
+                    </div>
+                    <!-- /个人资料开始 -->
+                    <!--<div class="layui-tab-item">-->
+                        <!--<p>King1993-->
+                            <!--<img src="../images/ol.gif" height="13" width="13"/>-->
+                            <!--<span>(UID: 298383)</span>-->
+                        <!--</p>-->
+                        <!--<p class="dashed-line"></p>-->
+                        <!--<p>邮箱认证：未认证</p>-->
+                        <!--<p class="dashed-line"></p>-->
+                        <!--<p>性别：保密</p>-->
+                        <!--<p class="dashed-line"></p>-->
+                        <!--<p>好友数：0</p>-->
+                        <!--<p class="dashed-line"></p>-->
+                        <!--<p>回帖数：0</p>-->
+                        <!--<p class="dashed-line"></p>-->
+                        <!--<p>主题贴：0</p>-->
+                        <!--<p class="dashed-line"></p>-->
+                        <!--<p>注册： IP111.172.32.91 - - 湖北武汉</p>-->
+                        <!--<p class="dashed-line"></p>-->
+                        <!--<p>上次访问： IP219.139.227.117:54579 - - 湖北武汉</p>-->
+                        <!--<p class="dashed-line"></p>-->
+                    <!--</div>-->
+                    <!-- /个人资料结束 -->
+                </div>
+                <!-- /个人资料开始 -->
+            </div>
+     </div>
+ </div>
+<!--<div class="send-posting-box hide">-->
+    <!--<div class="layui-breadcrumb-title">-->
+        <!--<div class="left">-->
+             <!--<span class="layui-breadcrumb" style="visibility: visible;">-->
+                <!--<a href="javascript:void(0);">5636网吧论坛<span class="layui-box">&gt;</span></a>-->
+                 <!--<a href="javascript:void(0);">进入版块</a>-->
+            <!--</span>-->
+        <!--</div>-->
+        <!--<div class="right">-->
+            <!--<button data-method="offset" data-type="auto" class="layui-btn layui-btn-normal">发帖</button>-->
+        <!--</div>-->
+    <!--</div>-->
+    <!--<div class="choice">-->
+        <!--<div class="left">-->
+            <!--<ul class="layui-nav layui-nav-tree" lay-filter="demo">-->
+                <!--<li class="layui-nav-item  layui-this" data-index="1"><a href="javascript:void(0);">常用版块</a></li>-->
+                <!--<li class="layui-nav-item" data-index="2"><a href="javascript:void(0);">网吧资讯与教程专区</a></li>-->
+                <!--<li class="layui-nav-item" data-index="3"><a href="javascript:void(0);">网吧信息发布专区</a></li>-->
+                <!--<li class="layui-nav-item" data-index="4"><a href="javascript:void(0);">网吧经营与技术专区</a></li>-->
+                <!--<li class="layui-nav-item" data-index="5"><a href="javascript:void(0);">网吧休闲</a></li>-->
+            <!--</ul>-->
+        <!--</div>-->
+        <!--<div class="middle">-->
+            <!--<div class="content-box set-content1 layui-hide">-->
+                <!--<ul class="layui-nav layui-nav-tree" lay-filter="demo1">-->
+                    <!--<li class="layui-nav-item" data-index="1"><a href="javascript:void(0);">贴图灌水</a></li>-->
+                <!--</ul>-->
+            <!--</div>-->
+            <!--<div class="content-box set-content2 layui-hide">-->
+                <!--<ul class="layui-nav layui-nav-tree" lay-filter="demo2">-->
+                    <!--<li class="layui-nav-item" data-index="1"  data-name="name1"><a href="javascript:void(0);">网吧经营管理咨询-->
+
+                        <!--<img src="../images/arrwd.gif" height="4" width="12"/></a></li>-->
+                    <!--<li class="layui-nav-item" data-index="2"><a href="javascript:void(0);">网吧各类技术咨询</a></li>-->
+                    <!--<li class="layui-nav-item" data-index="3"><a href="javascript:void(0);">网吧装机配置及价格咨询</a></li>-->
+                <!--</ul>-->
+            <!--</div>-->
+            <!--<div class="content-box set-content3 layui-hide">-->
+                <!--<ul class="layui-nav layui-nav-tree" lay-filter="demo3">-->
+                    <!--<li class="layui-nav-item" data-index="1"><a href="javascript:void(0);">网吧热点资讯</a></li>-->
+                    <!--<li class="layui-nav-item" data-index="2"><a href="javascript:void(0);">网吧交易信息</a></li>-->
+                    <!--<li class="layui-nav-item" data-index="3"><a href="javascript:void(0);">网吧求职招聘</a></li>-->
+                <!--</ul>-->
+            <!--</div>-->
+            <!--<div class="content-box set-content4 layui-hide">-->
+                <!--<ul class="layui-nav layui-nav-tree" lay-filter="demo4">-->
+                    <!--<li class="layui-nav-item" data-index="1"><a href="javascript:void(0);">网咖经营</a></li>-->
+                    <!--<li class="layui-nav-item" data-index="2"><a href="javascript:void(0);">全国网吧点评</a></li>-->
+                    <!--<li class="layui-nav-item" data-index="3"><a href="javascript:void(0);">网管情感-网管的疯狂生活</a></li>-->
+                    <!--<li class="layui-nav-item" data-index="4"><a href="javascript:void(0);">网吧硬软路由交流</a></li>-->
+                    <!--<li class="layui-nav-item" data-index="5"><a href="javascript:void(0);"> 网吧无盘技术交流</a></li>-->
+                <!--</ul>-->
+            <!--</div>-->
+            <!--<div class="content-box set-content5 layui-hide">-->
+                <!--<ul class="layui-nav layui-nav-tree" lay-filter="demo5">-->
+                    <!--<li class="layui-nav-item" data-index="1"><a href="javascript:void(0);">网吧闲聊交友</a></li>-->
+                    <!--<li class="layui-nav-item" data-index="2"><a href="javascript:void(0);">游戏讨论</a></li>-->
+                    <!--<li class="layui-nav-item" data-index="3"><a href="javascript:void(0);">音乐影视</a></li>-->
+                    <!--<li class="layui-nav-item" data-index="4"><a href="javascript:void(0);">贴图灌水</a></li>-->
+                    <!--<li class="layui-nav-item" data-index="5"><a href="javascript:void(0);"> 商家资讯</a></li>-->
+                    <!--<li class="layui-nav-item" data-index="6"><a href="javascript:void(0);"> 联系管理员</a></li>-->
+                <!--</ul>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<div class="right">-->
+            <!--<div class="content-box set-content1 layui-hide name1">-->
+                <!--<ul class="layui-nav layui-nav-tree">-->
+                    <!--<li class="layui-nav-item" data-index="1"><a href="javascript:void(0);">网吧闲聊交友</a></li>-->
+                    <!--<li class="layui-nav-item" data-index="2"><a href="javascript:void(0);">游戏讨论</a></li>-->
+                    <!--<li class="layui-nav-item" data-index="3"><a href="javascript:void(0);">音乐影视</a></li>-->
+                    <!--<li class="layui-nav-item" data-index="4"><a href="javascript:void(0);">贴图灌水</a></li>-->
+                    <!--<li class="layui-nav-item" data-index="5"><a href="javascript:void(0);"> 商家资讯</a></li>-->
+                    <!--<li class="layui-nav-item" data-index="6"><a href="javascript:void(0);"> 联系管理员</a></li>-->
+                <!--</ul>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</div>-->
+#include('./include/foot.tpl.html');
+
+

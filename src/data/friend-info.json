@@ -1,0 +1,18 @@
+{
+  "status" : "success",
+  "msg" : "获取成功",
+  "info" : {
+    "ava" : "../images/avatar01.jpg",
+    "name" : "King1993",
+    "sign" : "欢迎加入网吧业主qq交流群：123456，大家共同交流、学习和分享，有<a href='javascript:void(0);'>惊喜</a>相送！",
+    "uid" : "298383",
+    "email" : "123456@qq.com",
+    "emailVar" : 0,
+    "sex" : "保密",
+    "replyNum" : "45,123",
+    "pastNum" : "122,451",
+    "msgNum" : 123,
+    "regTime" : "2014-05-05 08:23:13",
+    "lastTime" : "2017-06-15 12:14:56"
+  }
+}

@@ -1,0 +1,37 @@
+{
+"list":[{
+		"name":"公告区",
+		"id":"1",
+		"url": "../data/sel-section.json"
+	},
+	{
+		"name":"交流区",
+		"id":"b",
+		"url": "../data/sel-section.json"
+	},
+	{
+		"name":"客服区",
+		"id":"c",
+		"url": "../data/sel-section.json"
+	},
+	{
+		"name":"攻略区",
+		"id":"d",
+		"url": "../data/sel-section.json"
+	}],
+"theme":[{
+		"name":"网页游戏",
+		"id":"1",
+		"url": "../data/sel-section.json"
+	},
+	{
+		"name":"手机游戏",
+		"id":"b",
+		"url": "../data/sel-section.json"
+	},
+	{
+		"name":"网络游戏",
+		"id":"c",
+		"url": "../data/sel-section.json"
+	}]	
+}

@@ -1,0 +1,161 @@
+$blue: #0172a9;
+$blue2 : #29a4e0;
+
+$red : #d70c06;
+$c6 : #666;
+$green : #a7e10e;
+$green1 : #93C40E;
+
+
+.left, .left-box, .center-box {
+  float: left
+}
+
+.right, .right-box {
+  float: right;
+}
+
+
+.w1100 {
+  width:1100px;
+  overflow:hidden;
+  margin:0 auto;
+}
+
+.top,.container,.main {
+  @extend .w1100;
+}
+
+
+// 顶部
+.top {height:50px;padding:14px 0;
+  .logo {width:162px;height:50px;}
+  .top-right {line-height:50px;color:#eee;
+    a {padding:0 6px 0 20px;}
+    //@at-root .top-right-login {background:url("../images/ico/bbs-1_03.png") no-repeat left center;}
+    //@at-root .top-right-reg {background:url("../images/ico/bbs-1_06.png") no-repeat left center;}
+  }
+}
+
+
+// 顶部
+.top {height:50px;padding:14px 0;
+  .logo {width:162px;height:50px;}
+  .top-right {line-height:50px;color:#eee;
+    a {padding:0 6px 0 20px;}
+    //@at-root .top-right-login {background:url("../images/ico/bbs-1_03.png") no-repeat left center;}
+    //@at-root .top-right-reg {background:url("../images/ico/bbs-1_06.png") no-repeat left center;}
+  }
+}
+
+// 主体容器
+.container {
+  // 导航
+  .nav {height:40px;line-height:40px;overflow:hidden;background:$blue2;
+    ul {width:750px;float:left;
+      li {display:block;float:left;width:150px;text-align: center;
+        a {display:block;color:#fff;font-size:16px;
+          &:hover {background:$blue;text-decoration:none;}
+        }
+      }
+    }
+    .search {width:320px;float:right;
+      .input-group {
+        $h : 32px;
+        $marginTop : 6px;
+        input.txt {width:236px;height:28px;line-height:28px;margin-top:$marginTop;border:1px solid #ddd;float:left;padding-left:10px;}
+        a.btn {display:block;width:60px;margin-top:$marginTop;text-align:center;height:30px;line-height:24px;float:left;font-size:14px;background:$green1;color:#fff;
+          &:hover {text-decoration:none;background:$green;}
+        }
+      }
+    }
+  }
+
+  // 统计数
+  .total {height:20px;line-height:20px;padding:10px 0;overflow:hidden;
+    ul {
+      li {display: inline-block;float:left;padding-right:10px;
+        em {color:$red;}
+      }
+    }
+  }
+
+  // ban图
+  .ban {height:90px;overflow:hidden;
+    a {
+      img {width:1100px;height:90px;}
+    }
+  }
+}
+
+
+//自定义下拉框
+.selectDefine {
+        display: inline-block;
+        width: 180px;
+        height: 35px;
+        font-size: 14px;
+        border: 1px solid #cecece;
+        background: url("../images/jiao.png") no-repeat 164px center;
+
+        position: relative;
+        p {
+            text-align: left;
+            height: 35px;
+            line-height: 35px;
+            padding-left: 8px;
+        }
+        dl {
+            display: none;
+            position: absolute;
+            top: 37px;
+            left: -1px;
+            background: #fff;
+            background-clip: border-box;
+            border: 1px solid #cecece;
+            border-radius: 2px;
+            -webkit-background-clip: padding-box;
+            -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+            box-shadow: 0 6px 12px rgba(0,0,0,.175);
+            z-index: 3;
+            dd {
+                padding-left: 8px;
+                width: 172px;
+                height: 35px;
+                line-height: 35px;
+                margin: 2px 0;
+                cursor: pointer;
+                &:hover {
+                    background: #009688;
+                    color: #fff;
+                }
+            }
+        }
+        
+    &.notclick{
+        color: #d2d2d2;
+        cursor: not-allowed;
+        border-color: #d2d2d2;
+    }    
+}
+//第三方登录
+.three-to-login5636{width:650px;height:400px;}
+.three-to-login5636-left{width:250px;height:350px; float: left;margin:15px 15px 0 15px }
+//.binding-nickname {display:inline-block;height: 30px;background: url(../images/other-login.png) no-repeat;padding: 6px 0 0 36px;}
+//.binding-tips .binding-nickname {display:inline-block;height: 30px;background: url(../images/other-login.png) no-repeat;padding: 6px 0 0 36px;}
+.binding-tips .ico-qq{background-position: 0 0}
+.binding-tips .ico-weixin{background-position: 0 -40px}
+.binding-tips .ico-sina{background-position: 0 -80px}
+.three-to-login5636-left .binding-txt{padding: 30px 6px; line-height: 24px;text-indent: 24px;}
+.qqcolor{color:#0f8ff2}
+.binding-tips .binding-input{line-height: 18px;margin: 8px 0;padding:6px 0}
+.three-to-login5636-right{width:320px;height:350px; float: left;margin-left:35px;}
+.three-to-login5636-right p{ line-height: 18px;margin: 8px 0;padding:4px 0}
+.three-to-login5636-right .binding-input input{ width: 208px;border: 1px solid #ddd; padding: 2px 6px; height: 26px; line-height: 26px;outline: 0;}
+.three-to-login5636-right .binding-input span{ padding: 10px 0 0 80px;display: block;}
+.three-to-login5636-right .binding-input a.btn{border-radius:3px;float: left;height: 40px; line-height: 40px;color: #fff;font-size: 16px;padding: 2px 12px;display:block;text-align:center;}
+.three-to-login5636-right .binding-input a.btn-sub{background: #ff5a00; width: 160px;}
+.three-to-login5636-right .binding-input a.btn-no{ background: #dca51b;width:75px;margin:0 15px;}
+//论坛精华
+.main .h-module .h-module-content ul li{width:610px;height:28px;line-height: 28px;}
+.main .h-module .h-module-content ul li a{display:block;width:580px;text-overflow : ellipsis;white-space :nowrap ;overflow: hidden }

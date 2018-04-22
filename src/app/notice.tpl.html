@@ -1,0 +1,214 @@
+#include('./include/head.tpl.html');
+
+<script src="../js/lib/ueditor/ueditor.config.js"></script>
+<script src="../js/lib/ueditor/ueditor.all.js"></script>
+
+<!--主体-->
+<div class="main main-container notice-main">
+    <!--<div class="crumbs">-->
+            <!--<span class="layui-breadcrumb" style="visibility: visible;">-->
+              <!--<a href="/">首页<span class="layui-box">&gt;</span></a>-->
+              <!--<a href="javascript:void(0);">通知<span class="layui-box">&gt;</span></a>-->
+              <!--<a><cite>消息</cite></a>-->
+            <!--</span>-->
+    <!--</div>-->
+    <!--面包屑导航-->
+    <div class="list-tips">
+        <a href="./" class="nvhm" title="首页">5636网吧论坛</a><em>›</em>
+        <a href="person.html">个人中心</a> <em>›</em>
+        <a href="notice.html">消息中心</a>
+    </div>
+    <div class="set-box">
+        <div class="set-left">
+            <ul class="layui-nav layui-nav-tree" lay-filter="demo">
+                <li class="layui-nav-item layui-this" data-index="1"><a href="javascript:void(0);">个人消息</a></li>
+                <li class="layui-nav-item" data-index="2"><a href="javascript:void(0);">系统消息</a></li>
+            </ul>
+        </div>
+        <div class="set-right">
+            <div class="content-box set-content1">
+                <div class="layui-tab ">
+                    <!--<ul class="layui-tab-title c-blue">
+                        <li class="layui-this">个人消息</li>
+                    </ul>-->
+                    <div class="layui-tab-content">
+                        <div class="layui-tab-item layui-show">
+                        	<script class="data-tpl notice-person-tpl" type="text/html" data-target="notice-person" data-url="../data/notice-person.json">
+	                        		{{# layui.each(d.list,function(index, item) { }}
+	                        		<li data-url="../data/delete-ajax.json" data-mid="{{item.mid}}">
+	                        			<!--<div class="site-demo-button shield-per-status" >-->
+	                                        <!---->
+	                                    <!--</div>-->
+	                                    <div class="site-demo-button shield-per-delete" >
+	                                        <a href="javascript:void(0);" data-url="../data/delete-ajax.json" data-mid="{{item.mid}}"><i class="layui-icon">&#xe640;</i> 删除</a>
+	                                    </div>
+	                                    <div class="notice-left"><img src="{{ item.img }}" height="48" width="48"/></div>
+	                                    <div class="notice-middle">
+	                                        <input type="checkbox" name="delet-choice[]" id="" class="pc" value="">
+	                                    </div>
+	                                    <div class="notice-right">
+	                                        <p class="c-notice-gray other-per"><a href="javascript:void(0);" data-uid="{{item.uid}}">{{item.uname}}</a> 对 您 说 :</p>
+	                                        <div class="notice-status" data-status={{item.checkStatus}}>
+	                                            <div href="javascript:void(0)" class="{{# if(item.checkStatus == 0) { }} f-fwb  {{# }}}" check-url="../data/notice-check.json" list-url="../data/notice-person1.json"  data-url="../data/notice-ajax.json" data-mid="{{item.mid}}" data-checkStatus="{{item.checkStatus}}" data-replyStatus="{{item.replyStatus}}" data-rcontent="{{item.rcontent}}">{{item.content}}</div>
+	                                        </div>
+	                                        <p class="c-notice-gray" data-rtime="{{item.rtime}}" data-utime="{{item.utime}}">
+                                                {{item.utime}}
+                                                {{# if(item.checkStatus == 0) { }}
+                                                <span class="blue1">未读</span>
+                                                {{# }}}
+                                                {{# if(item.checkStatus == 1&&item.replyStatus==0) { }}
+                                                <span class="red">未回</span>
+                                                {{# }}}
+                                                {{# if(item.checkStatus == 1&&item.replyStatus==1) { }}
+                                                <span class="green">已回</span>
+                                                {{# }}}
+                                            </p>
+	                                    </div>
+	                                </li>
+	                                {{# }) }}
+
+	                                {{# if(d.list.length <= 0){ }}
+	                                        <li class="f-tac">
+	                                            	抱歉，您暂时没有回复！
+	                                        </li>
+	                                 {{# } }}
+                        	</script>
+
+
+                            <ul class="notice-list yx-notice-list yx-notice-per-list notice-person" data-json='{"total":10,"pageSize":4,"act":"../data/notice-person-ajax.json"}'>
+                                <!--<li>
+                                    <div class="site-demo-button shield-per-delete">
+                                        <a href="javascript:void(0);">删除</a>
+                                    </div>
+                                    <div class="notice-left"><img src="../images/avatar2.jpg" height="48" width="48"/></div>
+                                    <div class="notice-middle">
+                                        <input type="checkbox" name="delet-choice[]" id="" class="pc" value="">
+                                    </div>
+                                    <div class="notice-right">
+                                        <p class="c-notice-gray other-per"><a href="javascript:void(0);">AlekSSanRT</a> 对 您 说 :</p>
+                                        <p class="notice-status">
+                                            <a href="javascript:void(0)">关于您在“海蜘蛛软路由动态域名要怎么设置”的帖子你好可以教我一下吗 QQ285387219  帮我远程下，什么都注册号了  绑定了 就是打不开 我是用了不花钱多那个免费域名</a>
+                                        </p>
+                                        <p class="c-notice-gray">2017-06-14 15:11</p>
+                                    </div>
+                                </li>-->
+                                <li class="f-tac">
+                                    	抱歉，您暂时没有回复！
+                                </li>
+
+                            </ul>
+                            <div class="select-notice-bottom">
+                                <div class="select-notice-left">
+                                    <label for="delete_all"><input type="checkbox" name="chkall" id="delete_all" class="pc">全选</label>
+                                    <a href="javascript:void(0);" class="delete-all-btn" data-url="../data/delete-ajax.json">删除</a>
+                                    <!--<a href="javascript:void(0);" class="set-all-read">标记为已读</a>-->
+                                </div>
+                                <div class="select-notice-right">
+                                    <div class="pages pages-a" data-target="notice-person"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content-box set-content2 layui-hide">
+                <div class="layui-tab ">
+                    <!--<ul class="layui-tab-title c-blue">
+                        <li class="layui-this">系统提醒</li>
+                    </ul>-->
+                    <div class="layui-tab-content">
+                        <div class="layui-tab-item layui-show">
+                        	<script class="data-tpl notice-system-tpl" type="text/html" data-target="notice-system" data-url="../data/notice-system.json">
+
+                        			{{# layui.each(d.list,function(index, item) { }}
+		                                <li>
+		                                    <!--<div class="site-demo-button shield">
+		                                        <button data-method="offset" data-type="auto" class="layui-btn layui-btn-normal shield-btn">&nbsp;</button>
+		                                    </div>-->
+		                                    <div class="site-demo-button shield-per-delete" >
+		                                        <a href="javascript:void(0);" data-url="../data/delete-ajax.json" data-mid="{{item.mid}}"><i class="layui-icon">&#xe640;</i> 删除</a>
+		                                    </div>
+		                                    <div class="notice-left"><img src="{{item.img}}" height="48" width="48"/></div>
+		                                    <div class="notice-right">
+		                                        <p class="c-notice-gray">{{item.time}}</p>
+		                                        <div class="notice-status">
+		                                        	<span class="{{# if(item.checkStatus == 0) { }} f-fwb  {{# }}}" data-checkStatus="{{item.checkStatus}}">{{item.content}}</span>
+		                                        	<span style="cursor: pointer;" class="check blue1" data-mid="123"  check-url="../data/notice-check.json" list-url="../data/notice-system1.json">查看&gt;</span>
+		                                        </div>
+		                                    </div>
+		                                </li>
+	                                {{# }) }}
+
+	                                {{# if(d.list.length <= 0){ }}
+	                                        <li class="f-tac">
+	                                            	抱歉，您暂时没有系统消息！
+	                                        </li>
+	                                 {{# } }}
+
+                        	</script>
+                            <ul class="notice-list yx-notice-list yx-notice-sys-list notice-system" data-json='{"total":5,"pageSize":2,"act":"../data/notice-system-ajax.json"}'>
+                                <!--<li>
+                                    <div class="site-demo-button shield">
+                                        <button data-method="offset" data-type="auto" class="layui-btn layui-btn-normal shield-btn">&nbsp;</button>
+                                    </div>
+                                    <div class="notice-left"><img src="../images/set/systempm.png" height="48" width="48"/></div>
+                                    <div class="notice-right">
+                                        <p class="c-notice-gray">2017-06-14 15:11</p>
+                                        <p class="notice-status">系统消息您发表的主题 看看网鱼网咖是怎么抓住手游这一市场的！ 未通过审核，现已被删除！</p>
+                                    </div>
+                                </li>-->
+                                <li class="f-tac">
+                                    	抱歉，您暂时没有系统消息！
+                                </li>
+
+                            </ul>
+                            <div class="select-notice-bottom">
+                                <!--<div class="select-notice-left">
+                                    <label for="delete_all"><input type="checkbox" name="chkall" id="delete_all" class="pc">全选</label>
+                                    <a href="javascript:void(0);" class="delete-all-btn">删除</a>
+                                </div>-->
+                                <div class="select-notice-right">
+                                    <div class="pages pages-a" data-target="notice-system"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="reply-msg-editor hide" style="padding:0 20px;">
+    	<label>
+    		<span style="color: #1E9FFF;" class="uname">uname</span> 在  <span class="utime">utime</span> 对您说：
+    	</label>
+            <p style="text-indent:2em; word-break:break-all;line-height:25px;" class="msg">wqdw</p><hr />
+            <div id="editor" style="width:660px;height:200px;" ></div>
+            <div class="yzm">
+				<label>验证码:<input type="text" name="yzm" id="yzm" value="" data-key="999"/></label>
+				<span><img src="../images/yzm.png" data-src="../images/yzm.png"/>换一张</span>
+			</div>
+    </div>
+    
+    <!-- /安全结束 -->
+</div>
+<div class="clearBoth"></div>
+<div class="shieldAlert hide">
+    <div class="shieldAlert-box">
+        <p>在下次浏览时不再显示此类通知</p>
+        <form class="layui-form" action="">
+            <div class="layui-form-item">
+                <div class="layui-input-block">
+                    <input type="radio" name="shield" value="仅屏蔽该好友的" title="仅屏蔽该好友的" checked="">
+                    <div class="layui-unselect layui-form-radio"><i class="layui-anim layui-icon"></i><span>仅屏蔽该好友的</span></div><br/>
+                    <input type="radio" name="shield" value="屏蔽所有好友的" title="屏蔽所有好友的">
+                    <div class="layui-unselect layui-form-radio layui-form-radioed"><i class="layui-anim layui-icon layui-anim-scaleSpring"></i><span>屏蔽所有好友的</span></div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+#include('./include/foot.tpl.html');
+
+

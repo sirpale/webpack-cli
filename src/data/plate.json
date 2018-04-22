@@ -1,0 +1,143 @@
+{
+  "title" : "版块导航",
+  "list" : [
+    {
+      "title" : "网吧信息发布专区",
+      "items" : [
+        {
+          "url" : "list.html?mod=list&type=1",
+          "txt" : "网吧信息发布专区"
+        },
+        {
+          "url" : "list.html?mod=list&type=1",
+          "txt" : "网吧热点资讯"
+        },
+        {
+          "url" : "list.html?mod=list&type=1",
+          "txt" : "网吧交易信息"
+        },
+        {
+          "url" : "list.html?mod=list&type=1",
+          "txt" : "网吧求职招聘"
+        }
+      ]
+    },
+    {
+      "title" : "网吧咨询与教程专区",
+      "items" : [
+        {
+          "url" : "list.html?mod=list&type=1",
+          "txt" : "网吧经营管理咨询"
+        },
+        {
+          "url" : "list.html?mod=list&type=1",
+          "txt" : "网吧各类技术咨询"
+        },
+        {
+          "url" : "list.html?mod=list&type=1",
+          "txt" : "网吧装机配置及价格咨询"
+        }
+      ]
+    },
+    {
+      "title" : "网吧信息发布专区",
+      "items" : [
+        {
+          "url" : "list.html?mod=list&type=1",
+          "txt" : "网吧信息发布专区"
+        },
+        {
+          "url" : "list.html?mod=list&type=1",
+          "txt" : "网吧热点资讯"
+        },
+        {
+          "url" : "list.html?mod=list&type=1",
+          "txt" : "网吧交易信息"
+        },
+        {
+          "url" : "list.html?mod=list&type=1",
+          "txt" : "网吧求职招聘"
+        }
+      ]
+
+    },
+    {
+      "title" : "网吧经营与技术专区",
+      "items" : [
+        {
+          "url" : "list.html?mod=list&type=1",
+          "txt" : "网咖经营"
+        },
+        {
+          "url" : "list.html?mod=list&type=1",
+          "txt" : "全国网吧点评"
+        },
+        {
+          "url" : "list.html?mod=list&type=1",
+          "txt" : "网管情感-网管的疯狂生活"
+        },
+        {
+          "url" : "list.html?mod=list&type=1",
+          "txt" : "网吧硬软路由交流"
+        },
+        {
+          "url" : "list.html?mod=list&type=1",
+          "txt" : "网吧无盘技术交流"
+        },
+        {
+          "url" : "list.html?mod=list&type=1",
+          "txt" : "计费软件使用交流"
+        },
+        {
+          "url" : "list.html?mod=list&type=1",
+          "txt" : "网吧工具与软件分享"
+        },
+        {
+          "url" : "list.html?mod=list&type=1",
+          "txt" : "网吧系统发布与分享"
+        },
+        {
+          "url" : "list.html?mod=list&type=1",
+          "txt" : "5636网吧增值交流"
+        },
+        {
+          "url" : "list.html?mod=list&type=1",
+          "txt" : "游戏更新软件使用交流"
+        },
+        {
+          "url" : "list.html?mod=list&type=1",
+          "txt" : "网吧职场交流"
+        }
+      ]
+    },
+    {
+      "title" : "网吧休闲",
+      "items" : [
+        {
+          "url" : "list.html?mod=list&type=1",
+          "txt" : "网吧闲聊交友"
+        },
+        {
+          "url" : "list.html?mod=list&type=1",
+          "txt" : "游戏讨论"
+        },
+        {
+          "url" : "list.html?mod=list&type=1",
+          "txt" : "音乐影视"
+        },
+        {
+          "url" : "list.html?mod=list&type=1",
+          "txt" : "贴图灌水"
+        },
+        {
+          "url" : "list.html?mod=list&type=1",
+          "txt" : "商家资讯"
+        },
+        {
+          "url" : "list.html?mod=list&type=1",
+          "txt" : "联系管理员"
+        }
+      ]
+    }
+  ]
+}

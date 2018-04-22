@@ -1,0 +1,50 @@
+/*异步分页*/
+.pages{padding:10px 12px;clear:both;text-align:center;/*font-family:Arial, "\5B8B\4F53", sans-serif;*/font-size:14px;vertical-align:top}
+.pages a,
+.pages span{font-size:12px;display:inline-block;height:23px;line-height:23px;padding:6px 12px;margin:5px 5px 0 0;background:#fff;border:1px solid #e5e5e5;overflow:hidden;vertical-align:top}
+.pages a:hover{background:#1e9fff;border:1px solid #1e9fff;text-decoration:none;}
+.pages a,
+.pages a:visited{color:#666;}
+.pages a:hover,
+.pages a:active{color:#ffffff;}
+.pages .current{background:#1e9fff;border:1px solid #1e9fff;color:#fff;}
+.pages a.current,
+.pages a.current:visited{color:#ffffff;}
+.pages a.current:hover,
+.pages a.current:active{color:#ffffff;}
+
+.pages-ctrl{font-family:"\5B8B\4F53", sans-serif;font-weight:bold;font-size:16px}
+.pages-e5e5e5{color:#e5e5e5}
+.pages-all{font-size:12px;vertical-align:top}
+
+
+
+.pages-sm{padding:10px 12px;clear:both;text-align:center;font-family:Arial, "\5B8B\4F53", sans-serif;font-size:14px;vertical-align:top}
+.pages-sm a,
+.pages-sm span{display:inline-block;height:23px;line-height:23px;padding:0 8px;margin:5px 1px 0 0;background:#fff;border:1px solid #e5e5e5;overflow:hidden;vertical-align:top}
+.pages-sm a:hover{background:#42bdff;border:1px solid #42bdff;text-decoration:none;}
+.pages-sm a,
+.pages-sm a:visited{color:#666;}
+.pages-sm a:hover,
+.pages-sm a:active{color:#ffffff;}
+.pages-sm .current{background:#42bdff;border:1px solid #42bdff;color:#fff;}
+.pages-sm a.current,
+.pages-sm a.current:visited{color:#ffffff;}
+.pages-sm a.current:hover,
+.pages-sm a.current:active{color:#ffffff;}
+.pages-sm-ctrl{font-family:"\5B8B\4F53", sans-serif;font-weight:bold;font-size:16px}
+.pages-sm-e5e5e5{color:#e5e5e5}
+.pages-sm-all{font-size:12px;vertical-align:top}
+
+
+
+
+//同步分页
+.l-page{ margin-top: 5px;/*width: 90%;*/ overflow: hidden;height: 40px;}
+.l-page .pg, .l-page .pgb {  line-height: 30px;  }
+.l-page .pg a, .l-page .pg strong, .l-page .pgb a, .l-page .pg label {  float: left;  display: inline;  margin-left: 4px;  padding: 0 8px;  height: 30px;  border: 1px solid #C2D5E3;  background: #fff no-repeat;  color: #333;  overflow: hidden;  text-decoration: none; }
+.l-page .pgb a {  padding-left: 25px;  background: url(../images/ico/arw_l.gif) no-repeat 10px 50%;}
+.l-page .pg a.nxt{  background: url(../images/ico/arw_r.gif) no-repeat right 50%;padding-right:14px;}
+.l-page .pg a.current {background-color: #E5EDF2;}
+.l-page .pg a.prev {background: url(../images/ico/arw_l.gif) no-repeat 0 50%;padding-left:14px;}
+.l-page .pg a:hover, .l-page .pgb a:hover {border-color: #369;color: #369;}

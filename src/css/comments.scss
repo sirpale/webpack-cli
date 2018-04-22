@@ -1,0 +1,30 @@
+.comments-title{ height: 44px; line-height: 44px;}
+.comments-list{padding: 10px;border-left: 1px solid #CDCDCD;border-right: 1px solid #CDCDCD;border-bottom: 1px solid #CDCDCD; margin-bottom: 10px;}
+.comments-list-group{ width: 100%; height:auto !important; min-height: 100px; overflow: hidden; zoom: 1;}
+.comments-list-group dl{width: 222px; float: left; padding: 10px 0; font-size: 12px; border-bottom: 1px #ccc dotted;}
+.comments-list-group dl dt{ float: left;width: 31px;}
+.comments-list-group dl dt img{ width: 31px; height: 29px;}
+.comments-list-group dl dd{padding-left: 10px; margin-left: 31px;line-height: 20px;}
+.comments-list-group dl dd b{ }
+.pasting-list-none{ height:70px;}
+.pasting-list-none:hover{ background: #F2F2F2}
+.pasting-list-none p{ padding:25px 0 25px 15px;}
+.layui-quote-nm{background: #fff;border:none}
+
+
+
+.yzm{
+    padding: 20px 0;
+    
+    input{
+        margin-left: 5px;
+        height: 28px;
+    }
+    
+    span{
+        cursor: pointer;
+        img{
+            margin: 0 5px;
+        }
+    }
+}

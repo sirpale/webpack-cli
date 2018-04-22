@@ -1,0 +1,177 @@
+$blue: #0172a9;
+$blue2 : #29a4e0;
+
+$red : #d70c06;
+$c6 : #666;
+$green : #a7e10e;
+$green1 : #93C40E;
+
+
+
+@mixin bgControl ($name,$color) {
+  h3 {border-bottom:1px solid $color;
+    //span {
+    //  background-image : url("../images/bar/bbs-1_#{$name}.png");
+    //}
+  }
+}
+
+
+
+
+// 主体
+.main {padding:10px 0;
+
+  // 头部推荐
+  .h-top {height:200px;overflow:hidden;
+    $w : 315px;
+    $h : 203px;
+    .h-top-left {width:$w;
+      .rotation {width:$w;height:$h;position:relative;z-index:1;
+
+        ul {position:absolute;z-index:2;
+          li {width:$w;height:$h;position:absolute;z-index:3;display: none;
+            &.active {display: block;}
+            a {
+              img {width:$w;height:$h}
+            }
+          }
+        }
+        span {position:absolute;z-index:4;bottom:0;right:0;display:block;height:26px;
+          a {background:rgba(0,0,0,.5);color:#fff;padding:4px 10px;display: inline-block;float:left;
+            &:hover {text-decoration:none;background:$blue2;}
+            &.active {background:$blue2;}
+          }
+        }
+      }
+    }
+    .h-top-center {width:440px;padding:0 10px;
+      b {display:block;height:40px;line-height:40px;font-size:18px;text-align: center;
+        a {color:$red;}
+      }
+      p {line-height:26px;text-indent:2em;}
+      ul {border-top:1px dashed #ddd;
+        li {height:28px;line-height:28px;
+          em {float:right;color:#999;}
+          a {
+            &:hover {color:$blue;}
+          }
+        }
+      }
+    }
+    .h-top-right {width:315px;
+      dl {overflow:hidden;padding-bottom:30px;
+        dt {width:105px;float:left;
+          a {
+            img {width:105px;height:78px;}
+          }
+        }
+        dd {width:200px;float:right;
+          b {
+            a {
+              color:$blue;
+
+            }
+          }
+          p {line-height:20px;}
+        }
+      }
+    }
+  }
+
+
+  // 首页模块区域
+  .h-module {padding:10px 0;
+    h3 {height:35px;line-height:35px;color:#fff;font-weight:400;font-size:16px;
+      span {display:block;width:191px;text-align:center;text-shadow:2px 2px rgba(0,0,0,.2);}
+    }
+    .h-module-content {overflow:hidden;padding:10px 0;width:1300px;
+      ul {padding:10px 0;
+        li {display:block;width:610px;float:left;line-height:28px;
+          a {}
+          em {color:$blue;}
+        }
+      }
+      dl {width:420px;float:left;padding:6px 0;height:64px;overflow:hidden;
+        dt {width:64px;float:left;
+          a {
+            img {width:64px;height:64px;}
+            &:hover img {
+              -moz-box-shadow:2px 2px 10px rgba(0,0,0,0.14);
+              -webkit-box-shadow:2px 2px 10px rgba(0,0,0,0.14);
+              box-shadow:2px 2px 10px rgba(0,0,0,0.14);
+            }
+          }
+        }
+        dd {width:226px;float:left;padding-left:10px;line-height:22px;
+          b {width:180px;
+            //word-wrap: break-word;
+            //display: inline-block;
+            a {}
+            em {color:$red;padding-left:10px;}
+          }
+          p {
+            em {color:$blue;}
+          }
+          span {
+            a {color:#999;}
+          }
+        }
+      }
+    }
+  }
+
+  //// 论坛精华
+  .h-module-1 {
+    @include bgControl(27,#2e9fd7);
+  }
+  // 网吧咨询
+  .h-module-2 {
+    @include bgControl(30,#52c175)
+  }
+
+  // 网吧信息
+  .h-module-3 {
+    @include bgControl(44,#52beb3)
+  }
+  // 网吧经营
+  .h-module-4 {
+    @include bgControl(54,#2e9fd7)
+  }
+
+  // 网吧休闲
+  .h-module-5 {
+    @include bgControl(80,#e9535b)
+  }
+
+}
+.main-container {}
+
+
+.h-module-1 h3 em a{ padding: 0 3px; font-size: 13px; color: #666}
+.h-module-1 h3 em a.hh{color: #2E9FD7}
+.h-module-1 h3 em a:hover{ color: #2E9FD7}
+.h-m1-pic {margin:0; overflow: hidden; width: 1170px; float: left;}
+.h-m1-pic > a { float: left;height: 145px; width: 162px !important; margin: 15px 72px 10px 0; overflow: hidden;}
+.h-m1-pic > a > img { border: 1px solid #CDCBCC; height: 112px;width: 160px;}
+.h-m1-pic > a > span { cursor: pointer; clear:both; height: 31px; line-height: 31px; margin: 0 10px; overflow: hidden; width: 160px;}
+
+
+.h-m1-height{  height: 178px;}
+
+.h-m1-img {
+  dl {overflow:hidden;padding-bottom:30px; width:375px !important;
+    dt {width:105px !important;float:left;
+      a {
+        img{ width: 104px !important;height:78px !important;}
+      }
+    }
+    dd {width:230px !important;float:right;
+      b {
+        a {color:$blue;}
+      }
+      p {line-height:20px;}
+    }
+  }
+}
+

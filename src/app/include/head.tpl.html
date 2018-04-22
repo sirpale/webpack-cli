@@ -1,0 +1,188 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="keywords" content="网吧,网管,网吧招聘,网吧系统,网吧软件,网吧论坛"/>
+    <meta name="description" content="5636网吧论坛为您提供一个全新的网管交流知识与软件分享平台 "/>
+    <title>网吧网管_网吧系统_网吧软件下载_网吧招聘-5636网吧论坛</title>
+    <link rel="stylesheet" href="../css/style.css"/>
+    <link rel="stylesheet" href="../css/sprite.css"/>
+
+    <script type="text/javascript" src="../js/lib/jquery-1.8.0.min.js"></script>
+    <script type="text/javascript" src="../js/lib/layui/layui.js"></script>
+    <script type="text/javascript" src="../js/lib/compatible.js"></script>
+    <script type="text/javascript" src="http://city.jxwan.com/cityjson"></script>
+
+    <script type="text/javascript">
+        var FRONT_APP_BASE = 'index.html';
+        var BIND_URL = 'binding.html';
+
+		//默认图片加载
+		function showImgDelay(imgObj,imgSrc){
+	        imgObj.onerror=null;
+	        imgObj.src=imgSrc;
+		}
+    </script>
+
+</head>
+<body>
+
+
+<!--登录标识-->
+<input type="hidden" class="login-flag" value="" />
+<!--第三方登录绑定标识-->
+<input type="hidden" class="third-binding-flag" value="" />
+
+
+<!--顶部-->
+<div class="top">
+    <!--logo-->
+    <div class="logo left">
+        <a href="index.html">
+            <img src="../../images/logo.png" alt="">
+        </a>
+    </div>
+
+    <!-- 登录 -->
+    <div class="top-right right">
+
+        <div class="s-log-reg" data-url="../data/check-login.json">
+            <a href="javascript:void(0)" class=" site-demo-button top-right-login" data-type="login" title="登录"> 登录</a> |
+            <a href="reg.html" class="top-right-reg " title="注册">注册</a>
+        </div>
+
+		<script class="login-before" type="text/html" data-target="s-log-reg">
+			<a href="javascript:void(0)" class=" site-demo-button top-right-login" data-type="login" title="登录"> 登录</a> |
+            <a href="reg.html" class="top-right-reg " title="注册">注册</a>
+		</script>
+
+        <!-- 登录弹窗开始 -->
+        <div class="login-alert-container hide">
+            <div class="login-alert-box ">
+                <div class="my-login">
+                    <p class="login-error-tips red" ></p>
+                    <form class="layui-form" action="">
+                        <div class="layui-form-item login-input-border">
+                            <label class="layui-form-label small-ico">
+                                <img src="../../images/set/login-head.png" height="16" width="15"/>
+                            </label>
+                            <div class="layui-input-inline">
+                                <input type="text" name="username" placeholder="用户名" lay-verify="username" autocomplete="off"  class="layui-input form-control" data-valid="0">
+                            </div>
+                        </div>
+                        <div class="layui-form-item login-input-border">
+                            <label class="layui-form-label small-ico">
+                                <img src="../../images/set/login-lock.png" height="17" width="14"/>
+                            </label>
+                            <div class="layui-input-inline">
+                                <input type="password" name="pwd" placeholder="密码" lay-verify="pwd" autocomplete="off"  class="layui-input form-control " data-valid="0">
+                            </div>
+                        </div>
+                        <div class="layui-form-item  login-input-border">
+                            <!--<label class="layui-form-label" style="padding: 9px 0 0 15px;text-align:left;width:52px">验证码：</label>-->
+                            <!--<label class="layui-form-label small-ico">-->
+                            <!--<i class="layui-icon">&#xe60b;</i>-->
+                            <!--</label>-->
+                            <div class="layui-input-inline" style="width:230px">
+                                <input type="text" name="yzm" placeholder="验证码" autocomplete="off"  class="layui-input form-control" style="width:245px;text-indent:15px;margin-top:6px;" data-valid="0">
+                            </div>
+                            <div class="layui-input-inline f-fr" style="width:100px;">
+                                <img src="../../images/misc.png" class="yzm-img yzm-head-login-key" data-key="headLoginYzmKey" width="116" height="46"/>
+                            </div>
+                        </div>
+                        <div class="layui-form-item" style="margin:20px auto">
+                            <div class="layui-input-block" style="margin-left:0;">
+                                <button type="button" style="width:355px;font-size:18px;" class="layui-btn layui-btn-normal alert-login-btn" data-url="../data/login.json">立即登录</button>
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <a href="reg.html"><span  style="color:#333">没有账号?</span>立即注册</a>
+                            <a href="find-pwd.html" style="float:right">忘记密码？</a>
+                        </div>
+                        <p class="dashed-line"></p>
+                        <div class="layui-form-item third-to-login">
+                            <label class="layui-form-label" style="padding: 9px 0;text-align:left;width:65px">快捷登录：</label>
+                            <a data-url="http://www.58wan.com/thirdparty/third_party/qqLoginBox.json" href="javaScript:void(0);"><img src="../../images/set/qq.png" height="40" width="40"/></a>
+                            <a data-url="http://www.58wan.com/thirdparty/third_party/weixinLoginBox.json" href="javaScript:void(0);" style="padding:0 25px"><img src="../../images/set/wx.png" height="40" width="40"/></a>
+                            <a data-url="http://www.58wan.com/thirdparty/third_party/weiboLoginBox.json" href="javascript:void(0);"><img src="../../images/set/wb.png" height="40" width="40"/></a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- /登录弹窗结束 -->
+        <!-- 登录后开始 -->
+        <script class="login-info" type="text/html" data-target="s-log-reg">
+            <div class="user-detail">
+                <div class="f-fl">
+                    <p>欢迎，
+                    {{# if(d.info.regType && d.info.regType != '') { }}
+                        <a href="javascript:void(0);" class="blue1">{{ d.info.name }}</a> |
+                        <a href="binding.html" title="完善账号资料">完善账号资料</a>
+                    {{# } else { }}
+                        <a href="person.html?uid={{ d.info.uid}}" class="blue1" title="我的主页">{{ d.info.name }}</a> |
+                        <a href="per-set.html?uid={{ d.info.uid}}&chioceMod=set" title="个人设置">设置</a> |
+                        <a href="notice.html?uid={{ d.info.uid}}&chioceMod=notice" title="消息中心">{{# if(d.info.msgNum > 0) { }} <b class="blue1"><i class="layui-icon">&#xe645;</i> 消息({{d.info.msgNum}})</b>{{# } else { }} 消息 {{# }}}</a>
+                    {{# } }}
+                    </p>
+                    <p class="f-tar"><a href="per-set.html?uid={{ d.info.uid }}&chioceMod=group" title="用户组">{{ d.info.group}}</a> | <a href="javascript:void(0);" title="安全退出" class="quit" data-url="../data/logout.json">[退出]</a></p>
+
+                </div>
+                <div class="f-fr user-ava">
+                    <a href="person.html" title="我的主页"><img onerror="showImgDelay(this,'../images/avatar.jpg');" src="{{ d.info.ava }}"/></a>
+                </div>
+            </div>
+        </script>
+
+    </div>
+
+</div>
+
+<!-- /顶部结束 -->
+<div class="f-cb"></div>
+
+
+<div class="container">
+    <!--导航-->
+    <div class="nav">
+        <ul class="left">
+            <li><a href="index.html">网吧论坛</a></li>
+            <li><a href="index.html">网吧资讯</a></li>
+            <li><a href="index.html">网吧问答</a></li>
+            <li><a href="index.html">加入5636联盟</a></li>
+        </ul>
+        <!--搜索-->
+        <div class="search">
+            <div class="input-group">
+                <input class="txt" type="text" placeholder="搜索" name="search"/>
+                <a class="btn" href="search.html" data-href="searchResult.html"><i class="layui-icon" style="font-size: 30px; color: #1E9FFF;"></i>搜索 </a>
+            </div>
+        </div>
+    </div>
+    <div class="f-cb"></div>
+    <!--统计数-->
+    <script class="data-tpl" type="text/html" data-target="post-num" data-url="../data/posts-num.json">
+        <ul>
+            <li>今日发帖：<em>{{ d.today }}</em></li>
+            <li>昨日发帖：<em>{{ d.yesterday }}</em></li>
+            <li>帖子总数：<em>{{ d.total }}</em></li>
+            <li>会员总数：<em>{{ d.mTotal }}</em></li>
+        </ul>
+    </script>
+    <div class="post-num total">
+        <ul>
+            <li>今日发帖：<em>0</em></li>
+            <li>昨日发帖：<em>0</em></li>
+            <li>帖子总数：<em>0</em></li>
+            <li>会员总数：<em>0</em></li>
+        </ul>
+    </div>
+    <div class="f-cb"></div>
+    <div class="ban">
+        <a href="javascript:void(0);"><img src="../../images/ban01.jpg" alt=""></a>
+    </div>
+    <div class="f-cb"></div>
+</div>

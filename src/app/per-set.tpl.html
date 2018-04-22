@@ -1,0 +1,447 @@
+#include('./include/head.tpl.html');
+
+    <script type="text/javascript" src="../js/lib/jcrop.min.js"></script>
+    <!--主体-->
+    <div class="main main-container per-set-main">
+        <!--<div class="crumbs">-->
+            <!--<span class="layui-breadcrumb" style="visibility: visible;">-->
+              <!--<a href="/">首页<span class="layui-box">&gt;</span></a>-->
+              <!--<a href="/demo/">设置<span class="layui-box">&gt;</span></a>-->
+              <!--<a><cite>修改头像</cite></a>-->
+            <!--</span>-->
+        <!--</div>-->
+        <!--面包屑导航-->
+
+        <div class="list-tips ">
+            <a href="./" class="nvhm" title="首页">5636网吧论坛</a><em>›</em>
+            <a href="person.html">个人中心</a> <em>›</em>
+            <a href="per-set.html">个人设置</a>
+        </div>
+
+        <div class="set-box">
+            <div class="set-left">
+                <ul class="layui-nav layui-nav-tree" lay-filter="demo">
+                    <li class="layui-nav-item layui-this" data-index="1"><a href="javascript:void(0);">修改头像</a></li>
+                    <li class="layui-nav-item " data-index="2"><a href="javascript:void(0);">个人资料</a></li>
+                    <li class="layui-nav-item" data-index="3"><a href="javascript:void(0);">用户组</a></li>
+                    <li class="layui-nav-item" data-index="4"><a href="javascript:void(0);">密码安全</a></li>
+                </ul>
+            </div>
+            <div class="set-right" style="width:915px">
+                <div class="content-box set-content1">
+                    <div class="user-ava">
+                        <div class="user-ava-img">
+                            <b>当前我的头像</b>
+                            <p>如果您还没有设置自己的头像，系统会显示为默认头像，您需要自己上传一张新照片来作为自己的个人头像</p>
+                            <img class="my-ava" src="../images/noavatar_big.gif" alt="">
+
+                        </div>
+
+                        <div class="upload-img">
+                            <div class="f-fl">
+                                <img data-width="" data-height="" src="" id="target" class="hide" alt="头像" />
+                                <div class="img-container"></div>
+                            </div>
+                            <div class="f-fr">
+                                <div class="img-opt">
+                                    <p class="red">*请上传2M以内的图片<br />*头像支持JPG、JPEG、PNG格式</p>
+
+
+
+                                    <form class="img-fm" method="get" action="../data/upload-face.json" enctype="multipart/form-data">
+                                        <input id="file" type="file" name="upload" class="upload-img" style="opacity:0;filter:alpha(opacity:0);" />
+                                        <input type="submit" class="sub-img hide" value="提交图片" style="position:absolute;top:20px;" />
+                                        <a href="javascript:void(0);" class="upload-btn">选择图片</a>
+                                        <a href="javascript:void(0);" class="sub-upload-btn" data-url="../data/upload-face.json">保存修改</a>
+                                    </form>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-box set-content2 layui-hide">
+					<p class="safe-line">个人资料修改</p>
+					<div style="width:650px;margin:35px auto" >
+						<div class="layui-form layui-form-pane zl" data-url="../data/my-data.json">
+							<div class="layui-form-item">
+								<label class="layui-form-label">用户名：</label>
+								<div class="layui-input-block">
+									<input type="text" name="title" readonly  class="layui-input user-read-name" data-url="../data/my-data.json" value="King199" style="color:#A9A9A9">
+								</div>
+							</div>
+							<div class="layui-form-item">
+								<label class="layui-form-label">真实姓名：</label>
+								<div class="layui-input-block">
+									<input type="text" name="username"  placeholder="请输入" class="layui-input user-really-name">
+									<p class="tips">如不想填写，此处请留空</p>
+								</div>
+							</div>
+							<div class="layui-form-item" pane="">
+								<label class="layui-form-label user-sex">性别：</label>
+								<div class="layui-input-block user-sex-box">
+									<input type="radio" name="sex" value="男" title="男" >
+									<input type="radio" name="sex" value="女" title="女" checked>
+								</div>
+							</div>
+							<div class="layui-form-item">
+								<label class="layui-form-label" style="height:44px;line-height:28px">个性签名</label>
+								<input id="user-signature"type="text" value="">
+							</div>
+							<div class="layui-form-item">
+								<a href="javascript:void(0);"class="layui-btn my-data-sub-btn"  data-url="../data/my-data-ajax.json">保存修改</a>
+								<em>您还可以输入<strong style="color:red;padding:0 5px" class="older-bit">25</strong>个字符</em>
+							</div>
+							</div>
+						</div>
+				</div>
+
+                <div class="content-box set-content3 layui-hide">
+                    <div class="group-title">
+                        <span>&nbsp;</span>
+                        <span class="my-group" style="width:320px">我的用户组 - 管理员</span>
+                        <span class="other-group" style="width:300px">普通用户组 - 普通会员</span>
+                    </div>
+                    <table class="layui-table group-table" lay-even="" lay-skin="row">
+                        <colgroup>
+                            <col width="295">
+                            <col width="320">
+                            <col>
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>&nbsp;</th>
+                                <th>
+                                    <img src="../images/set/notice.gif"  style="margin-top: -4px;"/>
+                                    积分：456
+                                </th>
+                                <th>
+                                    <img src="../images/set/notice.gif"  style="margin-top: -4px;"/>
+                                    您升级到此用户组还需积分 33
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>用户级别</td>
+                                <td>
+                                    <img src="../images/set/star_level2.gif" />
+                                    <img src="../images/set/star_level1.gif" />
+                                </td>
+                                <td><img src="../images/set/star_level3.gif" /></td>
+                            </tr>
+                            <tr>
+                                <td>访问论坛</td>
+                                <td><img src="../images/set/data_valid.gif" /></td>
+                                <td><img src="../images/set/data_valid.gif" /></td>
+                            </tr>
+                            <tr>
+                                <td>阅读权限</td>
+                                <td>30</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>隐身</td>
+                                <td><img src="../images/set/data_invalid.gif" /></td>
+                                <td><img src="../images/set/data_invalid.gif" /></td>
+                            </tr>
+                            <tr>
+                                <td>使用搜索</td>
+                                <td>允许搜索帖子内容</td>
+                                <td>允许搜索帖子内容</td>
+                            </tr>
+                            <tr>
+                                <td>自定义头衔</td>
+                                <td><img src="../images/set/data_invalid.gif" /></td>
+                                <td><img src="../images/set/data_valid.gif" /></td>
+                            </tr>
+                            <tr>
+                                <td>发帖不受限制</td>
+                                <td><img src="../images/set/data_invalid.gif" /></td>
+                                <td><img src="../images/set/data_invalid.gif" /></td>
+                            </tr>
+                            <tr>
+                                <td>允许发短消息</td>
+                                <td><img src="../images/set/data_valid.gif" /></td>
+                                <td><img src="../images/set/data_valid.gif" /></td>
+                            </tr>
+                            <tr>
+                                <td>允许加好友</td>
+                                <td><img src="../images/set/data_valid.gif" /></td>
+                                <td><img src="../images/set/data_valid.gif" /></td>
+                            </tr>
+                            <tr>
+                                <td>查看统计数据报表</td>
+                                <td><img src="../images/set/data_invalid.gif" /></td>
+                                <td><img src="../images/set/data_invalid.gif" /></td>
+                            </tr><tr>
+                                <td>允许使用应用</td>
+                                <td><img src="../images/set/data_valid.gif" /></td>
+                                <td><img src="../images/set/data_valid.gif" /></td>
+                            </tr><tr>
+                                <td>帖子相关</td>
+                                <td>普通会员</td>
+                                <td>管理员</td>
+                            </tr>
+                            <tr>
+                                <td>发新话题</td>
+                                <td><img src="../images/set/data_valid.gif" /></td>
+                                <td><img src="../images/set/data_valid.gif" /></td>
+                            </tr><tr>
+                                <td>发表回复</td>
+                                <td><img src="../images/set/data_valid.gif" /></td>
+                                <td><img src="../images/set/data_valid.gif" /></td>
+                            </tr>
+                            <tr>
+                                <td>发起投票</td>
+                                <td><img src="../images/set/data_valid.gif" /></td>
+                                <td><img src="../images/set/data_valid.gif" /></td>
+                            </tr><tr>
+                                <td>参与投票</td>
+                                <td><img src="../images/set/data_valid.gif" /></td>
+                                <td><img src="../images/set/data_valid.gif" /></td>
+                            </tr>
+                            <tr>
+                                <td>发表悬赏</td>
+                                <td><img src="../images/set/data_valid.gif" /></td>
+                                <td><img src="../images/set/data_valid.gif" /></td>
+                            </tr>
+                            <tr>
+                                <td>发表活动</td>
+                                <td><img src="../images/set/data_valid.gif" /></td>
+                                <td><img src="../images/set/data_valid.gif" /></td>
+                            </tr>
+                            <tr>
+                                <td>发表辩论</td>
+                                <td><img src="../images/set/data_valid.gif" /></td>
+                                <td><img src="../images/set/data_valid.gif" /></td>
+                            </tr>
+                            <tr>
+                                <td>发表交易</td>
+                                <td><img src="../images/set/data_valid.gif" /></td>
+                                <td><img src="../images/set/data_valid.gif" /></td>
+                            </tr>
+                            <tr>
+                                <td>允许 @ 的人数</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>允许设置回帖奖励</td>
+                                <td><img src="../images/set/data_valid.gif" /></td>
+                                <td><img src="../images/set/data_valid.gif" /></td>
+                            </tr>
+                            <tr>
+                                <td>允许使用标签</td>
+                                <td><img src="../images/set/data_valid.gif" /></td>
+                                <td><img src="../images/set/data_valid.gif" /></td>
+                            </tr>
+                            <tr>
+                                <td>允许创建淘专辑的数量</td>
+                                <td>5</td>
+                                <td>5</td>
+                            </tr>
+                            <tr>
+                                <td>最大签名长度</td>
+                                <td>150字节</td>
+                                <td>200字节</td>
+                            </tr>
+                            <tr>
+                                <td>签名中使用编辑器代码</td>
+                                <td><img src="../images/set/data_valid.gif" /></td>
+                                <td><img src="../images/set/data_valid.gif" /></td>
+                            </tr>
+                            <tr>
+                                <td>签名中使用 [img] 代码</td>
+                                <td><img src="../images/set/data_invalid.gif" /></td>
+                                <td><img src="../images/set/data_invalid.gif" /></td>
+                            </tr>
+                            <tr>
+                                <td>主题评价影响值</td>
+                                <td>+1</td>
+                                <td>+1</td>
+                            </tr>
+                            <tr>
+                                <td>允许参与评分</td>
+                                <td><img src="../images/set/data_valid.gif" /></td>
+                                <td><img src="../images/set/data_valid.gif" /></td>
+                            </tr><tr>
+                                <td>允许使用多媒体代码</td>
+                                <td><img src="../images/set/data_invalid.gif" /></td>
+                                <td><img src="../images/set/data_invalid.gif" /></td>
+                            </tr>
+                            <tr>
+                                <td>家园相关</td>
+                                <td>普通会员</td>
+                                <td>管理员</td>
+                            </tr>
+                            <tr>
+                                <td>允许打招呼</td>
+                                <td><img src="../images/set/data_valid.gif" /></td>
+                                <td><img src="../images/set/data_valid.gif" /></td>
+                            </tr>
+                            <tr>
+                                <td>允许表态</td>
+                                <td><img src="../images/set/data_valid.gif" /></td>
+                                <td><img src="../images/set/data_valid.gif" /></td>
+                            </tr>
+                            <tr>
+                                <td>发表留言/评论</td>
+                                <td><img src="../images/set/data_valid.gif" /></td>
+                                <td><img src="../images/set/data_valid.gif" /></td>
+                            </tr>
+                            <tr>
+                                <td>空间大小</td>
+                                <td>没有限制</td>
+                                <td>没有限制</td>
+                            </tr>
+                            <tr>
+                                <td>单张图片最大尺寸</td>
+                                <td>没有限制</td>
+                                <td>没有限制</td>
+                            </tr>
+                            <tr>
+                                <td>上传图片</td>
+                                <td><img src="../images/set/data_valid.gif" /></td>
+                                <td><img src="../images/set/data_valid.gif" /></td>
+                            </tr>
+                            <tr>
+                                <td>附件相关</td>
+                                <td>使用搜索</td>
+                                <td>使用搜索</td>
+                            </tr>
+                            <tr>
+                                <td>下载附件</td>
+                                <td><img src="../images/set/data_valid.gif" /></td>
+                                <td><img src="../images/set/data_valid.gif" /></td>
+                            </tr>
+                            <tr>
+                                <td>查看图片</td>
+                                <td><img src="../images/set/data_valid.gif" /></td>
+                                <td><img src="../images/set/data_valid.gif" /></td>
+                            </tr>
+                            <tr>
+                                <td>上传附件</td>
+                                <td><img src="../images/set/data_valid.gif" /></td>
+                                <td><img src="../images/set/data_valid.gif" /></td>
+                            </tr>
+                            <tr>
+                                <td>上传图片</td>
+                                <td><img src="../images/set/data_valid.gif" /></td>
+                                <td><img src="../images/set/data_valid.gif" /></td>
+                            </tr>
+                            <tr>
+                                <td>允许设置附件权限</td>
+                                <td><img src="../images/set/data_invalid.gif" /></td>
+                                <td><img src="../images/set/data_invalid.gif" /></td>
+                            </tr>
+                            <tr>
+                                <td>单个最大附件尺寸</td>
+                                <td>6.84M</td>
+                                <td>1.95M</td>
+                            </tr>
+                            <tr>
+                                <td>每天最大附件总尺寸</td>
+                                <td>没有限制</td>
+                                <td>没有限制</td>
+                            </tr>
+                            <tr>
+                                <td>每天最大附件数量</td>
+                                <td>没有限制</td>
+                                <td>没有限制</td>
+                            </tr>
+                            <tr>
+                                <td>附件类型</td>
+                                <td>chm, pdf, zip, rar, tar, gz, bzip2, gif, jpg, jpeg, png</td>
+                                <td>chm, pdf, zip, rar, tar, gz, bzip2, gif, jpg, jpeg, png</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p style="width:100%;">
+                        表示有权操作
+                        <img src="../images/set/data_valid.gif" />
+                        表示无权操作
+                        <img src="../images/set/data_invalid.gif" />
+                    </p>
+                </div>
+                <!-- 安全开始 -->
+				<div class="content-box set-content4 layui-hide">
+                    <div class="normal-show">
+					    <p class="safe-line">您必须填写原密码才能修改下面的资料</p>
+                        <div style="width:750px;margin:25px auto;">
+                            <div class="layui-form layui-form-pane sf" data-url="../data/my-safe.json">
+                                <div class="layui-form-item">
+                                    <label class="layui-form-label">旧密码：</label>
+                                    <div class="layui-input-block">
+                                        <input type="password" name="title" class="layui-input old-passw" value="">
+                                        <p class="tips old-paw-tips" style="height:24px">6~20数字、字母或特殊符号组成！</p>
+                                    </div>
+                                </div>
+                                <div class="layui-form-item">
+                                    <label class="layui-form-label">新密码：</label>
+                                    <div class="layui-input-block">
+                                        <input type="password" name="title"  class="layui-input new-passw" value="">
+                                        <p class="tips">如不需要更改密码，此处请留空！</p>
+                                    </div>
+                                </div>
+                                <div class="layui-form-item">
+                                    <label class="layui-form-label">确认密码：</label>
+                                    <div class="layui-input-block">
+                                        <input type="password" name="title"   class="layui-input re-new-passw" value="">
+                                        <p class="tips">如不需要更改密码，此处请留空！</p>
+                                    </div>
+                                </div>
+                                <div class="layui-form-item">
+                                    <label class="layui-form-label">Email：</label>
+                                    <div class="layui-input-block">
+                                        <input type="text" name="title"  class="layui-input user-email" value="">
+                                        <p class="tips" style="min-height:24px">
+                                            该邮箱已激活，邮箱是找回密码的唯一途径，请您务必记住！
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="layui-form-item">
+                                    <div class="layui-inline">
+                                        <label class="layui-form-label">验证码</label>
+                                        <div class="layui-input-inline">
+                                            <input type="tel" name="phone" class="layui-input safe-yzm">
+                                        </div>
+                                        <div class="layui-input-inline">
+                                            <img src="../images/misc.png" class="yzm-img yzm-perset-key" data-key="psersetYzmKey" height="38" width="100"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="layui-form-item">
+                                    <a href="javascript:void(0);" class="layui-btn my-safe-sub-btn " data-url="../data/my-safe-ajax.json" >保存修改</a>
+                                </div>
+                            </div>
+					    </div>
+					</div>
+                    <div class="third-login-show hide">
+                        您还没有绑定账号，不能设置密码和激活邮箱！<a href="binding.html" class="layui-btn layui-btn-normal ">前往绑定</a>
+                    </div>
+				</div>
+            </div>
+        </div>
+        <!-- /安全结束 -->
+
+    </div>
+    <div class="clearBoth"></div>
+
+    <script>
+
+        layui.use('element', function(){
+            var element = layui.element(); //导航的hover效果、二级菜单等功能，需要依赖element模块
+
+            //监听导航点击
+            element.on('nav(demo)', function(elem){
+                var $that = $(this);
+                //   alert($that.attr("data-index"))
+                $(".set-content" + $that.attr("data-index")).removeClass("layui-hide").siblings().addClass("layui-hide");
+            });
+
+        });
+
+    </script>
+
+#include('./include/foot.tpl.html');

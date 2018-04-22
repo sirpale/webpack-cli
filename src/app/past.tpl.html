@@ -1,0 +1,129 @@
+#include('./include/head.tpl.html');
+
+    <script src="../js/lib/ueditor/ueditor.config.js"></script>
+    <script src="../js/lib/ueditor/ueditor.all.js"></script>
+
+    <!--主体-->
+    <div class="main main-container">
+        <!--搜索-->
+        <!--<div class="list-search">-->
+            <!--<form>-->
+                <!--<div class="bg">-->
+                    <!--<input name="" value="" autocomplete="off" placeholder="请输入搜索内容" type="text">-->
+                    <!--<a href="javascript:;"  class="search-type" onclick="showMenu(this.id)" hidefocus="true">帖子</a>-->
+                <!--</div>-->
+                <!--<div class="search-btn"><img src="../images/ico/search-btn.png"></div>-->
+            <!--</form>-->
+            <!--<ul class="search-type-menu"  initialized="true">-->
+                <!--<li><a href="javascript:;" rel="curforum" fid="66" class="">本版</a></li>-->
+                <!--<li><a href="javascript:;" rel="forum" class="curtype">帖子</a></li>-->
+                <!--<li><a href="javascript:;" rel="user">用户</a></li>-->
+            <!--</ul>-->
+            <!--<div class="search-hot">-->
+                <!--<strong >热搜: </strong>-->
+                <!--<a href="javascript:void(0);" target="_blank" >网鱼网咖</a>-->
+                <!--<a href="javascript:void(0);" target="_blank" >网咖加盟</a>-->
+                <!--<a href="javascript:void(0);" target="_blank" >网吧审批解禁</a>-->
+                <!--<a href="javascript:void(0);" target="_blank" >网吧一体机</a>-->
+                <!--<a href="javascript:void(0);" target="_blank" >网吧联盟</a>-->
+                <!--<a href="javascript:void(0);" target="_blank" >万象2004</a>-->
+                <!--<a href="javascript:void(0);" target="_blank" >网吧经营现状</a>-->
+                <!--<a href="javascript:void(0);" target="_blank" >易游</a>-->
+                <!--<a href="javascript:void(0);" target="_blank" >qq金牌网吧</a>-->
+                <!--<a href="javascript:void(0);" target="_blank" >锐起</a>-->
+                <!--<a href="javascript:void(0);" target="_blank" >网维</a>-->
+                <!--<a href="javascript:void(0);" target="_blank" >去广告</a>-->
+                <!--<a href="javascript:void(0);" target="_blank" >网吧论坛</a>-->
+                <!--<a href="javascript:void(0);" target="_blank" >pubwin</a>-->
+                <!--<a href="javascript:void(0);" target="_blank" >任子行</a>-->
+                <!--<a href="javascript:void(0);" target="_blank" >无盘</a>-->
+            <!--</div>-->
+        <!--</div>-->
+        <div class="list-tips ">
+            <a href="./" class="nvhm" title="首页">5636网吧论坛</a><em>›</em>
+            <a href="javascript:void(0);">论坛</a> <em>›</em>
+            <a href="javascript:void(0);">网吧咨询与教程专区</a><em>›</em>
+            <a href="javascript:void(0);">网吧经营管理咨询</a><em>›</em>
+            <a >发表帖子</a>
+        </div>
+        <!--发帖-->
+        <div class="pasting-box">
+            <div class="p-name"><span>发表帖子</span></div>
+            <div class="p-form-w layui-form" data-url="../data/old-editor-info.json">
+
+            	<div class="layui-form-item section" style="margin: 15px 0;" >
+				    <!--<label class="layui-form-label">发帖版块</label>-->
+				    <div class="layui-input-inline" style="z-index: 902;">
+						<div class="selectDefine section1">
+							<p data-value="">请选择版块</p>
+							<dl>
+								<dd data-value="a" data-url="../data/sel-section.json">冒险世界</dd>
+								<dd data-value="b" data-url="../data/sel-section.json">魔法王座</dd>
+								<dd data-value="c" data-url="../data/sel-section.json">梦幻西游</dd>
+								<dd data-value="d" data-url="../data/sel-section.json">英雄联盟</dd>
+							</dl>
+						</div>
+				    </div>
+				    <div class="layui-input-inline " style="z-index: 902;">
+						<div class="selectDefine section2 notclick">
+							<p data-value="">请选择</p>
+							<dl>
+								<!--<dd data-value="a" data-url="../data/sel-section.json">冒险世界</dd>
+								<dd data-value="b" data-url="../data/sel-section.json">魔法王座</dd>
+								<dd data-value="c" data-url="../data/sel-section.json">梦幻西游</dd>
+								<dd data-value="d" data-url="../data/sel-section.json">英雄联盟</dd>-->
+							</dl>
+						</div>
+				    </div>
+				    <div class="layui-input-inline " style="z-index: 902;">
+							<div class="selectDefine section3 notclick">
+								<p data-value="">请选择</p>
+								<dl>
+									<!--<dd data-value="a" data-url="../data/sel-section.json">冒险世界</dd>
+									<dd data-value="b" data-url="../data/sel-section.json">魔法王座</dd>
+									<dd data-value="c" data-url="../data/sel-section.json">梦幻西游</dd>
+									<dd data-value="d" data-url="../data/sel-section.json">英雄联盟</dd>-->
+								</dl>
+							</div>
+				    </div>
+				  </div>
+
+            	<div class="layui-form-item" style="margin: 15px 0;">
+					  <div class="layui-input-inline" style="z-index: 901;">
+							<div class="selectDefine theme notclick">
+								<p data-value="">请选择主题</p>
+								<dl>
+									<!--<dd data-value="a" data-url="../data/sel-section.json">网络游戏</dd>
+									<dd data-value="b" data-url="../data/sel-section.json">单机游戏</dd>
+									<dd data-value="c" data-url="../data/sel-section.json">网络游戏</dd>-->
+								</dl>
+							</div>
+					  </div>
+				      <div class="layui-input-inline" style="width: 400px;">
+				        <input type="text" name="title" class="" placeholder="请输入帖子标题" >
+				      </div>
+				      <div class="layui-input-inline">
+				      	<label class="layui-form-label ckeckLength" style="width: 150px;">还可以输入<b>80</b>个字符</label>
+				      </div>
+				  </div>
+
+                <!--编辑器-->
+                <div>
+                    <div id="editor" style="width:1098px;height:300px;"></div>
+                </div>
+				
+				<div class="yzm">
+					<label>验证码:<input type="text" name="yzm" id="yzm" value="" data-key="999"/></label>
+					<span><img src="../images/yzm.png" data-src="../images/yzm.png"/>换一张</span>
+				</div>
+				
+                <div class="layui-form-item">
+				    <div class="layui-input-inline" style="margin: 10px -50px 0 0;">
+				      <button id="sub" class="layui-btn" data-pid="223" data-url="../data/past-ajax.json">发表帖子</button>
+				    </div>
+			    </div>
+
+            </div>
+        </div>
+    </div>
+#include('./include/foot.tpl.html');

@@ -1,0 +1,57 @@
+#include('./include/head.tpl.html');
+
+<input type="hidden" class="login-regiser-flag" value = "0"/>
+<!--主体-->
+<div class="main main-container main-border log-main" style="position:relative">
+	<!--<div style="position: absolute;top:45px;left:0;width:1098px";><img src="../images/set/ballon.jpg" style="max-height:980px; max-width:100%"/></div>-->
+    <div class="site-demo-button userp-reg">
+        <a  class="f-fr" href="reg.html">没有账号？立即注册</a>
+        用户登录
+    </div>
+    <div style="width:460px;margin:0 auto">
+        <p class="login-error-tips" style="margin:10px auto;position:relative;width:240px"><img src="../images/warn.png" height="16" width="16" class="hide" /><span>&nbsp;</span></p>
+        <form class="layui-form yx-login-form" data-url="../data/login.json">
+            <div class="layui-form-item">
+                <label class="layui-form-label">用户名：</label>
+                <div class="layui-input-inline">
+                    <input type="text" name="username" placeholder="请输入用户名" class="layui-input yx-check-username">
+                </div>
+                <div class="layui-form-mid layui-word-aux hide">请填写正确的用户名</div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">密码：</label>
+                <div class="layui-input-inline">
+                    <input type="password" name="password"  placeholder="请输入密码"  class="layui-input yx-check-password">
+                </div>
+                <div class="layui-form-mid layui-word-aux hide">请填写正确的密码</div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">验证码：</label>
+                <div class="layui-input-inline"  style="width:190px;">
+                    <input type="text" name="vcode"  placeholder="请输入验证码" class="layui-input yx-check-yzm">
+                </div>
+                <div class="layui-input-inline"  style="width:100px;">
+                    <img src="http://192.168.0.56:3000/images/misc.png?yzmKey=login" class="yzm-img yzm-login-key" data-key="loginYzmKey" height="38" width="100"/></div>
+                <div class="layui-form-mid layui-word-aux">&nbsp;</div>
+            </div>
+            <div class="layui-form-item forget-and-other">
+                <a href="reg.html"><span>没有账号?</span>立即注册</a>
+                <a href="find-pwd.html" style="float:right">忘记密码？</a>
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-input-block">
+                    <button type="button" class="layui-btn layui-btn-normal user-login-sub-btn2" style="margin-left:0px;width:300px;font-size:18px;background: #56B1F5"  >立即登录</button>
+                    <!--<button type="reset" class="layui-btn layui-btn-primary">重置</button>-->
+                </div>
+            </div>
+            <p class="dashed-line"></p>
+            <div class="layui-form-item third-to-login" style=" margin-left: 25px;position:relative;z-index:3">
+                <label class="layui-form-label" style="padding: 9px 0px;text-align:left;width:85px">快捷登录：</label>
+                <a data-url="http://www.58wan.com/thirdparty/third_party/qqLoginBox.json" href="javaScript:void(0);"><img src="../images/set/qq.png" height="40" width="40"/></a>
+                <a data-url="http://www.58wan.com/thirdparty/third_party/weixinLoginBox.json" href="javaScript:void(0);" style="padding:0 25px"><img src="../images/set/wx.png" height="40" width="40"/></a>
+                <a data-url="http://www.58wan.com/thirdparty/third_party/weiboLoginBox.json" href="javascript:void(0);"><img src="../images/set/wb.png" height="40" width="40"/></a>
+            </div>
+        </form>
+    </div>
+</div>
+#include('./include/foot.tpl.html');

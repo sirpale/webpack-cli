@@ -1,0 +1,679 @@
+#include('./include/head.tpl.html');
+
+    <!--主体-->
+    <div class="main main-container">
+        <!--搜索-->
+        <!--<div class="list-search">-->
+            <!--<form>-->
+                <!--<div class="bg">-->
+                    <!--<input name="" value="" autocomplete="off" placeholder="请输入搜索内容" type="text">-->
+                    <!--<a href="javascript:;"  class="search-type" onclick="showMenu(this.id)" hidefocus="true">帖子</a>-->
+                <!--</div>-->
+                <!--<div class="search-btn"><img src="../images/ico/search-btn.png"></div>-->
+            <!--</form>-->
+            <!--<ul class="search-type-menu"  initialized="true">-->
+                <!--<li><a href="javascript:;" rel="curforum" fid="66" class="">本版</a></li>-->
+                <!--<li><a href="javascript:;" rel="forum" class="curtype">帖子</a></li>-->
+                <!--<li><a href="javascript:;" rel="user">用户</a></li>-->
+            <!--</ul>-->
+            <!--<div class="search-hot">-->
+                <!--<strong >热搜: </strong>-->
+                <!--<a href="javascript:void(0);" target="_blank" >网鱼网咖</a>-->
+                <!--<a href="javascript:void(0);" target="_blank" >网咖加盟</a>-->
+                <!--<a href="javascript:void(0);" target="_blank" >网吧审批解禁</a>-->
+                <!--<a href="javascript:void(0);" target="_blank" >网吧一体机</a>-->
+                <!--<a href="javascript:void(0);" target="_blank" >网吧联盟</a>-->
+                <!--<a href="javascript:void(0);" target="_blank" >万象2004</a>-->
+                <!--<a href="javascript:void(0);" target="_blank" >网吧经营现状</a>-->
+                <!--<a href="javascript:void(0);" target="_blank" >易游</a>-->
+                <!--<a href="javascript:void(0);" target="_blank" >qq金牌网吧</a>-->
+                <!--<a href="javascript:void(0);" target="_blank" >锐起</a>-->
+                <!--<a href="javascript:void(0);" target="_blank" >网维</a>-->
+                <!--<a href="javascript:void(0);" target="_blank" >去广告</a>-->
+                <!--<a href="javascript:void(0);" target="_blank" >网吧论坛</a>-->
+                <!--<a href="javascript:void(0);" target="_blank" >pubwin</a>-->
+                <!--<a href="javascript:void(0);" target="_blank" >任子行</a>-->
+                <!--<a href="javascript:void(0);" target="_blank" >无盘</a>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--面包屑导航-->
+        <div class="list-tips ">
+            <a href="./" class="nvhm" title="首页">5636网吧论坛</a><em>›</em>
+            <a href="javascript:void(0);">论坛</a> <em>›</em>
+            <a href="javascript:void(0);">网吧咨询与教程专区</a><em>›</em>
+            <a href="javascript:void(0);">网吧经营管理咨询</a>
+        </div>
+        <div class="list-main">
+            <!--侧边快速导航-->
+            <!--<script  class="data-tpl" type="text/html" data-target="l-sidebar-plate" data-url="../data/plate.json">-->
+                <!--<h2 class="s-title">{{d.title}}</h2>-->
+                <!--<ul class="layui-nav layui-nav-tree" lay-filter="plate">-->
+                    <!--{{# layui.each(d.list, function(index, item){ }}-->
+                        <!--<li class="layui-nav-item {{# if(index === 0) { }} layui-nav-itemed {{# } }}">-->
+                            <!--<a href="javascript:void(0);" title="{{ item.title }}">{{ item.title }}</a>-->
+                            <!--<dl class="layui-nav-child">-->
+                                <!--{{# layui.each(item.items, function(index1, item1){ }}-->
+                                    <!--<dd><a href="{{ item1.url }}"  title="{{ item1.txt }}">{{ item1.txt }}</a></dd>-->
+                                <!--{{# }) }}-->
+                            <!--</dl>-->
+                        <!--</li>-->
+                    <!--{{# }) }}-->
+
+                    <!--{{# if(d.list.length === 0) { }}-->
+                        <!--<li class="layui-nav-item">暂无板块</li>-->
+                    <!--{{# } }}-->
+                <!--</ul>-->
+            <!--</script>-->
+
+            <div class="l-sidebar l-sidebar-plate">
+                <h2 class="s-title">版块导航</h2>
+
+                <ul class="layui-nav layui-nav-tree" lay-filter="plat">
+                    <li class="layui-nav-item layui-nav-itemed">
+                        <a href="javascript:void(0);;" title="网吧咨询与教程专区">网吧咨询与教程专区</a>
+                        <dl class="layui-nav-child">
+                            <dd><a href="javascript:void(0);" title="网吧经营管理咨询">网吧经营管理咨询</a></dd>
+                            <dd><a href="javascript:void(0);" title="网吧各类技术咨询">网吧各类技术咨询</a></dd>
+                            <dd><a href="javascript:void(0);" title="网吧装机配置及价格咨询">网吧装机配置及价格咨询</a></dd>
+                        </dl>
+                    </li>
+                    <li class="layui-nav-item">
+                        <a href="javascript:void(0);" title="网吧信息发布专区">网吧信息发布专区</a>
+                        <dl class="layui-nav-child">
+                            <dd><a href="javascript:void(0);"  title="网吧信息发布专区">网吧信息发布专区</a></dd>
+                            <dd><a href="javascript:void(0);" title="网吧热点资讯">网吧热点资讯</a></dd>
+                            <dd><a href="javascript:void(0);" title="网吧交易信息">网吧交易信息</a></dd>
+                            <dd><a href="javascript:void(0);" title="网吧求职招聘">网吧求职招聘</a></dd>
+                        </dl>
+                    </li>
+                    <li class="layui-nav-item">
+                        <a href="javascript:void(0);" title="网吧经营与技术专区">网吧经营与技术专区</a>
+                        <dl class="layui-nav-child">
+                            <dd><a href="javascript:void(0);" title="网咖经营">网咖经营</a></dd>
+                            <dd><a href="javascript:void(0);" title="全国网吧点评">全国网吧点评</a></dd>
+                            <dd><a href="javascript:void(0);" title="网管情感-网管的疯狂生活">网管情感-网管的疯狂生活</a></dd>
+                            <dd><a href="javascript:void(0);" title="网吧硬软路由交流">网吧硬软路由交流</a></dd>
+                            <dd><a href="javascript:void(0);" title="网吧无盘技术交流">网吧无盘技术交流</a></dd>
+                            <dd><a href="javascript:void(0);" title="计费软件使用交流">计费软件使用交流</a></dd>
+                            <dd><a href="javascript:void(0);" title="网吧工具与软件分享">网吧工具与软件分享</a></dd>
+                            <dd><a href="javascript:void(0);" title="网吧系统发布与分享">网吧系统发布与分享</a></dd>
+                            <dd><a href="javascript:void(0);" title="5636网吧增值交流">5636网吧增值交流</a></dd>
+                            <dd><a href="javascript:void(0);" title="游戏更新软件使用交流">游戏更新软件使用交流</a></dd>
+                            <dd><a href="javascript:void(0);" title="网吧职场交流">网吧职场交流</a></dd>
+                        </dl>
+                    </li>
+                    <li class="layui-nav-item">
+                        <a href="javascript:void(0);" title="网吧休闲">网吧休闲</a>
+                        <dl class="layui-nav-child">
+                            <dd><a href="javascript:void(0);" title="网吧闲聊交友">网吧闲聊交友</a></dd>
+                            <dd><a href="javascript:void(0);" title="游戏讨论">游戏讨论</a></dd>
+                            <dd><a href="javascript:void(0);" title="音乐影视">音乐影视</a></dd>
+                            <dd><a href="javascript:void(0);" title="贴图灌水">贴图灌水</a></dd>
+                            <dd><a href="javascript:void(0);" title="商家资讯">商家资讯</a></dd>
+                            <dd><a href="javascript:void(0);" title="联系管理员">联系管理员</a></dd>
+                        </dl>
+                    </li>
+                </ul>
+
+            </div>
+            <!--右边主体-->
+            <div class="l-content">
+                <!--banner/统计-->
+                <div class="l-content-top bm">
+                    <div class="banner">
+                        <img src="../images/common_66_banner.jpg" alt="网吧经营管理咨询">
+                    </div>
+                    <div class="total">
+                        <!--<span class="right">-->
+                            <!--<a href="" class="fa_fav" onclick="">收藏本版 </a>-->
+                            <!--<span class="pipe">|</span>-->
+                            <!--<a href="" class="fa_rss" target="_blank" title="RSS">订阅</a>-->
+                        <!--</span>-->
+                        <h1>
+                            <a href="forum-66-1.html">网吧经营管理咨询</a>
+                            <span class="xw0">
+                                今日: <strong class="red">40</strong>
+                                <b class="ico_increase">&nbsp;</b>
+                                <span class="pipe">|</span>
+                                主题: <strong class="red">5893</strong>
+                                <span class="pipe">|</span>
+                                排名: <strong class="red" title="上次排名:3">3</strong>
+                                <b class="ico_increase">&nbsp;</b>
+                            </span>
+                        </h1>
+                    </div>
+                </div>
+
+
+
+                <div class="l-content-pasting">
+
+                    <div class="l-leader comments-title">
+                       子版块
+                    </div>
+                    <!--网吧列表-->
+                    <div class="comments-list">
+                        <div class="comments-list-group">
+                            <dl>
+                                <dt><a href="list.html"> <img src="../images/forum.gif" alt=""></a></dt>
+                                <dd><b><a href="list.html">上海网吧</a></b></dd>
+                                <dd><em>主题: 142</em>, <em>帖数: 1428</em></dd>
+                                <dd><a href="detail.html">最后发表: 2017-6-9 09:18</a></dd>
+                            </dl>
+                            <dl>
+                                <dt><a href="list.html"> <img src="../images/forum.gif" alt=""></a></dt>
+                                <dd><b><a href="list.html">上海网吧</a></b></dd>
+                                <dd><em>主题: 142</em>, <em>帖数: 1428</em></dd>
+                                <dd><a href="detail.html">最后发表: 2017-6-9 09:18</a></dd>
+                            </dl>
+                            <dl>
+                                <dt><a href="list.html"> <img src="../images/forum.gif" alt=""></a></dt>
+                                <dd><b><a href="list.html">上海网吧</a></b></dd>
+                                <dd><em>主题: 142</em>, <em>帖数: 1428</em></dd>
+                                <dd><a href="detail.html">最后发表: 2017-6-9 09:18</a></dd>
+                            </dl>
+                            <dl>
+                                <dt><a href="list.html"> <img src="../images/forum.gif" alt=""></a></dt>
+                                <dd><b><a href="list.html">上海网吧</a></b></dd>
+                                <dd><em>主题: 142</em>, <em>帖数: 1428</em></dd>
+                                <dd><a href="detail.html">最后发表: 2017-6-9 09:18</a></dd>
+                            </dl>
+                            <dl>
+                                <dt><a href="list.html"> <img src="../images/forum.gif" alt=""></a></dt>
+                                <dd><b><a href="list.html">上海网吧</a></b></dd>
+                                <dd><em>主题: 142</em>, <em>帖数: 1428</em></dd>
+                                <dd><a href="detail.html">最后发表: 2017-6-9 09:18</a></dd>
+                            </dl>
+                            <dl>
+                                <dt><a href="list.html"> <img src="../images/forum.gif" alt=""></a></dt>
+                                <dd><b><a href="list.html">上海网吧</a></b></dd>
+                                <dd><em>主题: 142</em>, <em>帖数: 1428</em></dd>
+                                <dd><a href="detail.html">最后发表: 2017-6-9 09:18</a></dd>
+                            </dl>
+                            <dl>
+                                <dt><a href="list.html"> <img src="../images/forum.gif" alt=""></a></dt>
+                                <dd><b><a href="list.html">上海网吧</a></b></dd>
+                                <dd><em>主题: 142</em>, <em>帖数: 1428</em></dd>
+                                <dd><a href="detail.html">最后发表: 2017-6-9 09:18</a></dd>
+                            </dl>
+                            <dl>
+                                <dt><a href="list.html"> <img src="../images/forum.gif" alt=""></a></dt>
+                                <dd><b><a href="list.html">上海网吧</a></b></dd>
+                                <dd><em>主题: 142</em>, <em>帖数: 1428</em></dd>
+                                <dd><a href="detail.html">最后发表: 2017-6-9 09:18</a></dd>
+                            </dl>
+                            <dl>
+                                <dt><a href="list.html"> <img src="../images/forum.gif" alt=""></a></dt>
+                                <dd><b><a href="list.html">上海网吧</a></b></dd>
+                                <dd><em>主题: 142</em>, <em>帖数: 1428</em></dd>
+                                <dd><a href="detail.html">最后发表: 2017-6-9 09:18</a></dd>
+                            </dl>
+                            <dl>
+                                <dt><a href="list.html"> <img src="../images/forum.gif" alt=""></a></dt>
+                                <dd><b><a href="list.html">上海网吧</a></b></dd>
+                                <dd><em>主题: 142</em>, <em>帖数: 1428</em></dd>
+                                <dd><a href="detail.html">最后发表: 2017-6-9 09:18</a></dd>
+                            </dl>
+                            <dl>
+                                <dt><a href="list.html"> <img src="../images/forum.gif" alt=""></a></dt>
+                                <dd><b><a href="list.html">上海网吧</a></b></dd>
+                                <dd><em>主题: 142</em>, <em>帖数: 1428</em></dd>
+                                <dd><a href="detail.html">最后发表: 2017-6-9 09:18</a></dd>
+                            </dl>
+                            <dl>
+                                <dt><a href="list.html"> <img src="../images/forum.gif" alt=""></a></dt>
+                                <dd><b><a href="list.html">上海网吧</a></b></dd>
+                                <dd><em>主题: 142</em>, <em>帖数: 1428</em></dd>
+                                <dd><a href="detail.html">最后发表: 2017-6-9 09:18</a></dd>
+                            </dl>
+                            <dl>
+                                <dt><a href="list.html"> <img src="../images/forum.gif" alt=""></a></dt>
+                                <dd><b><a href="list.html">上海网吧</a></b></dd>
+                                <dd><em>主题: 142</em>, <em>帖数: 1428</em></dd>
+                                <dd><a href="detail.html">最后发表: 2017-6-9 09:18</a></dd>
+                            </dl>
+                            <dl>
+                                <dt><a href="list.html"> <img src="../images/forum.gif" alt=""></a></dt>
+                                <dd><b><a href="list.html">上海网吧</a></b></dd>
+                                <dd><em>主题: 142</em>, <em>帖数: 1428</em></dd>
+                                <dd><a href="detail.html">最后发表: 2017-6-9 09:18</a></dd>
+                            </dl>
+                            <dl>
+                                <dt><a href="list.html"> <img src="../images/forum.gif" alt=""></a></dt>
+                                <dd><b><a href="list.html">上海网吧</a></b></dd>
+                                <dd><em>主题: 142</em>, <em>帖数: 1428</em></dd>
+                                <dd><a href="detail.html">最后发表: 2017-6-9 09:18</a></dd>
+                            </dl>
+                            <dl>
+                                <dt><a href="list.html"> <img src="../images/forum.gif" alt=""></a></dt>
+                                <dd><b><a href="list.html">上海网吧</a></b></dd>
+                                <dd><em>主题: 142</em>, <em>帖数: 1428</em></dd>
+                                <dd><a href="detail.html">最后发表: 2017-6-9 09:18</a></dd>
+                            </dl>
+                        </div>
+                    </div>
+
+                    <div class="l-leader">
+                        <table cellspacing="0" cellpadding="0">
+                            <tr>
+                                <th colspan="2" class="leader-type">
+                                    <div class="tf" style="position:relative;">
+                                        <!--<span  onclick="" class="right atarget" title="在新窗口中打开帖子">新窗</span>-->
+                                        <a href="list.html?fid=66" class="xi2">全部主题</a>&nbsp;
+                                        <a href="javascript:void(0);" class="xi2 filter active" data-filter="new">最新</a>&nbsp;
+                                        <a href="javascript:void(0);" class="xi2 filter" data-filter="heart">热门</a>&nbsp;
+                                        <a href="javascript:void(0);" class="xi2 filter" data-filter="hot">热帖</a>&nbsp;
+                                        <a href="javascript:void(0);" class="xi2 filter" data-filter="digest">精华</a>&nbsp;
+                                        <a href="javascript:void(0);" class="showmenu xi2">更多</a>&nbsp;
+                                        <div class="menu hide">
+                                    		<p class="more-order">
+                                    			<label>排序:
+	                                    			<a href="javascript:void(0);" class="order" data-order="1">发帖时间</a><i>l</i>
+	                                    			<a href="javascript:void(0);" class="order" data-order="2">回复/查看</a><i>l</i>
+	                                    			<a href="javascript:void(0);" class="order" data-order="3">查看</a>
+                                    			</label>
+                                    		</p>
+                                    		<p class="more-time">
+                                    			<label>时间:
+                                    				<a href="javascript:void(0);" class="time active" data-time="0">全部时间</a><i>l</i>
+                                    				<a href="javascript:void(0);" class="time" data-time="1">一天</a><i>l</i>
+                                    				<a href="javascript:void(0);" class="time" data-time="2">两天</a><i>l</i>
+                                    				<a href="javascript:void(0);" class="time" data-time="7">一周</a><i>l</i>
+                                    				<a href="javascript:void(0);" class="time" data-time="30">一个月</a><i>l</i>
+                                    				<a href="javascript:void(0);" class="time" data-time="90">三个月</a>
+                                    			</label>
+                                    		</p>
+                                    	</div>
+                                        <!--<a href="javascript:void(0);" onclick="" title="查看更新" class="forumrefresh"></a>
+                                        <span id="clearstickthread" style="display: block;">
+                                            <span class="pipe">|</span>
+                                            <a href="javascript:;" onclick="clearStickThread()" class="xi2" title="显示置顶">显示置顶</a>
+                                        </span>-->
+                                    </div>
+                                </th>
+                                <td class="author-width">作者</td>
+                                <td class="reply-view">回复/查看</td>
+                                <td class="author-width">最后发表</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <!--帖子列表-->
+                    <div class="pasting-list bm">
+                        <!--有主题-->
+                        <table class="hide">
+                            <tbody>
+                            <tr>
+                                <td class="ico">
+                                    <a href="detail.html"><img src="../images/ico/pin_3.gif" alt="全局置顶"></a>
+                                </td>
+                                <td class="common">
+                                    <a class="avatar left" href="detail.html"><img src="../images/avatar.jpg" alt="" title=""></a>
+                                    <div class="left caption">
+                                        <a  href="detail.html" class="t-red ">本论坛有奖征稿啦！！这里有奖品等你来领取！本论坛有奖征稿啦！！这里有奖品等你来领取!</a>
+                                        <img class="ico-img" src="../images/ico/image_s.gif" alt="attach_img" title="图片附件" align="">
+                                        <!--<span >...<a href="detail.html">2</a></span>-->
+                                    </div>
+                                    <!--<img  class="left" src="../images/ico/common.gif" alt="attachment" title="附件" >-->
+                                    <!--<a href="javascript:void(0);" onclick="" class="posts-hide right" title="隐藏置顶帖">隐藏置顶帖</a>-->
+                                    <!--<a class="preview-btn right" href="javascript:void(0);" onclick="">预览</a>-->
+
+                                </td>
+                                <td class="author-width">
+                                    <a href="detail.html" class="a-name">嘉乐君子</a>
+                                    <p class="a-time">前天 09:26</p>
+                                </td>
+                                <td class="reply-view">
+                                    <a href="detail.html" class="a-name t-blue">16</a>
+                                    <p class="a-time">前天 09:26</p>
+                                </td>
+                                <td class="author-width">
+                                    <a href="" class="a-name">网吧营销大师</a>
+                                    <p class="a-time">2017-6-3 09:26</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="ico">
+                                    <a href="detail.html"><img src="../images/ico/pin_1.gif" alt="全局置顶"></a>
+                                </td>
+                                <td class="common">
+                                    <a class="avatar left" href="detail.html"><img src="../images/avatar.jpg" alt="" title=""></a>
+                                    <div class="left caption">
+                                        <a  href="detail.html" class="t-red2">本论坛有奖征稿啦！！这里有奖品等你来领取！本论坛有奖征稿啦！！这里有奖品等你来领取!</a>
+                                        <img class="ico-img" src="../images/ico/digest_2.gif" alt="attach_img" title="图片附件" align="">
+                                        <!--<span >...<a href="detail.html">2</a></span>-->
+                                    </div>
+                                    <!--<a href="javascript:void(0);" onclick="" class="posts-hide right" title="隐藏置顶帖">隐藏置顶帖</a>-->
+                                    <!--<a class="preview-btn right" href="javascript:void(0);" onclick="">预览</a>-->
+                                </td>
+                                <td class="author-width">
+                                    <a href="detail.html" class="a-name">嘉乐君子</a>
+                                    <p class="a-time">前天 09:26</p>
+                                </td>
+                                <td class="reply-view">
+                                    <a href="detail.html" class="a-name t-blue">16</a>
+                                    <p class="a-time">前天 09:26</p>
+                                </td>
+                                <td class="author-width">
+                                    <a href="" class="a-name">网吧营销大师</a>
+                                    <p class="a-time">2017-6-3 09:26</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="ico">
+                                    <a href="detail.html"><img src="../images/ico/pin_1.gif" alt="全局置顶"></a>
+                                </td>
+                                <td class="common">
+                                    <a class="avatar left" href="detail.html"><img src="../images/avatar.jpg" alt="" title=""></a>
+                                    <div class="left caption">
+                                        <em>[<a href="list.html">还未解决</a>]</em>
+                                        <a  href="detail.html" class="t-blue">本论坛有奖征稿啦！！这里有奖品等你来领取!</a>
+                                        <img class="ico-img" src="../images/ico/digest_2.gif" alt="attach_img" title="图片附件" align="">
+                                        <!--<span >...<a href="detail.html">2</a></span>-->
+                                    </div>
+                                    <!--<a href="javascript:void(0);" onclick="" class="posts-hide right" title="隐藏置顶帖">隐藏置顶帖</a>-->
+                                    <!--<a class="preview-btn right" href="javascript:void(0);" onclick="">预览</a>-->
+                                </td>
+                                <td class="author-width">
+                                    <a href="detail.html" class="a-name">嘉乐君子</a>
+                                    <p class="a-time">前天 09:26</p>
+                                </td>
+                                <td class="reply-view">
+                                    <a href="detail.html" class="a-name t-blue" >16</a>
+                                    <p class="a-time">前天 09:26</p>
+                                </td>
+                                <td class="author-width">
+                                    <a href="" class="a-name">网吧营销大师</a>
+                                    <p class="a-time">2017-6-3 09:26</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="ico">
+                                    <a href="detail.html"><img src="../images/ico/folder_common.gif" alt="新窗口打开"></a>
+                                </td>
+                                <td class="common">
+                                    <a class="avatar left" href="list.html"><img src="../images/avatar.jpg" alt="" title=""></a>
+                                    <div class="left caption ">
+                                        <em>[<a href="list.html.html">已经解决</a>]</em>
+                                        <a  href="detail.html" class="t-black">作为网吧老板对手游的一点看法</a>
+                                        <img class="ico-img" src="../images/ico/image_s.gif" alt="attach_img" title="图片附件" align="">
+                                        <img class="ico-img" src="../images/ico/hot_2.gif" alt="attach_img" title="图片附件" align="">
+                                        <!--<span >...<a href="detail.html">2</a><a href="detail.html">3</a><a href="detail.html">4</a></span>-->
+                                    </div>
+                                    <!--<a class="preview-btn right" href="javascript:void(0);" onclick="">预览</a>-->
+                                </td>
+                                <td class="author-width">
+                                    <a href="detail.html" class="a-name">嘉乐君子</a>
+                                    <p class="a-time">前天 09:26</p>
+                                </td>
+                                <td class="reply-view">
+                                    <a href="detail.html" class="a-name t-blue">16</a>
+                                    <p class="a-time">前天 09:26</p>
+                                </td>
+                                <td class="author-width">
+                                    <a href="" class="a-name">网吧营销大师</a>
+                                    <p class="a-time">2017-6-3 09:26</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="ico">
+                                    <a href="detail.html"><img src="../images/ico/folder_common.gif" alt="新窗口打开"></a>
+                                </td>
+                                <td class="common">
+                                    <a class="avatar left" href="detail.html"><img src="../images/avatar.jpg" alt="" title=""></a>
+                                    <div class="left caption">
+                                        <a  href="detail.html" class="t-black">作为网吧老板对手游的一点看法</a>
+                                        <!--<span >...<a href="detail.html">2</a><a href="detail.html">3</a><a href="detail.html">4</a></span>-->
+                                    </div>
+                                    <!--<a class="preview-btn right" href="javascript:void(0);" onclick="">预览</a>-->
+                                </td>
+                                <td class="author-width">
+                                    <a href="detail.html" class="a-name">嘉乐君子</a>
+                                    <p class="a-time">前天 09:26</p>
+                                </td>
+                                <td class="reply-view">
+                                    <a href="detail.html" class="a-name t-blue">16</a>
+                                    <p class="a-time">前天 09:26</p>
+                                </td>
+                                <td class="author-width">
+                                    <a href="" class="a-name">网吧营销大师</a>
+                                    <p class="a-time">2017-6-3 09:26</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="ico">
+                                    <a href="detail.html"><img src="../images/ico/folder_new.gif" alt="新窗口打开"></a>
+                                </td>
+                                <td class="common">
+                                    <a class="avatar left" href="detail.html"><img src="../images/avatar.jpg" alt="" title=""></a>
+                                    <div class="left caption">
+                                        <a  href="detail.html" class="t-black">作为网吧老板对手游的一点看法</a>
+                                        <img class="ico-img" src="../images/ico/image_s.gif" alt="attach_img" title="图片附件" align="">
+                                        <img src="../images/ico/011.small.gif" alt="新人帖" align="absmiddle">
+                                        <!--<span >...<a href="detail.html">2</a><a href="detail.html">3</a><a href="detail.html">4</a></span>-->
+                                    </div>
+                                    <!--<a class="preview-btn right" href="javascript:void(0);" onclick="">预览</a>-->
+                                </td>
+                                <td class="author-width">
+                                    <a href="detail.html" class="a-name">嘉乐君子</a>
+                                    <p class="a-time">前天 09:26</p>
+                                </td>
+                                <td class="reply-view">
+                                    <a href="detail.html" class="a-name t-blue" >16</a>
+                                    <p class="a-time">前天 09:26</p>
+                                </td>
+                                <td class="author-width">
+                                    <a href="" class="a-name">网吧营销大师</a>
+                                    <p class="a-time">2017-6-3 09:26</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="ico">
+                                    <a href="detail.html"><img src="../images/ico/pollsmall.gif" alt="投票 - 有新回复 - 新窗口打开" target="_blank"></a>
+                                </td>
+                                <td class="common">
+                                    <a class="avatar left" href="detail.html"><img src="../images/avatar.jpg" alt="" title=""></a>
+                                    <div class="left caption">
+                                        <a  href="detail.html" class="t-black">作为网吧老板对手游的一点看法</a>
+                                        <!--<span >...<a href="detail.html">2</a><a href="detail.html">3</a><a href="detail.html">4</a></span>-->
+                                    </div>
+                                    <!--<a class="preview-btn right" href="javascript:void(0);" onclick="">预览</a>-->
+                                </td>
+                                <td class="author-width">
+                                    <a href="detail.html" class="a-name">嘉乐君子</a>
+                                    <p class="a-time">前天 09:26</p>
+                                </td>
+                                <td class="reply-view">
+                                    <a href="detail.html" class="a-name t-blue">16</a>
+                                    <p class="a-time">前天 09:26</p>
+                                </td>
+                                <td class="author-width">
+                                    <a href="" class="a-name">网吧营销大师</a>
+                                    <p class="a-time">2017-6-3 09:26</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="ico">
+                                    <a href="detail.html"><img src="../images/ico/folder_new.gif" alt="新窗口打开"></a>
+                                </td>
+                                <td class="common">
+                                    <a class="avatar left" href="detail.html"><img src="../images/avatar.jpg" alt="" title=""></a>
+                                    <div class="left caption">
+                                        <a  href="detail.html" class="t-black">作为网吧老板对手游的一点看法</a>
+                                        <img src="../images/ico/hot_2.gif" alt="新窗口打开">
+                                        <!--<span >...<a href="detail.html">2</a><a href="detail.html">3</a><a href="detail.html">4</a></span>-->
+                                    </div>
+                                    <!--<a class="preview-btn right" href="javascript:void(0);" onclick="">预览</a>-->
+                                </td>
+                                <td class="author-width">
+                                    <a href="detail.html" class="a-name">嘉乐君子</a>
+                                    <p class="a-time">前天 09:26</p>
+                                </td>
+                                <td class="reply-view">
+                                    <a href="detail.html" class="a-name t-blue">16</a>
+                                    <p class="a-time">前天 09:26</p>
+                                </td>
+                                <td class="author-width">
+                                    <a href="" class="a-name">网吧营销大师</a>
+                                    <p class="a-time">2017-6-3 09:26</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="ico">
+                                    <a href="detail.html"><img src="../images/ico/folder_new.gif" alt="新窗口打开"></a>
+                                </td>
+                                <td class="common">
+                                    <a class="avatar left" href="detail.html"><img src="../images/avatar.jpg" alt="" title=""></a>
+                                    <div class="left caption">
+                                        <a  href="detail.html" class="t-black">作为网吧老板对手游的一点看法</a>
+                                        <!--<span >...<a href="detail.html">2</a><a href="detail.html">3</a><a href="detail.html">4</a></span>-->
+                                        <a href="detail.html" class="t-red">New</a>
+                                    </div>
+                                    <!--<a class="preview-btn right" href="javascript:void(0);" onclick="">预览</a>-->
+                                </td>
+                                <td class="author-width">
+                                    <a href="detail.html" class="a-name">嘉乐君子</a>
+                                    <p class="a-time">前天 09:26</p>
+                                </td>
+                                <td class="reply-view">
+                                    <a href="detail.html" class="a-name t-blue">16</a>
+                                    <p class="a-time">前天 09:26</p>
+                                </td>
+                                <td class="author-width">
+                                    <a href="" class="a-name">网吧营销大师</a>
+                                    <p class="a-time">2017-6-3 09:26</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="ico">
+                                    <a href="detail.html"><img src="../images/ico/folder_new.gif" alt="新窗口打开"></a>
+                                </td>
+                                <td class="common">
+                                    <a class="avatar left" href="detail.html"><img src="../images/avatar.jpg" alt="" title=""></a>
+                                    <div class="left caption ">
+                                        <a  href="detail.html" class="t-black">作为网吧老板对手游的一点看法</a>
+                                        <!--<span >...<a href="detail.html">2</a><a href="detail.html">3</a><a href="detail.html">4</a></span>-->
+                                    </div>
+                                    <!--<a class="preview-btn right" href="javascript:void(0);" onclick="">预览</a>-->
+                                </td>
+                                <td class="author-width">
+                                    <a href="detail.html" class="a-name">嘉乐君子</a>
+                                    <p class="a-time">前天 09:26</p>
+                                </td>
+                                <td class="reply-view">
+                                    <a href="detail.html" class="a-name t-blue">16</a>
+                                    <p class="a-time">前天 09:26</p>
+                                </td>
+                                <td class="author-width">
+                                    <a href="" class="a-name">网吧营销大师</a>
+                                    <p class="a-time">2017-6-3 09:26</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="ico">
+                                    <a href="detail.html"><img src="../images/ico/folder_new.gif" alt="新窗口打开"></a>
+                                </td>
+                                <td class="common">
+                                    <a class="avatar left" href="detail.html"><img src="../images/avatar.jpg" alt="" title=""></a>
+                                    <div class="left caption">
+                                        <a  href="detail.html" class="t-black">作为网吧老板对手游的一点看法</a>
+                                        <!--<span >...<a href="detail.html">2</a><a href="detail.html">3</a><a href="detail.html">4</a></span>-->
+                                    </div>
+                                    <!--<a class="preview-btn right" href="javascript:void(0);" onclick="">预览</a>-->
+                                </td>
+                                <td class="author-width">
+                                    <a href="detail.html" class="a-name">嘉乐君子</a>
+                                    <p class="a-time">前天 09:26</p>
+                                </td>
+                                <td class="reply-view">
+                                    <a href="detail.html" class="a-name t-blue">16</a>
+                                    <p class="a-time">前天 09:26</p>
+                                </td>
+                                <td class="author-width">
+                                    <a href="" class="a-name">网吧营销大师</a>
+                                    <p class="a-time">2017-6-3 09:26</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="ico">
+                                    <a href="detail.html"><img src="../images/ico/folder_common.gif" alt="新窗口打开"></a>
+                                </td>
+                                <td class="common">
+                                    <a class="avatar left" href="detail.html"><img src="../images/avatar.jpg" alt="" title=""></a>
+                                    <div class="left caption">
+                                        <a  href="detail.html" class="t-black">作为网吧老板对手游的一点看法</a>
+                                        <!--<span >...<a href="detail.html">2</a><a href="detail.html">3</a><a href="detail.html">4</a></span>-->
+                                    </div>
+                                    <!--<a class="preview-btn right" href="javascript:void(0);" onclick="">预览</a>-->
+                                </td>
+                                <td class="author-width">
+                                    <a href="detail.html" class="a-name">嘉乐君子</a>
+                                    <p class="a-time">前天 09:26</p>
+                                </td>
+                                <td class="reply-view">
+                                    <a href="detail.html" class="a-name t-blue">16</a>
+                                    <p class="a-time">前天 09:26</p>
+                                </td>
+                                <td class="author-width">
+                                    <a href="" class="a-name">网吧营销大师</a>
+                                    <p class="a-time">2017-6-3 09:26</p>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <!--无主题-->
+                        <div class="pasting-list-none">
+                            <p>本版块或指定的范围内尚无主题</p>
+                        </div>
+                    </div>
+
+                    <!--<a class="next-page bm page-static-next" href="javascript:void(0);">下一页 »</a>-->
+                    <!--发帖按钮/分页-->
+                    <div class="bm">
+                        <a class="layui-btn layui-btn-normal" href="past.html" login-href="login.html" binding-href="binding.html"  target="_blank">发新帖</a>
+                        <!--<a href="javascript:void(0);"  onclick="" title="发新帖"><img src="../images/ico/pn_post.png" alt="发新帖"></a>-->
+                        <span class="l-page right hide">
+                            <div class="pg right page-static" data-json='{"total":67852,"pageSize":10,"pageNum":13,"url":"list.html?mod=forumdisplay&fid=66&page=","num":[5,6,7,8,9,10,11,12,13,14]}'>
+                                <!--<div class="pgb left" ><a href="javascript:void(0);">返&nbsp;回</a></div>-->
+                                <!--<a href="javascript:void(0);" class="prev">上一页</a>-->
+                                <!--<a href="javascript:void(0);">首页</a>-->
+                                <!--<span>-->
+                                    <!--<a href="javascript:void(0);" class="current">1</a>-->
+                                    <!--<a href="javascript:void(0);">2</a>-->
+                                    <!--<a href="javascript:void(0);">3</a>-->
+                                    <!--<a href="javascript:void(0);">4</a>-->
+                                    <!--<a href="javascript:void(0);">5</a>-->
+                                    <!--<a href="javascript:void(0);">6</a>-->
+                                    <!--<a href="javascript:void(0);">7</a>-->
+                                    <!--<a href="javascript:void(0);">8</a>-->
+                                    <!--<a href="javascript:void(0);">9</a>-->
+                                    <!--<a href="javascript:void(0);">10</a>-->
+                                <!--</span>-->
+                                <!--<a href="javascript:void(0);" class="last">... 295</a>-->
+                                <!--&lt;!&ndash;<label><input name="custompage" class="px" size="2" title="输入页码，按回车快速跳转" value="1" type="text"><span title="共 295 页"> / 295 页</span></label>&ndash;&gt;-->
+                                <!--<a href="javascript:void(0);" class="nxt">下一页</a>-->
+                            </div>
+                        </span>
+
+                    </div>
+                    <!--快速发帖-->
+                    <!--<div class="quick-pasting">-->
+                        <!--<div class="p-leader"><h2>快速发帖</h2></div>-->
+                        <!--<form class="form-w">-->
+                            <!--<div class="mt bm">-->
+                                <!--<input class="p-title" placeholder="" type="text">-->
+                                <!--<label class="p-gray">　还可以输入<b>80</b>个字符</label>-->
+                            <!--</div>-->
+                            <!--<div style=" position:relative">-->
+                                <!--<textarea class="" style="width:100%;height:100px;">Hello, world!</textarea>-->
+                                <!--<div class="pt" style=" position:absolute; top:25px; left:0%">您现在无权发帖 ，<a href="" target="_blank" class="">点击查看原因</a>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                            <!--<div class="past-btn"><a class="" href="">发表帖子</a></div>-->
+                        <!--</form>-->
+                    <!--</div>-->
+                </div>
+
+            </div>
+        </div>
+    </div>
+#include('./include/foot.tpl.html');

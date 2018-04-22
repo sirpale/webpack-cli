@@ -1,0 +1,20 @@
+{
+  "status" : "success",
+  "msg" : "获取成功",
+  "info" : {
+    "ava" : "../images/avatar01.jpg",
+    "name" : "King1993",
+    "sign" : "",
+    "uid" : "298383",
+    "email" : "123456@qq.com",
+    "emailVar" : 0,
+    "sex" : "保密",
+    "replyNum" : "45,123",
+    "pastNum" : "122,451",
+    "msgNum" : 123,
+    "regTime" : "2014-05-05 08:23:13",
+    "lastTime" : "2017-06-15 12:14:56",
+    "is_site_user" : "1",
+    "emailVar" : "1"
+  }
+}

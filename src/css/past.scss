@@ -1,0 +1,106 @@
+.pipe {  margin: 0 5px;  color: #CCC; }
+.p-xs-gray, .p-xs-gray a{ color: #999; font-size: 12px;}
+.pasting-box{}
+  //标题
+  .p-name{ width: 100%; height: 31px; border-bottom: 1px #CDCDCD solid;
+    span{ display: block; width: 74px; height: 31px; margin: 0 auto 0px 20px; border: 1px #CDCDCD solid; border-bottom: none;background: #fff; line-height: 32px; text-align: center; font-weight: bold;}
+  }
+
+  //表单
+  .p-form-w{
+    .p-title{ width:305px; height:25px; line-height:25px; border:1px #ccc solid; margin: 10px auto;}
+    .p-gray{color:#777;}
+  }
+
+  //按钮
+  .p-form-w{
+    //发表帖子
+    .past-btn {width: 77px; margin: 10px 15px 10px 0; float: left;border: 1px solid #999;
+      a{ color: #fff; display: block;line-height:26px; text-align:center;height: 26px;background: #E5E5E5 url(../images/ico/pn.png) no-repeat 0 -48px;border-color: #235994;}
+      a:hover{ text-decoration: none;}
+    }
+    //保存草稿
+    .draft-btn {width: 77px; margin: 10px auto 10px 0; float: left; border: 1px solid #999;
+      a{ color: #222; display: block;line-height:26px; text-align:center;height: 26px;background: #E5E5E5 url(../images/ico/pn.png) no-repeat 0 0px;border-color: #235994;}
+      a:hover{ text-decoration: none;}
+    }
+
+  }
+
+  //附加选项 回帖奖励 主题标签
+  .p-type{
+    padding-top: 10px;
+    //三个标题
+    .p-menu{width:500px;height:24px;
+      ul{margin:0;padding:0;
+        li{ background:url(../images/ico/dot.gif) no-repeat 5px center;font-size:12px;float:left;list-style:none;display:inline; line-height:22px;border:1px solid #D1D1D1;margin:0 10px 0 0;white-space:nowrap;cursor:pointer;width:72px;height:22px;text-align:center;overflow:visible;}
+        li.hover{color: #000000;background:#E5EDF2; border-bottom: none; height: 24px;}
+      }
+    }
+    //选项卡内容
+    .p-content{
+      .p-con{display:none;margin: -1px 0 0 0;border: 1px solid #CDCDCD;padding: 10px 14px;background: #E5EDF2;
+        .s-ipt{height: 17px; padding: 2px 4px; line-height: 17px;}
+        //选项卡第一个
+        .show-one{
+          table{ width: 100%;
+            td {  padding: 5px 2px; height: 26px; line-height: 26px;
+              input {  margin-right:6px;}
+              label {  float: left;  width: 16%;}
+            }
+          }
+        }
+        //选项卡第二个
+        .show-two{
+          .p-row{ margin-bottom: 10px;
+            label{}
+            input{width: 30px !important;font-size: 12px;}
+            select{min-width: 36px !important; height: 22px; font-size: 12px;}
+          }
+        }
+        //选项卡第三个
+        .show-three{}
+      }
+    }
+  }
+
+/*.pasting-box .p-name{ width: 100%; height: 31px; border-bottom: 1px #CDCDCD solid;}
+.pasting-box .p-name span{ display: block; width: 74px; height: 31px; margin: 0 auto 0px 20px; border: 1px #CDCDCD solid; border-bottom: none;background: #fff; line-height: 32px; text-align: center; font-weight: bold;}*/
+/*.pasting-box .p-form-w{}*/
+/*.pasting-box .p-form-w .p-title{ width:305px; height:25px; line-height:25px; border:1px #ccc solid; margin: 10px auto;}
+.pasting-box .p-form-w .p-gray{color:#777;}*/
+/*.pasting-box .p-form-w .past-btn {width: 77px; margin: 10px 15px 10px 0; float: left;border: 1px solid #999; }
+.pasting-box .p-form-w .past-btn a{ color: #fff; display: block;line-height:26px; text-align:center;height: 26px;background: #E5E5E5 url(../images/ico/pn.png) no-repeat 0 -48px;border-color: #235994;}
+.pasting-box .p-form-w .past-btn a:hover{ text-decoration: none;}
+.pasting-box .p-form-w .draft-btn {width: 77px; margin: 10px auto 10px 0; float: left; border: 1px solid #999;}
+.pasting-box .p-form-w .draft-btn a{ color: #222; display: block;line-height:26px; text-align:center;height: 26px;background: #E5E5E5 url(../images/ico/pn.png) no-repeat 0 0px;border-color: #235994;}
+.pasting-box .p-form-w .draft-btn a:hover{ text-decoration: none;}*/
+/*.pasting-box .p-type{padding-top: 10px;}
+.pasting-box .p-type .p-menu{width:500px;height:24px;}
+.pasting-box .p-type .p-menu ul{margin:0;padding:0;}
+.pasting-box .p-type .p-menu ul li{ font-size:12px;float:left;list-style:none;display:inline; line-height:22px;border:1px solid #D1D1D1;margin:0 10px 0 0;white-space:nowrap;cursor:pointer;width:72px;height:22px;text-align:center;overflow:visible;}
+.pasting-box .p-type .p-menu ul li.hover{color: #000000;background:#E5EDF2; border-bottom: none; height: 24px;}
+.pasting-box .p-type .p-content{}
+.pasting-box .p-type .p-content .p-con{display:none;margin: -1px 0 0 0;border: 1px solid #CDCDCD;padding: 10px 14px;background: #E5EDF2;}
+.pasting-box .p-type .p-content .p-con .show-one{}
+.pasting-box .p-type .p-content .p-con .show-one table{ width: 100%;}
+.pasting-box .p-type .p-content .p-con .show-one table td {  padding: 5px 2px; height: 26px; line-height: 26px;}
+.pasting-box .p-type .p-content .p-con .show-one table td input {  margin-right:6px;}
+.pasting-box .p-type .p-content .p-con .show-one label {  float: left;  width: 16%;}*/
+/*.pasting-box .p-type .p-content .p-con .gray{ color: #999;}
+.pasting-box .p-type .p-content .p-con .show-two{}
+.pasting-box .p-type .p-content .p-con .show-two label{}
+.pasting-box .p-type .p-content .p-con .s-ipt{width: 30px !important;height: 17px; padding: 2px 4px; line-height: 17px;}*/
+
+.p-form-w input[name="title"]{
+    height: 35px;
+    line-height: 35px;
+    border: 1px solid #cecece;
+    width: 400px;
+    padding-left: 8px;
+}
+
+
+
+
+

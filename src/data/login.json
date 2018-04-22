@@ -1,0 +1,15 @@
+{
+  "status" : "success",
+  "msg" : "登录成功",
+  "info" : {
+    "uid" : "111",
+    "name" : "King1993",
+    "group" : "管理员",
+    "msgNum" : 16,
+    "ava" : "../images/avatar01.jpg",
+    "nickName":"ganlansi",
+    "recentPlay":[],
+    "regType" : "sina",
+    "sign":"false"
+  }
+}

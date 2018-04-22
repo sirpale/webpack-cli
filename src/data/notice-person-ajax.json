@@ -1,0 +1,64 @@
+{
+  "list" : [
+    {
+      "mid" : 32,
+      "img" : "../images/avatar2.jpg",
+      "uname" : "对企王",
+      "uid" : 12,
+      "content" : "当当当当！福利来袭，贴吧娱乐又为吧友们送福利辣~本次送出的是《逆袭之星途璀璨》主创签名照！！！",
+      "checkStatus" : "1",
+      "replyStatus" : "0",
+      "utime" : "2017-06-15 20:12:26",
+      "rtime" :	"",
+      "rcontent" : ""
+    },
+    {
+      "mid" : 33,
+      "img" : "../images/avatar2.jpg",
+      "uname" : "王热风",
+      "uid" : 13,
+      "content" : "当当当当！福利来袭，贴吧娱乐又为吧友们送福利辣~本次送出的是《逆袭之星途璀璨》主创签名照！！！",
+      "checkStatus" : "0",
+      "replyStatus" : "0",
+      "utime" : "2017-06-15 20:12:26",
+      "rtime" :	"",
+      "rcontent" : ""
+    },
+    {
+      "mid" : 34,
+      "img" : "../images/avatar2.jpg",
+      "uname" : "前端",
+      "uid" : 14,
+      "content" : "当当当当！福利来袭，贴吧娱乐又为吧友们送福利辣~本次送出的是《逆袭之星途璀璨》主创签名照！！！",
+      "checkStatus" : "0",
+      "replyStatus" : "0",
+      "utime" : "2017-06-15 20:12:26",
+      "rtime" :	"",
+      "rcontent" : ""
+    },
+    {
+      "mid" : 35,
+      "img" : "../images/avatar2.jpg",
+      "uname" : "定情物",
+      "uid" : 15,
+      "content" : "当当当当！福利来袭，贴吧娱乐又为吧友们送福利辣~本次送出的是《逆袭之星途璀璨》主创签名照！！！",
+      "checkStatus" : "1",
+      "replyStatus" : "1",
+      "utime" : "2017-06-15 20:12:26",
+      "rtime" :	"2017-06-16 21:15:30",
+      "rcontent" : "抱歉，您的问题我无能为力！"
+    },
+    {
+      "mid" : 36,
+      "img" : "../images/avatar2.jpg",
+      "uname" : "误工费",
+      "uid" : 16,
+      "content" : "当当当当！福利来袭，贴吧娱乐又为吧友们送福利辣~本次送出的是《逆袭之星途璀璨》主创签名照！！！",
+      "checkStatus" : "1",
+      "replyStatus" : "1",
+      "utime" : "2017-06-15 20:12:26",
+      "rtime" :	"2017-06-16 21:15:30",
+      "rcontent" : "抱歉，您的问题我无能为力！"
+    }
+  ]
+}

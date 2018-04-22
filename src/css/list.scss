@@ -1,0 +1,171 @@
+.xw0 {   padding-left: 25px;font-weight: 400; }
+.xw0 strong{color: #d70c06;font-weight: 400;}
+.bm{ margin-bottom: 10px;}
+.xi2, .xi2 a, .xi3 a {  color: #369;}
+.p-gray{color:#777;}
+.foot{clear: both;}
+
+//列表搜索
+.list-search{ overflow: hidden;  height: 42px; border-top: 1px solid #FFF; background: #E8EFF5;}
+.list-search form{}
+.list-search .bg{ width: 320px; height: 29px; float: left; margin: 5px 8px 5px 15px; background: #fff; border: 1px #CFDEE3 solid; overflow:hidden;}
+.list-search .bg input{ width: 240px;border: 1px solid #FFF;outline: none; float:left; padding:5px; color:#999; text-align: left;}
+.list-search .bg .search-type{ padding-left:7px;display: block; line-height: 29px; border-left: 1px solid #CFDEE3; float:right;width: 60px; height: 29px; text-align: left;text-decoration: none; background:url("../images/ico/search.png") no-repeat 50px center ; }
+.list-search .bg  a{ color: #999;}
+.list-search .search-btn{ float: left;margin: 7px auto;cursor: pointer;}
+.list-search .search-type-menu{ display:none;margin-top: -8px;position: absolute; z-index: 301; left: 676.5px; top: 290.5px;padding: 4px;  border: 1px solid;  min-width: 60px;  border-color: #DDD;  background: #FEFEFE;  box-shadow: 1px 2px 2px rgba(0,0,0,0.3);}
+.list-search .search-type-menu li{display: inline;}
+.list-search .search-type-menu li a {  display: block; padding: 3px 5px; border-bottom: 1px solid #E5EDF2;  white-space: nowrap;  }
+.list-search .search-type-menu li a:hover{ text-decoration: none; background: #E8EFF5;}
+.list-search .search-hot{ width:710px;padding-left: 8px;  height: 42px; line-height: 42px;  overflow: hidden; float: right;}
+.list-search .search-hot strong, .list-search .search_hot a{  float: left; margin-right: 10px;white-space: nowrap; }
+.list-search .search-hot a { color: #369;}
+
+
+
+/*面包屑导航*/
+.list-tips{ clear:both;height: 29px;background: transparent;line-height: 29px;margin-bottom:6px;}
+.list-tips .nvhm {width: 16px; background: url(../images/ico/list-hone.png) no-repeat 0 center;  line-height: 200px;  overflow: hidden;}
+.list-tips em {  width: 20px; height: 29px; text-align: center; line-height: 29px;  overflow: hidden; float: left;  }
+.list-tips a{ float: left; height: 29px; line-height: 29px;}
+.list-main{ width: 100%; height: auto;}
+.l-sidebar{ width: 165px; float: left; overflow: hidden;  border: 1px solid #BDD7E3; background-color: #F5F9FB;}
+.l-sidebar .s-title {  height: 32px;  line-height: 32px; padding-left: 10px;}
+
+.l-sidebar h2 {font-weight:700;border-bottom:1px solid #ddd;}
+
+//.l-sidebar dl {  }
+//.l-sidebar dl.a {  padding-bottom: 0px;  background-color: #FFF;  }
+//.l-sidebar dt {  overflow: hidden;  height: 27px;  line-height: 27px;  border: 1px solid #CCE0EB;  border-width: 1px 0;  background: #F5F9FB url(../images/ico/titlebg_sd.png) repeat-x 100% 0;  }
+//.l-sidebar dt a {  display: block;  padding: 0 15px 0 10px;  }
+//.l-sidebar dd{ display: none;}
+//.l-sidebar dd a {  display: block;  margin: 0 3px;  padding: 0 7px;  height: 26px;  line-height: 26px;  overflow: hidden;  }
+//.l-sidebar dd.current a {  background-color: #F5F9FB;  font-weight: 700;  color: #369;  }
+
+.l-content{ width: 910px; float: right;}
+.l-content-top{  background: #FFF;}
+.l-content-top .banner{ width: 100%; height: auto;margin-bottom:10px;}
+.l-content-top .banner img{ width:910px;height:291px;}
+.l-content-top .total{ border: 1px solid #CDCDCD;padding: 5px 10px;  height: 31px;  white-space: nowrap;  overflow: hidden;  line-height:31px;}
+.l-content-top .total .fa_fav { background: url("../images/ico/fav.gif") no-repeat left center; padding-left: 20px;}
+.l-content-top .total .pipe {  margin: 0 5px;  color: #CCC;  }
+.l-content-top .total .fa_rss {  background: url("../images/ico/feed.gif") no-repeat left center; padding-left: 20px;}
+.ico_increase, .ico_fall {  display: inline-block;  width: 16px;  height: 16px;  margin: 0 5px;  background: url(../images/ico/increase.png) no-repeat left center;  vertical-align: middle;  text-indent: -999em;  }
+.ico_incdown, .ico_fall {  display: inline-block;  width: 16px;  height: 16px;  margin: 0 5px;  background: url(../images/ico/incdown.png) no-repeat left center;  vertical-align: middle;  text-indent: -999em;  }
+
+
+//推荐主题
+.l-content-theme{ border: 1px solid #CDCDCD;}
+.l-content-theme .theme-title{ border: 1px solid #FFF;  border-bottom-color: #C2D5E3;   background: #E5EDF2;padding: 0 10px;  height: 31px; line-height: 31px;  white-space: nowrap;  overflow: hidden;}
+.l-content-theme .theme-list{padding: 10px; height: 120px; overflow: hidden;}
+.l-content-theme .theme-list ul{ height: auto; clear: both;}
+.l-content-theme .theme-list ul li {float: left;margin: 2px 0;padding: 0;width: 50%;  height: 1.5em;overflow: hidden;}
+.l-content-theme .theme-list ul li a {}
+.l-content-theme .theme-list ul li a:hover {text-decoration: underline;}
+
+
+// 帖子类型
+.list-type-select {
+    //background:#f2f2f2;
+    //border:1px solid #ddd;
+    padding:10px 0;
+    overflow: hidden;
+    a {
+        border:1px solid #ddd;
+        display: inline-block;
+        float:left;
+        margin:0 10px 10px 0;
+        padding:0 10px;
+        em {}
+        &:hover {background:#fff;}
+    }
+}
+
+
+.l-content-pasting {}
+.l-content-pasting .l-leader{margin-top: 1px;padding: 0 10px;border: 1px solid #CDCDCD;background: #F2F2F2;text-align: left;}
+.atarget, .unchk, .chked {padding-left: 15px;line-height: 16px;background: url(../images/ico/atarget.png) no-repeat 0 3px; color: #369; cursor: pointer;}
+.l-content-pasting .l-leader .tf { padding: 10px 0;
+    a.active{
+        font-weight: bold;
+        color: #000;
+    }
+}
+
+.l-content-pasting .l-leader .menu{
+    position: absolute;top: 30px;left:208px;background: #fff;border: 1px solid #ccc;padding: 5px;
+    width: 350px;
+    a{
+        padding: 2px 3px;
+        &:hover{
+           color: #369;
+           background: #E5EDF2;
+        }
+    }
+    a.active{
+        color: #369;
+        background: #E5EDF2;
+    }
+    i{
+        padding: 0 1px 0 2px;
+        color: #ddd;
+        cursor:auto;
+    }
+}
+
+
+.l-content-pasting .leader-type{ width: 600px; padding-right: 20px;}
+.author-width{ width: 125px;}
+.reply-view{width: 90px;}
+.l-content-pasting .leader .showmenu {padding-right: 16px;background: url(../images/ico/arrwd.gif) no-repeat 100% 50%;  cursor: pointer; white-space: nowrap;  }
+
+
+
+//帖子列表
+.pasting-list{ padding: 10px;border: 1px solid #CDCDCD;border-top:none; }
+.pasting-list a:hover {text-decoration: underline;}
+.pasting-list .ico{padding: 5px 0px;width: 25px;text-align: left;}
+.pasting-list .common{width:505px; padding: 5px 18px 5px 0px;}
+.pasting-list .common .avatar{}
+.pasting-list .common .avatar img{ width:35px; height:35px; padding: 2px; border: 1px #ccc solid;}
+.pasting-list .common .caption{ width: 350px;line-height:22px; overflow: hidden;height:45px; padding: 0 10px;}
+.pasting-list .common .t-red{color: #EC1282;}
+.pasting-list .common .t-red2{color:#EE1B2E;}
+.pasting-list .common .t-yellow{ color:#EE1B2E;}
+.pasting-list .common .t-blue{ color:#2B65B7;}
+.pasting-list .common .caption .ico-img{ margin-top:-2px;vertical-align:middle;}
+.pasting-list .common .preview-btn{width: 31px;  height: 17px;  margin-top: 3px;  background-image: url(../images/ico/preview.png);  text-indent: -999em;  overflow: hidden;}
+.pasting-list .common .posts-hide {width: 12px;  height: 12px;  background: url(../images/ico/close.gif) no-repeat 0 0;  text-indent: -999em;  cursor: pointer;  overflow: hidden;  margin: 5px 5px 0px 5px;  }
+.pasting-list .common .posts-hide:hover{background: url(../images/ico/close.gif) no-repeat 0 -12px; }
+.author-width .a-name,.reply-view .a-name{ padding-top: 6px; font-size: 12px;}
+.author-width .a-time,.reply-view .a-time{ font-size: 10px; color: #ccc}
+.pasting-list .common .caption em{color: #007CD5; font-size: 12px;}
+.pasting-list .common .caption em a{color: #007CD5;}
+.pasting-list .common .caption span a{padding: 2px 4px;}
+.pasting-list .common .t-black{ color: #333;}
+.pasting-list .common .t-black:hover{color: #333;}
+.pasting-list table {}
+.pasting-list table td{ border-bottom: 1px #C2D5E3 solid;}
+.pasting-list table tr:hover{  background: #F2F2F2;}
+
+
+a.page-static-next {display: block;margin-bottom: 10px;border: 1px solid rgb(194,213,227);border-radius: 3px;text-align: center;background: #F2F2F2;line-height: 31px;}
+a.page-static-next:hover {background: #fff;}
+
+//快速发帖
+.quick-pasting{height:auto; margin:15px auto;border: 1px solid #CDCDCD;}
+.quick-pasting h2{padding:10px 0;}
+.quick-pasting .p-leader{margin-top: 1px;padding: 0 10px;border-bottom: 1px solid #CDCDCD;background: #F2F2F2;text-align: left;}
+.quick-pasting .form-w{ width:95%; margin:0 auto;}
+.quick-pasting .form-w .p-title{ width:305px; height:25px; line-height:25px; border:1px #ccc solid; margin: 10px auto;}
+.quick-pasting .form-w .mt{ margin-top: 10px;}
+.quick-pasting .code{ width:40px; float:left}
+.quick-pasting .form-w .verity{ width:103px; height:24px; line-height:24px; border:1px #ccc solid}
+.quick-pasting .form-w .p-editor{ width:100%;}
+.quick-pasting .form-w .pt{ font-size:12px;width: 70%;margin-right: 0; padding: 0 !important; border: none; text-align: center;}
+.quick-pasting .form-w .pt a{color: #2B65B7;}
+.quick-pasting .form-w .past-btn {width: 77px; margin: 10px auto 10px 0; }
+.quick-pasting .form-w .past-btn a{ color: #fff; display: block;line-height:26px; text-align:center;height: 26px;background: #E5E5E5 url(../images/ico/pn.png) no-repeat 0 -48px;border-color: #235994;}
+.quick-pasting .form-w .past-btn a:hover{ text-decoration: none;}
+
+.tree-color .layui-nav-child dd.layui-this a{color:red}

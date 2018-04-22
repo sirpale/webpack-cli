@@ -1,0 +1,128 @@
+#include('./include/head.tpl.html');
+
+<!-- 主体 -->
+<div class="main main-container">
+
+	<!--面包屑导航-->
+	<div class="list-tips ">
+		<a href="./" class="nvhm" title="首页">5636网吧论坛</a><em>›</em>
+		<a href="tag.html">标签</a> <em>›</em>
+		<a href="javascript:void(0);">英雄联盟</a>
+	</div>
+
+	<div class="content">
+		<div class="tag">
+			<!--<h1 ><img src="../images/tag.gif" alt="tag"> 标签: 英雄联盟</h1>-->
+			<div class="tag_content">
+				<!--<div class="th">-->
+				<!--<table cellspacing="0" cellpadding="0">-->
+				<!--<colgroup>-->
+				<!--<col width="650">-->
+				<!--<col width="150">-->
+				<!--<col width="100">-->
+				<!--<col width="">-->
+				<!--<col width="">-->
+				<!--</colgroup>-->
+				<!--<tbody>-->
+				<!--<tr>-->
+				<!--<th><h2>相关帖子</h2></th>-->
+				<!--<td>版块</td>-->
+				<!--<td>作者</td>-->
+				<!--<td>回复/查看</td>-->
+				<!--<td>最后发表</td>-->
+				<!--</tr>-->
+				<!--</tbody>-->
+				<!--</table>-->
+				<!--</div>-->
+				<div class="list">
+					<script class="data-tpl related-past-tpl" type="text/html" data-target="related-past" data-url="../data/related-past.json">
+						<colgroup>
+							<col width="">
+							<col width="150">
+							<col width="100">
+							<col width="100">
+							<col width="100">
+						</colgroup>
+						<thead>
+						<tr>
+							<th>相关帖子</th>
+							<th>版块</th>
+							<th>作者</th>
+							<th>回复/查看</th>
+							<th>最后发表</th>
+						</tr>
+						</thead>
+
+						<tbody >
+						{{# layui.each(d.list,function(index, item) { }}
+						<tr>
+							<td>
+								<a href="detail.html" target="_blank"><img src="../images/folder_common.gif" class="cin">{{item.title}}</a>
+							</td>
+							<td>
+								<a href="list.html">{{item.forum}}</a>
+							</td>
+							<td>
+								<p><a href="person.html" >{{item.author}}</a></p>
+								<em>{{item.atime}}</em>
+							</td>
+							<td>
+								<p><a href="detail.html" class="xi2">{{item.replyNum}}</a></p>
+								<em>{{item.checkNum}}</em>
+							</td>
+							<td>
+								<p><a href="person.html">{{item.sender}}</a></p>
+								<em><a class="xi1" href="detail.html" >{{item.stime}}</a></em>
+							</td>
+						</tr>
+						{{# }) }}
+
+						{{# if(d.list.length <= 0){ }}
+						<tr>
+							<td colspan="4" class="f-tac">抱歉，没有相关帖子</td>
+						</tr>
+						{{# } }}
+						</tbody>
+					</script>
+
+					<table cellspacing="0" cellpadding="0" class="related-past" data-json='{"total":68,"pageSize":10,"act":"../data/related-past-ajax.json"}'>
+						<tr>
+							<td colspan="4" class="f-tac"><i class="layui-icon layui-anim layui-anim-rotate layui-anim-loop"></i> 数据获取中...</td>
+						</tr>
+						<!--<tr>
+                            <td class="cin">
+                                <a href="thread-37818-1-1.html" title="新窗口打开" target="_blank">
+                                    <img src="../images/folder_common.gif">
+                                </a>
+                            </td>
+                            <th>
+                                <a href="thread-37818-1-1.html" target="_blank">网吧玩英雄联盟需要怎么样的配置？</a>
+                            </th>
+                            <td class="by">
+                                <a href="forum-68-1.html">网吧装机配置及价格咨询</a>
+                            </td>
+                            <td class="by">
+                                <p><a href="space-uid-208.html" c="1" mid="card_3408">gtru6789</a></p>
+                                <em><span>2013-2-6</span></em>
+                            </td>
+                            <td class="num">
+                                <p><a href="thread-37818-1-1.html" class="xi2">19</a></p>
+                                <em>3592</em>
+                            </td>
+                            <td class="by">
+                                <p><a href="space-username-%C3%C0%C5%AE%B5%C4%D2%C2%D0%E4.html" c="1" mid="card_8945">美女的衣袖</a></p>
+                                <em><a href="forum.php?mod=redirect&amp;tid=37818&amp;goto=lastpost#lastpost" class="xi1">2013-2-6 17:26</a></em>
+                            </td>
+                        </tr>-->
+					</table>
+					<div class="pages pages-a" data-target="related-past"></div>
+				</div>
+
+
+			</div>
+		</div>
+	</div>
+
+</div>
+
+#include('./include/foot.tpl.html');

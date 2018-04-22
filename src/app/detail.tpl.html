@@ -1,0 +1,541 @@
+#include('./include/head.tpl.html');
+
+<script src="../js/lib/ueditor/ueditor.config.js"></script>
+<script src="../js/lib/ueditor/ueditor.all.js"></script>
+
+<input type="hidden" class="login-uid" name="login-uid" id="login-uid" value="111" />
+
+<!--主体-->
+<div class="main main-container">
+    <!--搜索-->
+    <!--<div class="list-search">-->
+        <!--<form>-->
+            <!--<div class="bg">-->
+                <!--<input name="" value="" autocomplete="off" placeholder="请输入搜索内容" type="text">-->
+                <!--<div class="nice-select" name="nice-select">-->
+                    <!--<input type="text" value="帖子" readonly>-->
+                    <!--<ul>-->
+                        <!--<li data-value="1">本版</li>-->
+                        <!--<li data-value="2">帖子</li>-->
+                        <!--<li data-value="3">用户</li>-->
+                    <!--</ul>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="search-btn"><img src="../images/ico/search-btn.png"></div>-->
+        <!--</form>-->
+        <!--<div class="search-hot">-->
+            <!--<strong>热搜: </strong>-->
+            <!--<a href="javascript:void(0);" target="_blank">网鱼网咖</a>-->
+            <!--<a href="javascript:void(0);" target="_blank">网咖加盟</a>-->
+            <!--<a href="javascript:void(0);" target="_blank">网吧审批解禁</a>-->
+            <!--<a href="javascript:void(0);" target="_blank">网吧一体机</a>-->
+            <!--<a href="javascript:void(0);" target="_blank">网吧联盟</a>-->
+            <!--<a href="javascript:void(0);" target="_blank">万象2004</a>-->
+            <!--<a href="javascript:void(0);" target="_blank">网吧经营现状</a>-->
+            <!--<a href="javascript:void(0);" target="_blank">易游</a>-->
+            <!--<a href="javascript:void(0);" target="_blank">qq金牌网吧</a>-->
+            <!--<a href="javascript:void(0);" target="_blank">锐起</a>-->
+            <!--<a href="javascript:void(0);" target="_blank">网维</a>-->
+            <!--<a href="javascript:void(0);" target="_blank">去广告</a>-->
+            <!--<a href="javascript:void(0);" target="_blank">网吧论坛</a>-->
+            <!--<a href="javascript:void(0);" target="_blank">pubwin</a>-->
+            <!--<a href="javascript:void(0);" target="_blank">任子行</a>-->
+            <!--<a href="javascript:void(0);" target="_blank">无盘</a>-->
+        <!--</div>-->
+    <!--</div>-->
+
+    <div class="list-tips">
+        <a href="./" class="nvhm" title="首页">5636网吧论坛</a><em>›</em>
+        <a href="javascript:void(0);">论坛</a> <em>›</em>
+        <a href="javascript:void(0);">网吧咨询与教程专区</a><em>›</em>
+        <a href="javascript:void(0);">网吧经营管理咨询</a><em>›</em>
+        <a href="javascript:void(0);">本论坛有奖征稿啦！！这里有奖品等你来领取！</a>
+    </div>
+
+    <div class="bm">
+        <!--发帖/回复按钮-->
+        <a href="javaScript:void(0);" class="layui-btn layui-btn-normal" data-href="past.html" login-href="login.html" binding-href="binding.html">发帖</a>
+        <a class="layui-btn layui-btn-normal" href="#reply" login-href="login.html">回复</a>
+        <!--分页-->
+        <span class="l-page right">
+            <div class="pg right page-static" data-json='{"total":678,"pageSize":10,"pageNum":62,"url":"detail.html?mod=forumdisplay&fid=66&page="}'></div>
+        </span>
+    </div>
+
+    <!-- 发消息编辑器 -->
+    <!--<div class="send-msg-editor hide">
+        <div id="editor2" style="width:600px;height:260px;" ></div>
+    </div>-->
+
+
+    <div class="pasting-detail">
+        <!--帖子标题-->
+        <table>
+            <tbody>
+            <tr>
+                <td class="pls ptn pbn">
+                    <div class="txt-c">
+                        <span class="p-xs-gray">查看:</span>
+                        <span class="p-red">97001</span>
+                        <span class="pipe">|</span>
+                        <span class="p-xs-gray">回复:</span>
+                        <span class="p-red">19</span>
+                    </div>
+                </td>
+                <td class="plc ptn pbn">
+                    <span class="p-title-h1">本论坛有奖征稿啦！！这里有奖品等你来领取！</span>
+                    <span class="p-xs-gray">
+                        <img src="../images/ico/hot_2.gif" alt="" title="热度: 129">
+                    </span>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <!--分割线-->
+        <table class="ad" cellspacing="0" cellpadding="0">
+            <tr><td class="pls"></td><td class="plc"></td></tr>
+        </table>
+        <!--1楼-->
+        <div class="pasting-row">
+            <table>
+                <tbody>
+                <tr>
+                    <!--发帖者信息/回复者信息-->
+                    <td class="pls vat" rowspan="2">
+                        <div class="favatar">
+                            <div class="p-lft pasting-detail-lft">
+                                <a href="javascript:void(0);" target="_blank" class="f-fwb">嘉乐君子</a>
+                            </div>
+                            <div class="avatar"><a href="" class="avtm" target="_blank"><img onerror="showImgDelay(this,'http://192.168.0.69:3000/images/ava_01.jpg');" src="" /></a></div>
+                            <div class="tns p-gray-6">
+                                <table cellspacing="0" cellpadding="0">
+                                    <tr>
+                                        <th><p><a href="" class="xi2">321</a></p><p>主题</p></th>
+                                        <td><p><a href="" class="xi2">1774</a></p><p>帖子</p></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <p><em>管理员</em></p>
+                            <ul class="detail-user-opt hide">
+                                <li><a href="javascript:void(0);" title="发消息" class="xi2 send-msg" data-uid="456" data-mid="123" data-name="嘉乐君子" data-url="../data/send-msg.json">发消息</a></li>
+                            </ul>
+                        </div>
+                    </td>
+
+                    <td class="plc vat">
+
+                        <div class="pi">
+                            <strong><a href="">楼主</a></strong>
+                            <div class="pasting-plc-time">
+                                <img class="authicn vam" src="../images/ico/online_admin.gif">
+                                <em class="p-xs-gray">发表于 2016-4-8 15:46:38</em>
+                                <span class="pipe">|</span>
+                            </div>
+                        </div>
+                        <!--帖子具体内容-->
+                        <div class="pasting-plc-con">
+                            <div class="info-one">
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <p>亲爱的读者，5636网吧增值联盟为了给您带来更多的服务，不断丰富平台内容，提供更好的资料与您分享，现有奖诚征好稿，具体要求如下：</p>
+                                            <p>1、最好是原创文章，由自己撰写且尚未在媒体上发表的，配图为佳；</p>
+                                            <p>2、来稿采用后，根据文章质量给予一定稿酬。特稿特酬，好稿优酬。文章一旦被采用，礼品丰厚！</p>
+                                            <p>3、来稿一经采用，版权归5636网吧联盟和作者共同所有，5636网吧联盟有权授权第三方使用，其他媒体如需采用，需与我们联系。</p>　　
+                                            <p>4、来稿要求文字精练，条理顺畅，通俗易懂；来稿可通过邮箱或微信发送。稿件采用后，我们会在一周内回复您，一周内若没收到我们的答复，可另投他处。</p>
+                                            <p>5、若您对我们5636网吧联盟有任何意见和建议也请提出，一经采用，将会得到一份精美的礼物。</p>
+                                            <p>6、投稿信箱：2850592923@qq.com</p>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="plc vab">
+
+                        <div class="pasting-plc-con">
+                            <div class="info-two f-fs1 xi2">
+                                <a title="第三方" href="tag.html" target="_blank">第三方</a>,
+                                <a title="含金量" href="tag.html" target="_blank">含金量</a>,
+                                <a title="中兴" href="tag.html" target="_blank">中兴</a>,
+                                <a title="音乐" href="tag.html" target="_blank">音乐</a>,
+                                <a title="文章" href="tag.html" target="_blank">文章</a>
+                            </div>
+                            <div class="share">
+                                <!-- JiaThis Button BEGIN -->
+                                <div class="jiathis_style_24x24">
+                                    <a class="jiathis_button_qzone"></a>
+                                    <a class="jiathis_button_tsina"></a>
+                                    <a class="jiathis_button_tqq"></a>
+                                    <a class="jiathis_button_weixin"></a>
+                                    <a class="jiathis_button_renren"></a>
+                                    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+                                    <a class="jiathis_counter_style"></a>
+                                </div>
+                                <script type="text/javascript" src="http://v3.jiathis.com/code/jia.js" charset="utf-8"></script>
+                                <!-- JiaThis Button END -->
+                            </div>
+                            <div class="info-three f-fs1"><a href="" title="帖子模式">本主题由 嘉乐君子 于 2017-2-13 11:01 删除回复</a></div>
+                            <div class="info-five">
+                                <h3 class="pi">相关帖子</h3>
+                                <ul>
+                                    <li>• <a href="" title="win10系统删除qq音乐缓存的方法" target="_blank">win10系统删除qq音乐缓存的方法</a></li>
+                                    <li>• <a href="" title="在win10系统将网易云音乐设为默认播放器" target="_blank">在win10系统将网易云音乐设为默认播放器</a></li>
+                                    <li>• <a href="" title="在win10系统更改网易云音乐歌词大小" target="_blank">在win10系统更改网易云音乐歌词大小</a></li>
+                                    <li>• <a href="" title="5636有奖征稿：凡投稿者均可获得高颜值电扇一台！" target="_blank">5636有奖征稿：凡投稿者均可获得高颜值电扇一台！</a></li>
+                                    <li>• <a href="" title="网吧营销大师音乐点播有两个声音重叠播放？" target="_blank">网吧营销大师音乐点播有两个声音重叠播放？</a></li>
+                                    <li>• <a href="" title="第三方无盘分配游戏不显示盘符？" target="_blank">第三方无盘分配游戏不显示盘符？</a></li>
+                                    <li>• <a href="" title="音乐点播有两个声音重叠播放？" target="_blank">音乐点播有两个声音重叠播放？</a></li>
+                                    <li>• <a href="" title="为什么网吧开启加速之后，网吧特权会失效？" target="_blank">为什么网吧开启加速之后，网吧特权会失效？</a></li>
+                                    <li>• <a href="" title="大家有没有接收到这个网吧“蓝鲸”紧急通知" target="_blank">大家有没有接收到这个网吧“蓝鲸”紧急通知</a></li>
+                                </ul>
+                            </div>
+                            <div class="info-six f-fs1">欢迎加入网吧业主qq交流群：397580722</div>
+                            <div class="info-seven hide f-fs1">
+
+                                <em>
+                                    <a class="ico-bg-1" href="javascript:void(0);" data-mid="123" data-title="网吧举行什么样的英雄联盟活动最吸引人？" data-name="嘉乐君子" data-time="2017-12-30 11:30" data-content="dqwqwdqwdqdqwd" data-url = "../data/reply-ajax.json">回复</a>
+                                    <a class="ico-bg-7 edit0" href="past.html?forum=2&pid=66" data-uid="111">编辑</a>
+                                </em>
+                                <p class="f-tar">
+                                    <a href="javascript:void(0);" data-mid="123" data-url="../data/report-ajax.json">举报</a>
+                                </p>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <!--分割线-->
+        <table class="ad" cellspacing="0" cellpadding="0">
+            <tr><td class="pls"></td><td class="plc"></td></tr>
+        </table>
+        <!--2楼-->
+        <div class="pasting-row">
+            <table>
+                <tbody>
+                <tr>
+                    <!--发帖者信息/回复者信息-->
+                    <td class="pls vat" rowspan="2">
+                        <div class="favatar">
+                            <div class="p-lft pasting-detail-lft">
+                                <a href="javascript:void(0);" target="_blank" class="f-fwb">这里也很美</a>
+                            </div>
+                            <div class="avatar"><a href="" class="avtm" target="_blank"><img src="../images/ava_01.jpg"></a></div>
+                            <div class="tns p-gray-6">
+                                <table cellspacing="0" cellpadding="0">
+                                    <tr>
+                                        <th><p><a href="" class="xi2">321</a></p><p>主题</p></th>
+                                        <td><p><a href="" class="xi2">1774</a></p><p>帖子</p></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <p><em>普通会员</em></p>
+                            <ul class="detail-user-opt hide">
+                                <li><a href="javascript:void(0);" title="发消息" class="xi2 send-msg" data-uid="456" data-mid="123"  data-name="这里也很美" data-url="../data/send-msg.json">发消息</a></li>
+                            </ul>
+                        </div>
+                    </td>
+
+                    <td class="plc vat">
+
+                        <div class="pi">
+                            <strong><a href="">2#</a></strong>
+                            <div class="pasting-plc-time">
+                                <img class="authicn vam" src="../images/ico/online_member.gif">
+                                <em class="p-xs-gray">发表于 2016-4-8 15:46:38</em>
+                                <span class="pipe">|</span>
+                            </div>
+                        </div>
+                        <!--帖子具体内容-->
+                        <div class="pasting-plc-con">
+                            <div class="info-one">
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <p>还不错的平台</p>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="plc vab">
+                        <div class="pasting-plc-con">
+                            <div class="info-six f-fs1">欢迎加入网吧业主qq交流群：397580722</div>
+                            <div class="info-seven hide f-fs1">
+                                <em>
+                                    <a class="ico-bg-1" href="javascript:void(0);" data-mid="123" data-title="网吧举行什么样的英雄联盟活动最吸引人？" data-name="嘉乐君子" data-time="2017-12-30 11:30" data-content="dqwqwdqwdqdqwd" data-url = "../data/reply-ajax.json">回复</a>
+                                    <a class="ico-bg-7 edit" href="javascript:void(0);" data-url="../data/edit-ajax.json"  data-mid="22" data-title="守望先锋游戏达人征集公告<span>&lt;&gt;" data-content="dqwdqwdqwdqwdqwdq" data-uid="222">编辑</a>
+                                </em>
+                                <p class="f-tar">
+                                    <a href="javascript:void(0);" data-mid="123" data-url="../data/report-ajax.json">举报</a>
+                                </p>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <!--分割线-->
+        <table class="ad" cellspacing="0" cellpadding="0">
+            <tr><td class="pls"></td><td class="plc"></td></tr>
+        </table>
+        <!--3楼-->
+        <div class="pasting-row">
+            <table>
+                <tbody>
+                <tr>
+                    <!--发帖者信息/回复者信息-->
+                    <td class="pls vat" rowspan="2">
+                        <div class="favatar">
+                            <div class="p-lft pasting-detail-lft">
+                                <a href="javascript:void(0);" target="_blank" class="f-fwb">这里也很美</a>
+                            </div>
+                            <div class="avatar"><a href="" class="avtm" target="_blank"><img src="../images/ava_01.jpg"></a></div>
+                            <div class="tns p-gray-6">
+                                <table cellspacing="0" cellpadding="0">
+                                    <tr>
+                                        <th><p><a href="" class="xi2">321</a></p><p>主题</p></th>
+                                        <td><p><a href="" class="xi2">1774</a></p><p>帖子</p></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <p><em>普通会员</em></p>
+                            <ul class="detail-user-opt hide">
+                                <li><a href="javascript:void(0);" title="发消息" class="xi2 send-msg" data-uid="456" data-mid="123"  data-name="这里也很美" data-url="../data/send-msg.json">发消息</a></li>
+                            </ul>
+                        </div>
+                    </td>
+
+                    <td class="plc vat">
+
+                        <div class="pi">
+                            <strong><a href="">3#</a></strong>
+                            <div class="pasting-plc-time">
+                                <img class="authicn vam" src="../images/ico/ico_lz.png">
+                                <sapn>楼主</sapn>
+                                <span class="pipe">|</span>
+                                <em class="p-xs-gray">  发表于 2016-4-8 15:46:38</em>
+                                <span class="pipe">|</span>
+                            </div>
+                        </div>
+                        <!--帖子具体内容-->
+                        <div class="pasting-plc-con">
+                            <div class="info-one">
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <div class="quote-left">
+                                                <div class="quote-right">
+                                                    <a href="" target="_blank" class="p-xs-gray underline">实在人哦 发表于 2016-4-19 01:29</a><br>
+                                                    <p>有字数限制么</p>
+                                                </div>
+                                            </div>
+                                            <p>针对网吧电脑配件经常失窃的安全问题，国内PC厂商长城电脑就曾推出了“俊杰n”系列网吧专用电脑。通过在光驱、软驱，安装双层的防盗挡板，将光驱、软驱牢牢地封死，机箱内部也进行了特殊的设计，把各个配件全都包裹了起来，对鼠标、电源等配件也提供了配件锁定的功能，这样的设计大大减少了网吧电脑配件失窃率。而针对网吧机器管理问题，国际芯片巨头英特尔公司则专门推出了英保通平台，可有效解决机器分散管理不便、游戏升级过程繁琐、系统频频安装导致宕机和资产管理耗时耗力等难题。</p>
+                                            <p>安徽的淮北原始部落网吧的徐先生就从中尝到了甜头。他一次性购买了100台长城网吧专用电脑，“尽管初期投资要比使用拼装机高一些，但长城的产品质量和性能十分可靠，500百万次敲击寿命的键盘和结实耐用的光电鼠标等耐用性的易损件，大大增强了电脑的耐用性。而且长城电脑的节能设计，远低于国家计算机产品的节能标准，100台电脑每个月就能省下近千元的电费，这无形中就为网吧增加了利润。”徐先生介绍。而长城的售后服务也没有让徐先生失望，每月长城的售后服务人员都会定期打电话或上门询问机器的使用情况，无论出现什么问题，都会在第一时间派人上门检查和维修。</p>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="plc vab">
+
+                        <div class="pasting-plc-con">
+                            <div class="info-six f-fs1">欢迎加入网吧业主qq交流群：397580722</div>
+                            <div class="info-seven hide f-fs1">
+                                <em>
+                                    <a class="ico-bg-1" href="javascript:void(0);" data-mid="123" data-title="网吧举行什么样的英雄联盟活动最吸引人？" data-name="嘉乐君子" data-time="2017-12-30 11:30" data-content="dqwqwdqwdqdqwd" data-url = "../data/reply-ajax.json">回复</a>
+                                    <a class="ico-bg-7 edit" href="javascript:void(0);" data-url="../data/edit-ajax.json"  data-mid="22" data-title="守望先锋游戏达人征集公告<span>&lt;&gt;" data-content="dqwdqwdqwdqwdqwdq" data-uid="333">编辑</a>
+                                </em>
+                                <p class="f-tar">
+                                    <a href="javascript:void(0);" data-mid="123" data-url="../data/report-ajax.json">举报</a>
+                                </p>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <!--分割线-->
+        <table class="ad" cellspacing="0" cellpadding="0">
+            <tr><td class="pls"></td><td class="plc"></td></tr>
+        </table>
+        <!--4楼-->
+        <div class="pasting-row">
+            <table>
+                <tbody>
+                <tr>
+                    <!--发帖者信息/回复者信息-->
+                    <td class="pls vat" rowspan="2">
+                        <div class="favatar">
+                            <div class="p-lft pasting-detail-lft">
+                                <a href="javascript:void(0);" target="_blank" class="f-fwb">这里也很美</a>
+                            </div>
+                            <div class="avatar"><a href="" class="avtm" target="_blank"><img src="../images/ava_01.jpg"></a></div>
+                            <div class="tns p-gray-6">
+                                <table cellspacing="0" cellpadding="0">
+                                    <tr>
+                                        <th><p><a href="" class="xi2">321</a></p><p>主题</p></th>
+                                        <td><p><a href="" class="xi2">1774</a></p><p>帖子</p></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <p><em>普通会员</em></p>
+                            <ul class="detail-user-opt hide">
+                                <li><a href="javascript:void(0);" title="发消息" class="xi2 send-msg" data-uid="456" data-mid="123"  data-name="这里也很美" data-url="../data/send-msg.json">发消息</a></li>
+                            </ul>
+                        </div>
+                    </td>
+
+                    <td class="plc vat">
+
+                        <div class="pi">
+                            <strong><a href="">4#</a></strong>
+                            <div class="pasting-plc-time">
+                                <img class="authicn vam" src="../images/ico/online_member.gif">
+                                <em class="p-xs-gray">发表于 2016-4-8 15:46:38</em>
+                                <span class="pipe">|</span>
+                            </div>
+                        </div>
+                        <!--帖子具体内容-->
+                        <div class="pasting-plc-con">
+                            <div class="info-one">
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <p>楼主辛苦了，非常感谢！</p>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="plc vab">
+
+                        <div class="pasting-plc-con">
+                            <div class="info-six f-fs1">欢迎加入网吧业主qq交流群：397580722</div>
+                            <div class="info-seven hide f-fs1">
+                                <em>
+                                    <a class="ico-bg-1" href="javascript:void(0);" data-mid="123" data-title="网吧举行什么样的英雄联盟活动最吸引人？" data-name="嘉乐君子" data-time="2017-12-30 11:30" data-content="dqwqwdqwdqdqwd" data-url = "../data/reply-ajax.json">回复</a>
+                                    <a class="ico-bg-7 edit" href="javascript:void(0);" data-url="../data/edit-ajax.json"  data-mid="22" data-title="守望先锋游戏达人征集公告<span>&lt;&gt;" data-content="dqwdqwdqwdqwdqwdq" data-uid="444">编辑</a>
+                                </em>
+                                <p class="f-tar">
+                                    <a href="javascript:void(0);" data-mid="123" data-url="../data/report-ajax.json">举报</a>
+                                </p>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <!--分割线-->
+        <table class="ad" cellspacing="0" cellpadding="0">
+            <tr><td class="pls"></td><td class="plc"></td></tr>
+        </table>
+    </div>
+    <a class="next-page bm page-static-next" href="javascript:void(0);">下一页 »</a>
+
+    <div class="bm">
+        <!--发帖/回复按钮-->
+        <a href="javaScript:void(0);" class="layui-btn layui-btn-normal" data-href="past.html" login-href="login.html" binding-href="binding.html">发帖</a>
+        <!--<a href="javaScript:void(0);" class="layui-btn layui-btn-normal" data-href="#reply" login-href="login.html">回复</a>-->
+        <!--分页-->
+        <span class="l-page right">
+            <div class="pg right page-static" data-json='{"total":67852,"pageSize":10,"pageNum":1,"url":"detail.html?mod=forumdisplay&fid=66&page="}'></div>
+        </span>
+
+    </div>
+
+    <!--回复编辑器-->
+    <div id="reply" class="tm mb p-bor">
+        <form>
+            <table cellspacing="0" cellpadding="0">
+                <tbody>
+                <tr>
+                    <td class="pls">
+                        <div class="avatar avtm" style="height: 126px;"><img src="../images/avatar2.jpg" ></div>
+                    </td>
+                    <td class="plc">
+                        <div class="pt detail-to-login" style="text-align: center; font-size: 14px;width: 895px;">
+                            	您需要登录才可以回帖 <a href="javascript:void(0)" class="site-demo-button top-right-login xi2" data-type="login" title="登录"> 登录</a> | <a href="reg.html" target="_blank" class="xi2">立即注册</a>
+
+                            <span class="third-to-login">
+                                <a class="detail-third-login" data-url="http://www.58wan.com/thirdparty/third_party/qqLoginBox.json" href="javaScript:void(0);" target="_top" rel="nofollow"><img src="../images/qq_login.gif" class="vm"></a>
+                                <a class="detail-third-login" data-url="http://www.58wan.com/thirdparty/third_party/weixinLoginBox.json" href="javaScript:void(0);" target="_top" rel="nofollow"><img src="../images/wechat_login.png" class="vm"></a>
+                                <a class="detail-third-login" data-url="http://www.58wan.com/thirdparty/third_party/weiboLoginBox.json" href="javaScript:void(0);" target="_top" rel="nofollow"><img src="../images/sina.png" class="vm"></a>
+
+                            </span>
+
+                        </div>
+                        <div class="for-binding" style="text-align: center; font-size: 14px;width: 895px;">
+                            您需要 <a href="binding.html" target="_blank" class="xi2">绑定账号 </a>后才可以发帖
+                        </div>
+                        <div class="tm bm hide pe">
+                        	<div id="editor" style="width:895px;height:200px;margin-bottom: 10px;"></div>
+                        	<div class="yzm">
+								<label>验证码:<input type="text" name="yzm" value="" data-key="999"/></label>
+								<span><img src="../images/yzm.png" data-src="../images/yzm.png"/>换一张</span>
+							</div>
+                            <button type="button" class="layui-btn layui-btn-small layui-btn-normal" data-url="../data/past-ajax.json" data-mid="333">回复</button>
+                        </div>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </form>
+    </div>
+
+	<!--回复帖子，发消息编辑器-->
+	<div class="hide reply-editor" >
+
+		<p class="reply-title"><span>RE:</span><span class="title">网吧举行什么样的活动最受欢迎！</span></p>
+
+		<p class="reply-content">
+			<span class="uname">九号秋风</span> 发表于 <span class="utime">2017-6-15 12:31</span>
+			<span class="ucontent">qwdqwdqwdqwdfdqwdqwdqwdqdqwdqwdqdwqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqwdqwdqwdqdwqqqqqqqqqdqwdqwdwqwdqwdqwdqwdqwdqwdqwdqwdqwdqwdqwdqw</span>
+		</p>
+
+		<div id="editor1" style="width:700px;height:250px;" ></div>
+
+		<div class="yzm">
+			<label>验证码:<input type="text" name="yzm" value="" data-key="999"/></label>
+			<span><img src="../images/yzm.png" data-src="../images/yzm.png"/>换一张</span>
+		</div>
+
+	</div>
+
+	<div class="hide report-editor" >
+
+		<p>请点击举报理由</p>
+		<ul class="radio clearfix">
+            <li><label for="1"><input type="radio" name="rubbish" id="1" value="1" />广告垃圾</label></li>
+            <li><label for="2"><input type="radio" name="rubbish" id="2" value="2" />违规内容</label></li>
+            <li><label for="3"><input type="radio" name="rubbish" id="3" value="3" />恶意灌水</label></li>
+            <li><label for="4"><input type="radio" name="rubbish" id="4" value="4" />重复发帖</label></li>
+            <li><label for="5"><input type="radio" name="rubbish" id="5" value="5" />其他</label></li>
+        </ul>
+
+        <div class="report-content">
+            <textarea  rows="6" name="report-content">请填写其他原因</textarea>
+        </div>
+
+	</div>
+
+
+</div>
+
+#include('./include/foot.tpl.html');

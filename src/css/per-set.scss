@@ -1,0 +1,39 @@
+
+@import "uploadimg";
+
+
+.user-ava-img {height:260px;}
+
+.set-box{background: #e8f0f7; overflow: hidden; border: 1px solid #ddd;  }
+.set-left{width:160px;min-height:300px;background:#E8F0F7;float: left}
+
+
+//.layui-nav{background: none!important;;}
+//.layui-nav li{border-bottom: 1px dashed #ddd;}
+//.layui-nav li a{color:#333!important;}
+//.layui-nav li a:hover{background:#fff!important}
+//.layui-nav-tree .layui-nav-child dd.layui-this, .layui-nav-tree .layui-this, .layui-nav-tree .layui-this > a, .layui-nav-tree .layui-this > a:hover{color:#333!important;background:#fff!important}
+//.layui-nav-tree .layui-nav-bar{background: #65A6E4!important;width:3px!important}
+
+.content-box form.zl,form.sf{width:100%;}
+.per-set-main{padding:0;}
+form.sf p.tips{color:#999;margin:5px 0;font-size:12px}
+
+
+.set-right{ width: 918px;min-height: 600px; background: #fff; padding: 10px; float: left;}
+.safe-line{border-bottom:1px dashed #ddd;height:35px;line-height:35px;}
+.clearBoth{content:"";clear:both;display:block;font-size:1px;text-indent: -9999999px;}
+.group-title{width:100%;height:45px;}
+.group-title span{display:block;float:left;width:290px;height:100%;line-height:45px;text-align:center;color:#fff;font-size:16px}
+.group-title span.my-group{background: #7CB9EF;margin-left: 5px;width: 295px;}
+.group-title span.other-group{background: #01AAED ;width: 288px;}
+.group-table{margin:0!important;}
+//.icon-bbs-1_03 { background: url(../images/bbs-1_03.png) no-repeat 0px 1px;}
+.email-ico-img{display:inline-block;width:16px;height:16px;background: url(../images/mail_inactive.png);}
+.third-login-show{text-align: center;margin-top:150px;}
+.binding-error-tips{margin-left:110px;margin-top:-15px;position: relative;z-index:9999}
+.binding-error-tips img{position:relative;top:-2px;}
+.layui-quote-nm{text-align: center;width:400px;margin:10px auto;position: relative;z-index:999;color:#f60;}
+.yx-login-form .layui-word-aux img{position:relative;top:-2px;margin-right:3px;}
+
+#user-signature{width: 530px;border: 1px solid #e2e2e2;border-left:none;height: 42px;border-left: 1px;line-height: 42px;font-size: 14px;padding-left: 5px;}

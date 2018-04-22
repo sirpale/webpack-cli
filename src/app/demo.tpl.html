@@ -1,0 +1,270 @@
+#include('./include/head.tpl.html');
+
+<div class="main main-container">
+
+    <div class="person-op">
+        <div class="left">
+            <ul class="layui-nav layui-nav-tree" lay-filter="demo">
+                <!--<li class="layui-nav-item layui-nav-itemed">-->
+                <!--<a href="javascript:;">默认展开</a>-->
+                <!--<dl class="layui-nav-child">-->
+                <!--<dd><a href="javascript:;">选项一</a></dd>-->
+                <!--<dd><a href="javascript:;">选项二</a></dd>-->
+                <!--<dd><a href="javascript:;">选项三</a></dd>-->
+                <!--<dd><a href="">跳转项</a></dd>-->
+                <!--</dl>-->
+                <!--</li>-->
+                <!--<li class="layui-nav-item">-->
+                <!--<a href="javascript:;">解决方案</a>-->
+                <!--<dl class="layui-nav-child">-->
+                <!--<dd><a href="">移动模块</a></dd>-->
+                <!--<dd><a href="">后台模版</a></dd>-->
+                <!--<dd><a href="">电商平台</a></dd>-->
+                <!--</dl>-->
+                <!--</li>-->
+                <li class="layui-nav-item layui-this" data-index="1"><a href="javascript:void(0);">修改头像</a></li>
+                <li class="layui-nav-item" data-index="2"><a href="javascript:void(0);">个人资料</a></li>
+                <li class="layui-nav-item" data-index="3"><a href="javascript:void(0);">用户组</a></li>
+                <li class="layui-nav-item" data-index="4"><a href="javascript:void(0);">密码安全</a></li>
+            </ul>
+        </div>
+        <div class="right">
+
+            <div class="content-box content-1">
+
+                <script id="demo" type="text/html">
+                    <h3>{{ d.title }}</h3>
+                    <ul>
+                        {{#  layui.each(d.list, function(index, item){ }}
+                        <li>
+                            <span>{{ item.modname }}</span>
+                            <span>{{ item.alias }}：</span>
+                            <span>{{ item.site || '' }}</span>
+                        </li>
+                        {{#  }); }}
+
+                        {{#  if(d.list.length === 0){ }}
+                        无数据
+                        {{#  } }}
+                    </ul>
+                </script>
+                <div id="view"></div>
+                <p>
+                    当前我的头像
+                    如果您还没有设置自己的头像，系统会显示为默认头像，您需要自己上传一张新照片来作为自己的个人头像
+                </p>
+
+                <table class="layui-table person-table" data-json='{"total":1619,"pageSize":20,"act":"../data/person-table.json"}'>
+                    <colgroup>
+                        <col width="150">
+                        <col width="200">
+                        <col>
+                    </colgroup>
+                    <thead>
+                    <tr>
+                        <th>昵称</th>
+                        <th>加入时间</th>
+                        <th>签名</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>贤心</td>
+                        <td>2016-11-29</td>
+                        <td>人生就像是一场修行</td>
+                    </tr>
+                    <tr>
+                        <td>贤心</td>
+                        <td>2016-11-29</td>
+                        <td>人生就像是一场修行</td>
+                    </tr>
+                    </tbody>
+                </table>
+
+                <!--<div class="pages" data-target="news-list" data-pagesize="20">-->
+                    <!--<a href="javascript:void(0);" class="first">首页</a>-->
+                    <!--<a href="javascript:void(0);" class="prev">上一页</a>-->
+                    <!--<em class="page-num">-->
+                    <!--<a href="javascript:void(0);" class="current">1</a><a href="javascript:void(0);">2</a>-->
+                    <!--<a href="javascript:void(0);">3</a><a href="javascript:void(0);">4</a>-->
+                    <!--<a href="javascript:void(0);">5</a>-->
+                    <!--</em>-->
+                    <!--<a href="javascript:void(0);" class="next">下一页</a>-->
+                    <!--<a href="javascript:void(0);" class="last">末页</a>-->
+                <!--</div>-->
+
+                <div class="pages pages-a" data-target="person-table"></div>
+
+
+            </div>
+            <div class="content-box content-2 layui-hide">
+                <form class="layui-form layui-form-pane" action="">
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">真实姓名：</label>
+                        <div class="layui-input-block">
+                            <input type="text" name="title" autocomplete="off" placeholder="真实姓名" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">短输入框</label>
+                        <div class="layui-input-inline">
+                            <input type="text" name="username" lay-verify="required" placeholder="请输入" autocomplete="off" class="layui-input">
+                        </div>
+                    </div>
+
+                    <div class="layui-form-item">
+                        <div class="layui-inline">
+                            <label class="layui-form-label">日期选择</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="date" id="date" autocomplete="off" class="layui-input" onclick="layui.laydate({elem: this})">
+                            </div>
+                        </div>
+                        <div class="layui-inline">
+                            <label class="layui-form-label">行内表单</label>
+                            <div class="layui-input-inline">
+                                <input type="number" name="number" autocomplete="off" class="layui-input">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">密码</label>
+                        <div class="layui-input-inline">
+                            <input type="password" name="password" placeholder="请输入密码" autocomplete="off" class="layui-input">
+                        </div>
+                        <div class="layui-form-mid layui-word-aux">请务必填写用户名</div>
+                    </div>
+
+                    <div class="layui-form-item">
+                        <div class="layui-inline">
+                            <label class="layui-form-label">范围</label>
+                            <div class="layui-input-inline" style="width: 100px;">
+                                <input type="text" name="price_min" placeholder="￥" autocomplete="off" class="layui-input">
+                            </div>
+                            <div class="layui-form-mid">-</div>
+                            <div class="layui-input-inline" style="width: 100px;">
+                                <input type="text" name="price_max" placeholder="￥" autocomplete="off" class="layui-input">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">单行选择框</label>
+                        <div class="layui-input-block">
+                            <select name="interest" lay-filter="aihao">
+                                <option value=""></option>
+                                <option value="0">写作</option>
+                                <option value="1" selected="">阅读</option>
+                                <option value="2">游戏</option>
+                                <option value="3">音乐</option>
+                                <option value="4">旅行</option>
+                            </select><div class="layui-unselect layui-form-select"><div class="layui-select-title"><input type="text" placeholder="请选择" value="阅读" readonly="" class="layui-input layui-unselect"><i class="layui-edge"></i></div><dl class="layui-anim layui-anim-upbit"><dd lay-value="0" class="">写作</dd><dd lay-value="1" class="layui-this">阅读</dd><dd lay-value="2" class="">游戏</dd><dd lay-value="3" class="">音乐</dd><dd lay-value="4" class="">旅行</dd></dl></div>
+                        </div>
+                    </div>
+
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">行内选择框</label>
+                        <div class="layui-input-inline">
+                            <select name="quiz1">
+                                <option value="">请选择省</option>
+                                <option value="浙江" selected="">浙江省</option>
+                                <option value="你的工号">江西省</option>
+                                <option value="你最喜欢的老师">福建省</option>
+                            </select><div class="layui-unselect layui-form-select"><div class="layui-select-title"><input type="text" placeholder="请选择省" value="浙江省" readonly="" class="layui-input layui-unselect"><i class="layui-edge"></i></div><dl class="layui-anim layui-anim-upbit"><dd lay-value="浙江" class="layui-this">浙江省</dd><dd lay-value="你的工号" class="">江西省</dd><dd lay-value="你最喜欢的老师" class="">福建省</dd></dl></div>
+                        </div>
+                        <div class="layui-input-inline">
+                            <select name="quiz2">
+                                <option value="">请选择市</option>
+                                <option value="杭州">杭州</option>
+                                <option value="宁波" disabled="">宁波</option>
+                                <option value="温州">温州</option>
+                                <option value="温州">台州</option>
+                                <option value="温州">绍兴</option>
+                            </select><div class="layui-unselect layui-form-select"><div class="layui-select-title"><input type="text" placeholder="请选择市" value="" readonly="" class="layui-input layui-unselect"><i class="layui-edge"></i></div><dl class="layui-anim layui-anim-upbit"><dd lay-value="杭州" class="">杭州</dd><dd lay-value="宁波" class=" layui-disabled">宁波</dd><dd lay-value="温州" class="">温州</dd><dd lay-value="温州" class="">台州</dd><dd lay-value="温州" class="">绍兴</dd></dl></div>
+                        </div>
+                        <div class="layui-input-inline">
+                            <select name="quiz3">
+                                <option value="">请选择县/区</option>
+                                <option value="西湖区">西湖区</option>
+                                <option value="余杭区">余杭区</option>
+                                <option value="拱墅区">临安市</option>
+                            </select><div class="layui-unselect layui-form-select"><div class="layui-select-title"><input type="text" placeholder="请选择县/区" value="" readonly="" class="layui-input layui-unselect"><i class="layui-edge"></i></div><dl class="layui-anim layui-anim-upbit"><dd lay-value="西湖区" class="">西湖区</dd><dd lay-value="余杭区" class="">余杭区</dd><dd lay-value="拱墅区" class="">临安市</dd></dl></div>
+                        </div>
+                    </div>
+                    <div class="layui-form-item" pane="">
+                        <label class="layui-form-label">开关-开</label>
+                        <div class="layui-input-block">
+                            <input type="checkbox" checked="" name="open" lay-skin="switch" lay-filter="switchTest" title="开关"><div class="layui-unselect layui-form-switch layui-form-onswitch" lay-skin="_switch"><em></em><i></i></div>
+                        </div>
+                    </div>
+                    <div class="layui-form-item" pane="">
+                        <label class="layui-form-label">单选框</label>
+                        <div class="layui-input-block">
+                            <input type="radio" name="sex" value="男" title="男" checked=""><div class="layui-unselect layui-form-radio layui-form-radioed"><i class="layui-anim layui-icon"></i><span>男</span></div>
+                            <input type="radio" name="sex" value="女" title="女"><div class="layui-unselect layui-form-radio"><i class="layui-anim layui-icon"></i><span>女</span></div>
+                            <input type="radio" name="sex" value="禁" title="禁用" disabled=""><div class="layui-unselect layui-form-radio layui-radio-disbaled layui-disabled"><i class="layui-anim layui-icon"></i><span>禁用</span></div>
+                        </div>
+                    </div>
+                    <div class="layui-form-item layui-form-text">
+                        <label class="layui-form-label">文本域</label>
+                        <div class="layui-input-block">
+                            <textarea placeholder="请输入内容" class="layui-textarea"></textarea>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <button class="layui-btn" lay-submit="" lay-filter="demo2">跳转式提交</button>
+                    </div>
+                </form>
+            </div>
+            <div class="content-box content-3 layui-hide">用户组</div>
+            <div class="content-box content-4 layui-hide">密码安全</div>
+
+        </div>
+    </div>
+
+</div>
+
+<!--<div class="layui-tab" lay-filter="link">-->
+    <!--<ul class="layui-tab-title">-->
+        <!--<li class="layui-this" data-ac="avatar">修改头像</li>-->
+        <!--<li data-ac="profile">个人资料</li>-->
+        <!--<li data-ac="usergroup">用户组</li>-->
+        <!--<li data-ac="pwd">密码安全</li>-->
+    <!--</ul>-->
+    <!--<div class="layui-tab-content">-->
+        <!--<div class="layui-tab-item layui-show">-->
+            <!--<form method="post" autocomplete="off" action="home.php?mod=spacecp&amp;ac=avatar&amp;ref">-->
+                <!--<table cellspacing="0" cellpadding="0" class="tfm">-->
+                    <!--<caption>-->
+                        <!--<span id="retpre" class="y xi2"><a href="http://bbs.5636.com/bbs/home.php?mod=spacecp&amp;ac=privacy">返回上一页</a></span>-->
+                        <!--<h2 class="xs2">当前我的头像</h2>-->
+                        <!--<p>如果您还没有设置自己的头像，系统会显示为默认头像，您需要自己上传一张新照片来作为自己的个人头像 </p>-->
+                    <!--</caption>-->
+                    <!--<tbody><tr>-->
+                        <!--<td><img src="http://www.5636.com/bbs/uc_server/avatar.php?uid=36&amp;size=big"></td>-->
+                    <!--</tr>-->
+                    <!--</tbody></table>-->
+
+                <!--<table cellspacing="0" cellpadding="0" class="tfm">-->
+                    <!--<caption>-->
+                        <!--<h2 class="xs2">设置我的新头像</h2>-->
+                        <!--<p>请选择一个新照片进行上传编辑。<br>头像保存后，您可能需要刷新一下本页面(按F5键)，才能查看最新的头像效果 </p>-->
+                    <!--</caption>-->
+                    <!--<tbody><tr>-->
+                        <!--<td>-->
+                            <!--<script type="text/javascript">document.write(AC_FL_RunContent('width','450','height','253','scale','exactfit','src','http://www.5636.com/bbs/uc_server/images/camera.swf?inajax=1&appid=1&input=265bIKuHmxiUfK739R2n1RjMDjPsE6RSOn8j0eKirOvjyQBcgbZx0S4fcvAO0HPbqJHFtqv7GV762KUX3aeF3aaVdzeqdQmcR70WX1oJTwOTOLwuvaxtLciT&agent=d69aa478a72ecd3a99c77af6fcf6b917&ucapi=www.5636.com%2Fbbs%2Fuc_server&avatartype=virtual&uploadSize=2048','id','mycamera','name','mycamera','quality','high','bgcolor','#ffffff','menu','false','swLiveConnect','true','allowScriptAccess','always'));</script><embed width="450" height="253" scale="exactfit" src="http://www.5636.com/bbs/uc_server/images/camera.swf?inajax=1&amp;appid=1&amp;input=265bIKuHmxiUfK739R2n1RjMDjPsE6RSOn8j0eKirOvjyQBcgbZx0S4fcvAO0HPbqJHFtqv7GV762KUX3aeF3aaVdzeqdQmcR70WX1oJTwOTOLwuvaxtLciT&amp;agent=d69aa478a72ecd3a99c77af6fcf6b917&amp;ucapi=www.5636.com%2Fbbs%2Fuc_server&amp;avatartype=virtual&amp;uploadSize=2048" name="mycamera" quality="high" bgcolor="#ffffff" menu="false" swliveconnect="true" allowscriptaccess="always" type="application/x-shockwave-flash">-->
+                        <!--</td>-->
+                    <!--</tr>-->
+                    <!--</tbody></table>-->
+                <!--<input type="hidden" name="formhash" value="542b80c4">-->
+            <!--</form>-->
+        <!--</div>-->
+        <!--<div class="layui-tab-item">个人资料</div>-->
+        <!--<div class="layui-tab-item">用户组</div>-->
+        <!--<div class="layui-tab-item">密码安全</div>-->
+    <!--</div>-->
+<!--</div>-->
+
+
+
+
+#include('./include/foot.tpl.html');

@@ -1,0 +1,106 @@
+#include('./include/head.tpl.html');
+
+<input type="hidden" class="login-regiser-flag" value = "0"/>
+<!--主体-->
+<div class="main main-container main-border reg-main" style="position:relative">
+	<!--<div style="position: absolute;top:45px;left:0;width:1098px";><img src="../images/set/ballon.jpg" style="max-height:980px; max-width:100%"/></div>-->
+    <div class="site-demo-button userp-reg">
+        <a class="f-fr" href="login.html">我有账号，立即登录</a>
+        用户注册
+    </div>
+    <div style="width:640px;margin:0 auto;">
+        <form class="layui-form yx-reg-form" action="" style="margin-top:35px" data-url="../data/reg.json">
+            <div class="layui-form-item">
+                <label class="layui-form-label">用户名：</label>
+                <div class="layui-input-inline">
+                    <input type="text" name="username"  placeholder="请输入用户名" class="layui-input yx-check-username" data-url="../data/reg-check-name.json">
+                </div>
+                <div class="layui-form-mid layui-word-aux yx-error-tips"><img src="../images/warn.png" height="16" width="16" style="margin:-2px 5px 0 0" class="hide"/><span>用户名由4~20数字、字母或中文组成！</span></div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">密码：</label>
+                <div class="layui-input-inline">
+                    <input type="password" name="password" placeholder="请输入密码"  class="layui-input yx-check-password">
+                </div>
+                <div class="layui-form-mid layui-word-aux yx-error-tips"><img src="../images/warn.png" height="16" width="16" style="margin:-2px 5px 0 0" class="hide"/><span>密码由6~20数字、字母或特殊符号组成！</span></div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">重复密码：</label>
+                <div class="layui-input-inline">
+                    <input type="password" name="repassword"  placeholder="请输入密码" class="layui-input yx-check-repassword">
+                </div>
+                <div class="layui-form-mid layui-word-aux yx-error-tips"><img src="../images/warn.png" height="16" width="16" style="margin:-2px 5px 0 0" class="hide"/><span>请确认登录密码！</span></div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">电子邮件：</label>
+                <div class="layui-input-inline">
+                    <input type="text" name="email" placeholder="请输入邮件"  class="layui-input yx-check-emial">
+                </div>
+                <div class="layui-form-mid layui-word-aux yx-error-tips"><img src="../images/warn.png" height="16" width="16" style="margin:-2px 5px 0 0" class="hide"/><span>请填写正确的电子邮件！</span></div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">验证码：</label>
+                <div class="layui-input-inline"  style="width:190px;">
+                    <input type="text" name="vcode" placeholder="请输入验证码"  class="layui-input yx-check-yzm">
+                </div>
+                <div class="layui-input-inline"  style="width:100px;">
+                    <img class="yzm-img yzm-reg-key" data-key="regYzmKey" src="http://192.168.0.56:3000/images/misc.png?yzmKey=register" height="38" width="100"/></div>
+                <div class="layui-form-mid layui-word-aux yx-error-tips"><img src="../images/warn.png" height="16" width="16" style="margin:-2px 5px 0 0" class="hide"/><span>输入验证码！</span></div>
+            </div>
+            <div class="layui-form-item forget-and-other">
+                <a href="login.html"><span>已有账号?</span>立即登录</a>
+                <a href="find-pwd.html" style="float:right">忘记密码？</a>
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-input-block">
+                    <button type="button" class="layui-btn layui-btn-normal reg-sub-btn" style="margin-left:0px;width:300px;font-size:18px;background: #56B1F5">立即注册</button>
+                    <!--<button type="reset" class="layui-btn layui-btn-primary">重置</button>-->
+                </div>
+            </div>
+            <p class="dashed-line"></p>
+            <div class="layui-form-item third-to-login" style=" margin-left: 25px;position:relative;z-index:3">
+                <label class="layui-form-label" style="padding: 9px 0px;text-align:left;width:85px">快捷登录：</label>
+                <a data-url="http://www.58wan.com/thirdparty/third_party/qqLoginBox.json" href="javaScript:void(0);"><img src="../images/set/qq.png" height="40" width="40"/></a>
+                <a data-url="http://www.58wan.com/thirdparty/third_party/weixinLoginBox.json" href="javaScript:void(0);" style="padding:0 25px"><img src="../images/set/wx.png" height="40" width="40"/></a>
+                <a data-url="http://www.58wan.com/thirdparty/third_party/weiboLoginBox.json" href="javascript:void(0);"><img src="../images/set/wb.png" height="40" width="40"/></a>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script>
+/*
+    layui.use(['form', 'layedit', 'laydate'], function(){
+        var form = layui.form()
+            ,layer = layui.layer
+            ,layedit = layui.layedit
+            ,laydate = layui.laydate;
+
+        //创建一个编辑器
+        var editIndex = layedit.build('LAY_demo_editor');
+
+        //自定义验证规则
+        form.verify({
+            title: function(value){
+                if(value.length < 4){
+                    return '用户名由4~20数字、字母或下划线组成';
+                }
+            }
+            ,pass: [/(.+){6,12}$/, '密码必须6到20位']
+            ,content: function(value){
+                layedit.sync(editIndex);
+            }
+        });
+        //监听提交
+        form.on('submit(demo1)', function(data){
+            layer.alert(JSON.stringify(data.field), {
+                title: '最终的提交信息'
+            })
+            return false;
+        });
+
+
+    });
+	*/
+</script>
+#include('./include/foot.tpl.html');

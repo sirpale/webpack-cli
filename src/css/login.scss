@@ -1,0 +1,99 @@
+.show{display:block}
+.hide{display:none}
+.top{overflow:visible}
+.top .top-right a{padding:0 1px}
+.log-main{margin-top:10px;padding:0}
+.fastlg_fm{width:150px;height:50px;border-right:1px solid #E5EDF2;font-size:12px;float:left;margin-right:10px}
+.fastlg_fm p{width:100%;height:25px;line-height:25px;text-align:center;color:#999}
+.hm{padding-top:5px}
+.login-box{width:530px;height:55px;float:left;margin-left:10px;color:#444}
+.login-before{width:100%;height:100%;}
+.login-before form input{outline:0;border:1px solid #29A4E0;height:16px;line-height:17px;text-indent:5px;padding:2px 0}
+.login-before form tr{width:100%;height:25px;line-height:25px}
+.sure-login{width:75px;padding:3px 0;margin-top:13px;background:#1E9FFF;border:none;color:#fff}
+.sure-login:hover{background:#41AEFF}
+.txt-left{width:50px}
+#ls_cookietime{border:none}
+.fastlg_l{padding-right:8px;border-right:1px solid #E5EDF2;padding-left:10px}
+.pc{vertical-align:middle;margin:0 5px 1px 0;padding:0;border-radius:0}
+.pn em{padding:0 7px;line-height:18px}
+#ls_password{margin-top:4px}
+.xi{color:#369;width:70px}
+.login-after{width:100%;height:100%}
+
+
+.user-detail {}
+.user-detail p {line-height:26px;color:#666;font-size:12px;}
+.user-detail p a {padding:0 6px;}
+.user-detail p a:hover {color:red;}
+.user-detail .user-ava {padding-left:10px;}
+.user-detail .user-ava img {width:48px;height:48px;}
+
+
+//.user-detail{width:500px;margin-right:10px;color:#333;}
+//.user-detail>div{height:25px;line-height:25px;float:right}
+//.pipe,.user-detail-top>div{float:left;width:55px;text-align:center;cursor:pointer}
+//.pipe{color:#ECECEC;width:2px!important}
+//.user-detail>div>div.vwmy{width:270px;text-align:right;margin-right:10px}
+//.user-detail>div>div.vwmy a{padding:0}
+//.qq{background:url(../images/connect_qq.gif) no-repeat scroll 0 2px;padding-left:20px}
+//.user-detail-bottom>div{float:right;text-align:right;cursor:pointer}
+//.user-detail-bottom>div.pipe{text-align:center;margin:0 10px}
+//.extcreditmenu{width:150px}
+//.extcreditmenu .menu-s{text-align:left}
+//.menu-f{position:relative}
+//.menu-s{position:absolute;z-index:100;min-width:56px;min-height:25px;background:#fff;border:1px solid #E6E6E6}
+//.menu-s a{padding:1px 10px!important;display:inherit}
+//.prompt_follower_0,.prompt_news_0{float:left;width:18px;height:14px;margin:6px 3px 5px 0;display:inline;background:url(http://bbs.5636.com/bbs/static/image/common/ico_notice.png) no-repeat 0 0}
+//.prompt_follower_0{background-position:0 -225px}
+//.myprompt .menu-s{width:95px}
+//.g_upmine{margin-right:15px}
+//.g_upmine .menu-s{min-width:80px;text-align:left;left:-11px}
+//.myprompt .myitem-list{width:90px}
+//.user-head{width:55px;height:50px;float:left}
+//.top .top-right .user-head {width:60px;float:right;}
+//.top .top-right .user-head a{padding:0}
+//.top .top-right .user-head a img{padding:2px;width:48px;height:48px;background:#FFF;border:1px solid;border-color:#F2F2F2 #CDCDCD #CDCDCD #F2F2F2}
+
+
+
+// 登录框
+.login-alert-box{width:100%;background:#fff;}
+.login-alert-box form{font-size:12px;margin:0 auto;overflow: hidden;}
+.login-alert-box form .layui-form-item{width:355px;margin:15px auto;}
+.login-alert-box form .login-input-border{border:1px solid #ccc}
+.login-alert-box form input{width:300px;font-size:12px;overflow: hidden;border:none;outline:none;padding-left:0}
+.login-alert-box form .layui-form-item .small-ico{width:10px;}
+.login-alert-box form .layui-form-item a{}
+.login-alert-box form .layui-form-item a:hover{color:#475AE4}
+.login-error-tips{width:277px;height:30px;line-height:44px;margin:0 auto;}
+.login-error-tips img{margin-top:-2px;margin-right:5px;}
+
+
+//.login-alert-box form .row{width:513px;height:30px;line-height:30px;margin-top:15px}
+//.login-alert-box form .sure-btn{margin-top:30px}
+//.login-alert-box form .sure-btn .row-left a{margin-bottom:45px}
+//.login-alert-box form .row>div{height:30px}
+//.login-alert-box form .row a#bindingBoxBtn{margin-right:15px;color:#29A4E0}
+//.login-alert-box form .row a#bindingBtn{padding:3px 15px;background:#29A4E0;color:#fff}
+//.login-alert-box form .row label{display:block;width:85px;height:30px;line-height:30px;float:left}
+//.login-alert-box form .row label.rember{width:125px}
+//.login-alert-box form .row label input{display:block;width:11px;height:11px;float:left;margin-top:9px;margin-right:5px}
+//.login-alert-box form .row label span{display:block;width:50px;height:30px;float:left}
+//.login-alert-box form .row .row-left{width:40px;float:left;color:#606060}
+//.login-alert-box form .row .row-middle{width:208px;float:left;margin:0 2px}
+//.login-alert-box form .row .row-middle input{display:block;width:198px;height:25px;line-height:25px;border:1px solid #e5e5e5;padding-left:12px;outline:0;float:left}
+//.login-alert-box form .row .row-right{display:block;width:220px;height:25px;line-height:25px;margin-left:12px;outline:0;float:left}
+
+
+
+//.row .layui-btn {display: inline-block;height: 25px;line-height: 27px}
+//.user-detail-top > div{width:30px;}
+//.g_upmine{margin-right:0;}
+//.user-detail > div{width:369px}
+//.user-detail-bottom > div.pipe{margin:0 5px}
+//忘记密码找回密码
+.forget-and-other{width:300px;margin:0 0 10px 112px;position: relative;font-size:12px;}
+.forget-and-other a{color:#797979}
+.forget-and-other a span{color:#797979}
+.forget-and-other a:hover{color:#1e9fff}
